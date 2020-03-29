@@ -193,21 +193,6 @@
 	 
 	 
 	 $(document).ready(function() {
-		 
-		 var xhr = new XMLHttpRequest();
-		 xhr.addEventListener("readystatechange", function () {
-			 if (this.readyState === 4) {
-				 console.log(xhr.response);
-			 } else{
-			 
-			 }
-		 });
-		 var URLforPOST = "https://abc-auth.herokuapp.com/retrievedata";
-		 xhr.open("POST", URLforPOST);
-		 xhr.setRequestHeader("Content-Type", "application/json");
-		 var myBodyToSend = JSON.stringify({"convid": convID});
-		 xhr.send(myBodyToSend);
-		 
 
               
               	var SDK = lpTag.agentSDK;
@@ -217,8 +202,22 @@
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
                 	convID = data;
-
-                };
+			
+			var xhr = new XMLHttpRequest();
+			xhr.addEventListener("readystatechange", function () {
+				if (this.readyState === 4) {
+					console.log(xhr.response);
+				} else{
+				
+				}
+			});
+			var URLforPOST = "https://abc-auth.herokuapp.com/retrievedata";
+			xhr.open("POST", URLforPOST);
+			xhr.setRequestHeader("Content-Type", "application/json");
+			var myBodyToSend = JSON.stringify({"convid": convID});
+			xhr.send(myBodyToSend);
+		
+		};
                 
                 var onError1 = function(data) {
                 // Do something with the returning data

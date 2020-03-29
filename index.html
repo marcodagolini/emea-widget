@@ -218,9 +218,9 @@
 					console.log(myResponse.picture);
 					$('#customerPicture').attr('src', myResponse.picture);
 					console.log(myResponse.email);
-					$('#customerEmail').val(myResponse.email);
+					$('#customerEmail').html(myResponse.email);
 					console.log(myResponse.name);
-					$('#customerName').val(myResponse.name);
+					$('#customerName').html(myResponse.name);
 					$('#customerData').removeAttr('hidden');
 				} else{
 				

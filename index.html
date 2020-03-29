@@ -90,7 +90,27 @@
 
 	 function sendAuthentication(){
 		 // do something
+		 
+		 var listPickerSC = {};
+		 var listPickerSCMetadata = [];
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: listPickerSC,
+			 metadata: listPickerSCMetadata
+		 };
+
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 outputLog.value = err ? err : 'done';
+		 });
+		 
+		 
+ 
 	 }
+	 
+	 
+	 
 	 
 	 function showAuthentication(){
 		 $("#main").attr("hidden", "true");

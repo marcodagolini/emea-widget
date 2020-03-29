@@ -15,6 +15,13 @@
     left: 20px;
 }
 	
+ #customerData {
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+	
 	
   .sendContent {
     background-color: #AAB5B2;
@@ -272,6 +279,12 @@
 	  <button id="sendAuthentication" class="sendContent" onclick="sendAuthentication()">Authenticate</button>
 	  </br>
 	<div id="alertBind"></div>
+	<div id="customerData" hidden="true">
+		<img id="customerPicture" src="" width="500" height="333">
+		<label>Name: </label> <div id="customerName"></div></br>
+		<label>Email: </label> <div id="customerEmail"></div>
+	
+	</div>
 	  <button id="back" class="back" onclick="back()">Back</button>
 
   

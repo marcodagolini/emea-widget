@@ -164,7 +164,6 @@
 								 console.log("***ping***");
 								 if(retrieveData()){
 									 clearInterval(refreshIntervalId);
-									 $("#alertBind").attr("hidden", "true");
 								 }
 							 
 							 }, 10000);
@@ -221,6 +220,8 @@
 					 return false;
 				 } else{
 					 isAuthenticated = true;
+					 document.getElementById("alertBind").innerHTML = "Customer authenticated!";
+					 document.getElementById("alertBind").style = "color : green";
 					 var myResponse = JSON.parse(xhr.response);
 					 console.log(myResponse.picture);
 					 $('#customerPicture').attr('src', myResponse.picture);

@@ -162,7 +162,8 @@
 							 window.clearInterval(refreshIntervalId);
 							 refreshIntervalId = setInterval(()=>{
 								 console.log("***ping***");
-								 if(retrieveData()){
+								 retrieveData();
+								 if(isAuthenticated){
 									 clearInterval(refreshIntervalId);
 								 }
 							 

@@ -213,14 +213,19 @@
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
 					console.log(xhr.response);
-					var myResponse = JSON.parse(xhr.response);
-					console.log(myResponse.picture);
-					$('#customerPicture').attr('src', myResponse.picture);
-					console.log(myResponse.email);
-					$('#customerEmail').html(myResponse.email);
-					console.log(myResponse.name);
-					$('#customerName').html(myResponse.name);
-					$('#customerData').removeAttr('hidden');
+					if(xhr.response === "ko"){
+						
+					} else{
+						var myResponse = JSON.parse(xhr.response);
+						console.log(myResponse.picture);
+						$('#customerPicture').attr('src', myResponse.picture);
+						console.log(myResponse.email);
+						$('#customerEmail').html(myResponse.email);
+						console.log(myResponse.name);
+						$('#customerName').html(myResponse.name);
+						$('#customerData').removeAttr('hidden');
+					}
+					
 				} else{
 				
 				}

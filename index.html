@@ -198,6 +198,40 @@
 	 
 	 
 	 
+	 function retrieveData(){
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+				 console.log(xhr.response);
+				 if(xhr.response === "ko"){
+				 
+				 } else{
+					 isAuthenticated = true;
+					 var myResponse = JSON.parse(xhr.response);
+					 console.log(myResponse.picture);
+					 $('#customerPicture').attr('src', myResponse.picture);
+					 console.log(myResponse.email);
+					 $('#customerEmail').html(myResponse.email);
+					 console.log(myResponse.name);
+					 $('#customerName').html(myResponse.name);
+					 $('#customerData').removeAttr('hidden');
+				 }
+			 } else{
+			 
+			 }
+		 
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/retrievedata";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify({"convid": convID});
+		 xhr.send(myBodyToSend);
+		 
+		 
+	 }
+	 
+	 
+	 
 	 
 	 $(document).ready(function() {
 
@@ -209,35 +243,8 @@
                 var onSuccess1 = function(data) {
                 // Do something with the returning data
                 	convID = data;
-			
-			var xhr = new XMLHttpRequest();
-			xhr.addEventListener("readystatechange", function () {
-				if (this.readyState === 4) {
-					console.log(xhr.response);
-					if(xhr.response === "ko"){
-						
-					} else{
-						isAuthenticated = true;
-						var myResponse = JSON.parse(xhr.response);
-						console.log(myResponse.picture);
-						$('#customerPicture').attr('src', myResponse.picture);
-						console.log(myResponse.email);
-						$('#customerEmail').html(myResponse.email);
-						console.log(myResponse.name);
-						$('#customerName').html(myResponse.name);
-						$('#customerData').removeAttr('hidden');
-					}
-					
-				} else{
-				
-				}
-			});
-			var URLforPOST = "https://abc-auth.herokuapp.com/retrievedata";
-			xhr.open("POST", URLforPOST);
-			xhr.setRequestHeader("Content-Type", "application/json");
-			var myBodyToSend = JSON.stringify({"convid": convID});
-			xhr.send(myBodyToSend);
-		
+			retrieveData();
+
 		};
                 
                 var onError1 = function(data) {

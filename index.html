@@ -144,17 +144,17 @@
 				 var xhr = new XMLHttpRequest();
 				 xhr.addEventListener("readystatechange", function () {
 					 if (this.readyState === 4) {
-						 if (xhr.response === "ko"){
+						 if (xhr.response === "ok"){
+							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
+							 document.getElementById("alertBind").style = "color : black";
+							 console.log(xhr.response);						 
+						 } else{
 							 document.getElementById("alertBind").innerHTML = "Error retrieving authenticated data!";
 							 document.getElementById("alertBind").style = "color : red";
 							 console.log(xhr.response);
 							 setTimeout(function(){
 								 document.getElementById("alertBind").innerHTML = "";
 							 }, 3000);
-						 } else{
-							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
-							 document.getElementById("alertBind").style = "color : black";
-							 console.log(xhr.response);
 						 }
 					 }	
 				 });

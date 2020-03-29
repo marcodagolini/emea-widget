@@ -211,7 +211,7 @@
 		 xhr.addEventListener("readystatechange", function () {
 			 if (this.readyState === 4) {
 				 console.log(xhr.response);
-				 if(xhr.response === "ko"){
+				 if((xhr.response === "ko") || (xhr.response === "")){
 					 return false;
 				 } else{
 					 isAuthenticated = true;

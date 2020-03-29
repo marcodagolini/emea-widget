@@ -155,7 +155,15 @@
 						 if (xhr.response === "ok"){
 							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
 							 document.getElementById("alertBind").style = "color : black";
-							 console.log(xhr.response);						 
+							 console.log(xhr.response);
+							 var refreshIntervalId = setInterval(()=>{
+								 console.log("***ping***");
+								 if(retrieveData()){
+									 clearInterval(refreshIntervalId);
+								 }
+							 
+							 }, 10000);
+
 						 } else{
 							 document.getElementById("alertBind").innerHTML = "Error retrieving authenticated data!";
 							 document.getElementById("alertBind").style = "color : red";

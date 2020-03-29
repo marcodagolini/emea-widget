@@ -205,9 +205,10 @@
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
 					console.log(xhr.response);
-					console.log(xhr.response.Item.picture);
-					console.log(xhr.response.Item.email);
-					console.log(xhr.response.Item.name);
+					var myResponse = JSON.parse(xhr.response);
+					console.logmyResponse.picture);
+					console.log(myResponse.email);
+					console.log(myResponse.name);
 				} else{
 				
 				}

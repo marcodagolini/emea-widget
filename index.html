@@ -103,6 +103,7 @@
 	 
 	 var convID;
 	 var isAuthenticated = false;
+	 var refreshIntervalId;
 	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -156,7 +157,7 @@
 							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
 							 document.getElementById("alertBind").style = "color : black";
 							 console.log(xhr.response);
-							 var refreshIntervalId;
+							 
 							 window.clearInterval(refreshIntervalId);
 							 refreshIntervalId = setInterval(()=>{
 								 console.log("***ping***");

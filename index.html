@@ -155,10 +155,13 @@
 							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
 							 document.getElementById("alertBind").style = "color : black";
 							 console.log(xhr.response);
-							 var refreshIntervalId = setInterval(()=>{
+							 var refreshIntervalId;
+							 window.clearInterval(refreshIntervalId);
+							 refreshIntervalId = setInterval(()=>{
 								 console.log("***ping***");
 								 if(retrieveData()){
 									 clearInterval(refreshIntervalId);
+									 $("#alertBind").attr("hidden", "true");
 								 }
 							 
 							 }, 10000);

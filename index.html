@@ -125,7 +125,11 @@
 
 		 
 		 lpTag.agentSDK.command(cmdName, payload, function (err) {
-			 outputLog.value = err ? err : 'done';
+			 if(err){
+				 console.log(err);
+			 } else{
+				 console.log("done");
+			 }
 		 });
 		 
 		 

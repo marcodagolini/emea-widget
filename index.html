@@ -85,14 +85,37 @@
     
  <script>
 	 
+	 function uuidv4() {
+		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			 var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			 return v.toString(16);
+		 });
+	 }
+	 
 	 
 	 
 
 	 function sendAuthentication(){
 		 // do something
 		 
-		 var authSC = {"type":"vertical","tag":"authentication","elements":[{"type":"text","text":"Authentication Request"}]};
-		 var authSCMetadata = [{"type":"BusinessChatMessage","receivedMessage":{"title":"Tap here to sign in","subtitle":"Thank you","imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png","style":"small"},"replyMessage":{"title":"Successfully signed in!","subtitle":"Thank you","imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png","style":"small"}},{"type":"ConnectorAuthenticationRequest","requestIdentifier":"ad46996a-2993-4344-afad-7f7948148333"}];
+		 var myRandomRequest = uuidv4();
+		 
+		 var authSC = {"type":"vertical",
+			       "tag":"authentication",
+			       "elements":[{"type":"text",
+					    "text":"Authentication Request"}]
+			      };
+		 var authSCMetadata = [{"type":"BusinessChatMessage",
+					"receivedMessage":{"title":"Tap here to sign in",
+							   "subtitle":"Thank you",
+							   "imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png",
+							   "style":"small"},
+					"replyMessage":{"title":"Successfully signed in!",
+							"subtitle":"Thank you",
+							"imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png",
+							"style":"small"}},
+				       {"type":"ConnectorAuthenticationRequest",
+					"requestIdentifier":myRandomRequest}];
 		 
 		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
 		 var payload = {

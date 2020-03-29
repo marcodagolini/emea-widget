@@ -149,8 +149,8 @@
 				 
 				 var xhr = new XMLHttpRequest();
 				 xhr.addEventListener("readystatechange", function () {
-					 if (this.readyState === 4) {
-						 if ((xhr.response === "ok") && (!isAuthenticated)){
+					 if ((this.readyState === 4) && (!isAuthenticated)) {
+						 if (xhr.response === "ok"){
 							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
 							 document.getElementById("alertBind").style = "color : black";
 							 console.log(xhr.response);						 

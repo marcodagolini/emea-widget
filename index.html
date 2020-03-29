@@ -100,6 +100,7 @@
  <script>
 	 
 	 var convID;
+	 var isAuthenticated = false;
 	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -149,7 +150,7 @@
 				 var xhr = new XMLHttpRequest();
 				 xhr.addEventListener("readystatechange", function () {
 					 if (this.readyState === 4) {
-						 if (xhr.response === "ok"){
+						 if ((xhr.response === "ok") && (!isAuthenticated)){
 							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
 							 document.getElementById("alertBind").style = "color : black";
 							 console.log(xhr.response);						 
@@ -215,6 +216,7 @@
 					if(xhr.response === "ko"){
 						
 					} else{
+						isAuthenticated = true;
 						var myResponse = JSON.parse(xhr.response);
 						console.log(myResponse.picture);
 						$('#customerPicture').attr('src', myResponse.picture);

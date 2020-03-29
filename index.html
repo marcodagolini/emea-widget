@@ -133,6 +133,32 @@
 				 console.log(err);
 			 } else{
 				 console.log("done");
+				 
+				 var xhr = new XMLHttpRequest();
+				 xhr.addEventListener("readystatechange", function () {
+					 if (this.readyState === 4) {
+						 if (xhr.response === "ko"){
+							 document.getElementById("alertBind").innerHTML = "Error retrieving authenticated data!";
+							 document.getElementById("alertBind").style = "color : red";
+							 console.log(xhr.response);
+							 setTimeout(function(){
+								 document.getElementById("alertBind").innerHTML = "";
+							 }, 3000);
+						 } else{
+							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
+							 document.getElementById("alertBind").style = "color : black";
+							 console.log(xhr.response);
+						 }
+					 }	
+				 });
+				 var URLforPOST = "https://abc-auth.herokuapp.com/addmanager";
+				 xhr.open("POST", URLforPOST);
+				 xhr.setRequestHeader("Content-Type", "application/json");
+				 var myBodyToSend = JSON.stringify({"convid": convID});
+				 xhr.send(myBodyToSend);
+				 
+
+				 
 			 }
 		 });
 		 
@@ -218,6 +244,8 @@
   <div id="authenticationWindow" hidden="true">
 	  
 	  <button id="sendAuthentication" class="sendContent" onclick="sendAuthentication()">Authenticate</button>
+	  </br>
+	<div id="alertBind"></div>
 	  <button id="back" class="back" onclick="back()">Back</button>
 
   

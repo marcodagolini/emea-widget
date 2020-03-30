@@ -275,6 +275,8 @@ div.products {
 			 if (this.readyState === 4) {
 				 console.log(xhr.response);
 				 if((xhr.response === "ko") || (xhr.response === "")){
+					 document.getElementById("alertBind").innerHTML = "Customer not authenticated!";
+					 document.getElementById("alertBind").style = "color : red";
 					 return false;
 				 } else{
 					 isAuthenticated = true;

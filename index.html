@@ -356,6 +356,20 @@ div.products {
 			 // appending the new product inside the list
 			 document.getElementsByClassName("products")[0].appendChild(node);
 		 }
+		 
+		 
+		 $(".product_checkbox").click(function () {
+			 if ($(this).is(":checked")) {
+				 console.log("my checkboxes1  --> " + document.querySelectorAll('input[type="checkbox"]:checked').length);
+				 console.log("my checkboxes2  --> " + $('.checkbox_class_here :checked').size());
+			 } else {
+				 console.log("my checkboxes1  --> " + document.querySelectorAll('input[type="checkbox"]:checked').length);
+				 console.log("my checkboxes2  --> " + $('.checkbox_class_here :checked').size());
+			 }
+		 });
+		 
+		 
+		 
 
               
               	var SDK = lpTag.agentSDK;

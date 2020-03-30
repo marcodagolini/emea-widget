@@ -197,6 +197,25 @@ div.products {
 		 
 		 console.log(myBody);
 		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if ((this.readyState === 4) && (!isAuthenticated)) {
+				 if (xhr.response === "ok"){
+					 console.log(xhr.response);
+				 
+				 } else{
+				 
+				 }
+			 }	
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/applePayPayload";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(myBody);
+		 xhr.send(myBodyToSend);
+		  
+		 
+		 
 	 }
 	 
 	 

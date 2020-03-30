@@ -141,6 +141,19 @@ div.products {
 	 var isAuthenticated = false;
 	 var refreshIntervalId;
 	 
+	 var myProducts = {
+		 [{"vertical":"telco",
+		   "name":"iPhone X",
+		   "price":"499.99",
+		   "tax":"49.99",
+		   "image":""}],
+		 [{"vertical":"telco",
+		   "name":"iPhone XR",
+		   "price":"599.99",
+		   "tax":"59.99",
+		   "image":""}]
+	 };
+	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
 			 var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);

@@ -358,11 +358,27 @@ div.products {
 		 
 		 
 		 $(".product_checkbox").click(function () {
+			 
+			 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
 			 if ($(this).is(":checked")) {
-				 console.log("my checkboxes1  --> " + document.querySelectorAll('input[type="checkbox"]:checked').length);
+				 console.log("my checkboxes1  --> " + myNumber);
 			 } else {
-				 console.log("my checkboxes1  --> " + document.querySelectorAll('input[type="checkbox"]:checked').length);
+				 console.log("my checkboxes1  --> " + myNumber);
 			 }
+			 if(myNumber === 0){
+				 $("#sendApplePay").prop( "disabled", true );
+				 $("#sendListPicker").prop( "disabled", true );
+				 
+			 } else if (myNumber === 1){
+				 $("#sendApplePay").prop( "disabled", false );
+				 $("#sendListPicker").prop( "disabled", false );
+				 
+			 } else{
+				 $("#sendApplePay").prop( "disabled", true );
+				 $("#sendListPicker").prop( "disabled", false );
+			 }
+			 
+			 
 		 });
 		 
 		 
@@ -454,12 +470,13 @@ div.products {
 
   <div id="applePayWindow" hidden="true">
 	  
-	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()">ApplePay</button>
+	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
+	  <button id="sendListPicker" class="sendContent" onclick="sendApplePay()" style="float: right;" disabled>ListPicker</button>
 	  
 	  <div class="products"></div>
 	  
 	  <button id="back" class="back" onclick="back()">Back</button>
-
+	  
   
     
     

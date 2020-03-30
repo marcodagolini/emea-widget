@@ -8,10 +8,18 @@
 <style>
 	
 	
-.product_container{
+.product_container_a{
 	width:100%;
 	height:50px;
 	background-color: #AAB5B2;
+	display: flex;
+	align-items: center
+
+}
+.product_container_b{
+	width:100%;
+	height:50px;
+	background-color: #C7D4D1;
 	display: flex;
 	align-items: center
 
@@ -293,32 +301,40 @@ div.products {
 		 $('.products').css('height',myNewHeight);
 		 $('.products').css('width',myNewWidth);
 		 
+		 var product_container = true;
+		 
 		 for(var z=0; z<20;z++){
-		 //creeating the new product element
-		 var node = document.createElement("div");
-		 node.className = "product_container";
-		 
-		 //appending the checkbox
-		 var newCheckBox = document.createElement('input');
-		 newCheckBox.type = 'checkbox';
-		 newCheckBox.id = 'ptworkinfo' + "1";
-		 newCheckBox.className = "product_checkbox";
-		 node.appendChild(newCheckBox);
-		 
-		 //appending the img
-		 var oImg = document.createElement("img");
-		 oImg.className = "product_img";
-		 oImg.setAttribute('src', 'https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png');
-		 node.appendChild(oImg);
-		 
-		 // appending the label
-		 var newLabel = document.createElement("LABEL");
-		 newLabel.className = "product_name";
-		newLabel.innerHTML = "myProduct";
-		 node.appendChild(newLabel);
-		 
-		 // appending the new product inside the list
-		 document.getElementsByClassName("products")[0].appendChild(node);
+			 //creeating the new product element
+			 var node = document.createElement("div");
+			 if(product_container){
+				 node.className = "product_container_a";
+				 product_container = false;
+			 } else{
+				 node.className = "product_container_b";
+				 product_container = true;
+			 }
+			 
+			 //appending the checkbox
+			 var newCheckBox = document.createElement('input');
+			 newCheckBox.type = 'checkbox';
+			 newCheckBox.id = 'ptworkinfo' + "1";
+			 newCheckBox.className = "product_checkbox";
+			 node.appendChild(newCheckBox);
+			 
+			 //appending the img
+			 var oImg = document.createElement("img");
+			 oImg.className = "product_img";
+			 oImg.setAttribute('src', 'https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png');
+			 node.appendChild(oImg);
+			 
+			 // appending the label
+			 var newLabel = document.createElement("LABEL");
+			 newLabel.className = "product_name";
+			 newLabel.innerHTML = "myProduct";
+			 node.appendChild(newLabel);
+			 
+			 // appending the new product inside the list
+			 document.getElementsByClassName("products")[0].appendChild(node);
 		 }
 
               

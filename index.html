@@ -179,9 +179,14 @@ div.products {
 		 var myIdNumber = myIdCheckBox.substring(10, 11);
 		 var idToSearch = "myLabel" + myIdNumber;
 		 var myProductName = $(idToSearch)[0].innerHTML;
+		 idToSearch = "myPrice" + myIdNumber;
+		 var myProductPrice = $(idToSearch)[0].innerHTML;
+		 idToSearch = "myTax" + myIdNumber;
+		 var myProductTax = $(idToSearch)[0].innerHTML;
+		 idToSearch = "myCurrency" + myIdNumber;
+		 var myProductCurrency = $(idToSearch)[0].innerHTML;
 		 
-		 
-		 
+		 console.log(myProductName + " <--> " + myProductPrice + " <--> " + myProductTax + " <--> " + myProductCurrency);
 		 
 	 }
 	 

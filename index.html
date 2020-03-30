@@ -310,9 +310,9 @@ div.products {
 		 node.appendChild(oImg);
 		 
 		 // appending the label
-		 var textnode = document.createTextNode("Water");
-		 textnode.className = "product_name";
-		 node.appendChild(textnode);
+		 var newLabel = document.createElement("LABEL");
+		 newLabel.className = "product_name";
+		 node.appendChild(newLabel);
 		 
 		 // appending the new product inside the list
 		 document.getElementsByClassName("products")[0].appendChild(node);

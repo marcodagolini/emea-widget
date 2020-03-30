@@ -34,6 +34,9 @@
 	position: absolute;
 	margin-left:200px;
 }
+.product_hidden{
+	display: none;
+}
 	
 	
 div.products {
@@ -151,12 +154,14 @@ div.products {
 		   "name":"iPhone X",
 		   "price":"499.99",
 		   "tax":"49.99",
+		   "currency":"GBP",
 		   "image":"https://res.cloudinary.com/djtjkiytu/image/upload/v1584569289/mycar.png"
 		 },
 		 {"vertical":"telco",
 		   "name":"iPhone XR",
 		   "price":"599.99",
 		   "tax":"59.99",
+		   "currency":"GBP",
 		   "image":"https://res.cloudinary.com/djtjkiytu/image/upload/v1547634069/ytyp59erht00978sqnxu.jpg"
 		 }]
 	 };
@@ -168,6 +173,18 @@ div.products {
 		 });
 	 }
 	 
+	 
+	 
+	 function sendApplePay(){
+		 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[0].id;
+		 var myIdNumber = myIdCheckBox.substring(10, 11);
+		 var idToSearch = "myLabel" + myIdNumber;
+		 var myProductName = $(idToSearch)[0].innerHTML;
+		 
+		 
+		 
+		 
+	 }
 	 
 	 
 
@@ -358,6 +375,24 @@ div.products {
 			 newLabel.id = 'myLabel' + z;
 			 newLabel.innerHTML = myProducts.myItems[z].name;
 			 node.appendChild(newLabel);
+			 
+			 var newPrice = document.createElement("LABEL");
+			 newPrice.className = "product_hidden";
+			 newPrice.id = 'myPrice' + z;
+			 newPrice.innerHTML = myProducts.myItems[z].price;
+			 node.appendChild(newPrice);
+			 
+			 var newTax = document.createElement("LABEL");
+			 newTax.className = "product_hidden";
+			 newTax.id = 'myTax' + z;
+			 newTax.innerHTML = myProducts.myItems[z].tax;
+			 node.appendChild(newTax);
+			 
+			 var newCurrency = document.createElement("LABEL");
+			 newCurrency.className = "product_hidden";
+			 newCurrency.id = 'myCurrency' + z;
+			 newCurrency.innerHTML = myProducts.myItems[z].currency;
+			 node.appendChild(newCurrency);
 			 
 			 // appending the new product inside the list
 			 document.getElementsByClassName("products")[0].appendChild(node);

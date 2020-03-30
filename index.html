@@ -292,21 +292,28 @@ div.products {
 		 $('.products').css('height',myNewHeight);
 		 $('.products').css('width',myNewWidth);
 		 
-		 
+		 //creeating the new product element
 		 var node = document.createElement("div");
 		 node.className = "product_container";
 		 
+		 //appending the checkbox
 		 var newCheckBox = document.createElement('input');
 		 newCheckBox.type = 'checkbox';
-		 newCheckBox.id = 'ptworkinfo' + "1"; // need unique Ids!
+		 newCheckBox.id = 'ptworkinfo' + "1";
 		 newCheckBox.className = "product_checkbox";
-		 
-		 // newCheckBox.value = check_value[count]
 		 node.appendChild(newCheckBox);
 		 
+		 //appending the img
+		 var oImg = document.createElement("img");
+		 oImg.className = "product_img";
+		 oImg.setAttribute('src', 'https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png');
+		 node.appendChild(oImg);
+		 
+		 // appending the label
 		 var textnode = document.createTextNode("Water");
 		 node.appendChild(textnode);
 		 
+		 // appending the new product inside the list
 		 document.getElementsByClassName("products")[0].appendChild(node);
 
               

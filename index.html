@@ -8,6 +8,25 @@
 <style>
 	
 	
+.product_container{
+	width:100%;
+	height:50px;
+	background-color: #AAB5B2;
+	display: flex;
+	align-items: center
+
+}
+.product_checkbox{
+	margin:20px;
+}
+.product_img{
+	height:90%;
+}
+.product_name{
+	margin-left:20px;
+}
+	
+	
 div.products {
   background-color: lightblue;
   height: 300px;
@@ -362,7 +381,13 @@ div.products {
 	  
 	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()">ApplePay</button>
 	  
-	  <div class="products">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</div>
+	  <div class="products">
+		  <div class="product_container">
+			  <input type="checkbox" id="vehicle1" class="product_checkbox" name="vehicle1" value="Bike">
+			  <img id="customerPicture" class="product_img" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png">
+			  <label class="product_name">Product Name</label>
+		  </div>
+	  </div>
 	  
 	  <button id="back" class="back" onclick="back()">Back</button>
 

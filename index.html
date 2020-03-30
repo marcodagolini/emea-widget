@@ -188,7 +188,14 @@ div.products {
 		 idToSearch = "#myCurrency" + myIdNumber;
 		 var myProductCurrency = $(idToSearch)[0].innerHTML;
 		 
-		 console.log(myProductName + " <--> " + myProductPrice + " <--> " + myProductTax + " <--> " + myProductCurrency);
+		 var myBody = {"convid": convID,
+			       "nameitem": myProductName,
+			       "price": myProductPrice,
+			       "tax": myProductTax,
+			       "currency": myProductCurrency
+			      }
+		 
+		 console.log(myBody);
 		 
 	 }
 	 

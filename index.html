@@ -264,6 +264,10 @@ div.products {
 	 
 	 
 	 $(document).ready(function() {
+		 
+		 var myHeight = window.innerHeight - 150;
+		 var myNewHeight = myHeight.toString() + 'px';
+		 $('.products').css('height',myNewHeight);
 
               
               	var SDK = lpTag.agentSDK;
@@ -295,7 +299,7 @@ div.products {
 	 
 	 
 	 $(window).resize(function() {
-		 var myHeight = window.innerHeight - 50;
+		 var myHeight = window.innerHeight - 150;
 		 var myNewHeight = myHeight.toString() + 'px';
 		 $('.products').css('height',myNewHeight);
 	 });

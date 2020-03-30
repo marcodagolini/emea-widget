@@ -341,13 +341,13 @@ div.products {
 			 //appending the img
 			 var oImg = document.createElement("img");
 			 oImg.className = "product_img";
-			 oImg.setAttribute('src', myProducts[z].image);
+			 oImg.setAttribute('src', myProducts.myItems[z].image);
 			 node.appendChild(oImg);
 			 
 			 // appending the label
 			 var newLabel = document.createElement("LABEL");
 			 newLabel.className = "product_name";
-			 newLabel.innerHTML = myProducts[z].name;
+			 newLabel.innerHTML = myProducts.myItems[z].name;
 			 node.appendChild(newLabel);
 			 
 			 // appending the new product inside the list

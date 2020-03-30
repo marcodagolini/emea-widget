@@ -146,12 +146,12 @@ div.products {
 		   "name":"iPhone X",
 		   "price":"499.99",
 		   "tax":"49.99",
-		   "image":""}],
+		   "image":"https://res.cloudinary.com/djtjkiytu/image/upload/v1584569289/mycar.png"}],
 		 [{"vertical":"telco",
 		   "name":"iPhone XR",
 		   "price":"599.99",
 		   "tax":"59.99",
-		   "image":""}]
+		   "image":"https://res.cloudinary.com/djtjkiytu/image/upload/v1547634069/ytyp59erht00978sqnxu.jpg"}]
 	 };
 	 
 	 function uuidv4() {
@@ -316,7 +316,9 @@ div.products {
 		 
 		 var product_container = true;
 		 
-		 for(var z=0; z<20;z++){
+		 var productLength = myProducts.length;
+		 
+		 for(var z = 0; z < productLength; z++){
 			 //creeating the new product element
 			 var node = document.createElement("div");
 			 if(product_container){
@@ -330,20 +332,20 @@ div.products {
 			 //appending the checkbox
 			 var newCheckBox = document.createElement('input');
 			 newCheckBox.type = 'checkbox';
-			 newCheckBox.id = 'ptworkinfo' + "1";
+			 newCheckBox.id = 'myCheckBox' + z;
 			 newCheckBox.className = "product_checkbox";
 			 node.appendChild(newCheckBox);
 			 
 			 //appending the img
 			 var oImg = document.createElement("img");
 			 oImg.className = "product_img";
-			 oImg.setAttribute('src', 'https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png');
+			 oImg.setAttribute('src', myProducts[z].image);
 			 node.appendChild(oImg);
 			 
 			 // appending the label
 			 var newLabel = document.createElement("LABEL");
 			 newLabel.className = "product_name";
-			 newLabel.innerHTML = "myProduct";
+			 newLabel.innerHTML = myProducts[z].name;
 			 node.appendChild(newLabel);
 			 
 			 // appending the new product inside the list

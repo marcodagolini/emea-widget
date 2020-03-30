@@ -295,8 +295,18 @@ div.products {
 		 
 		 var node = document.createElement("div");
 		 node.className = "product_container";
+		 
+		 var newCheckBox = document.createElement('input');
+		 newCheckBox.type = 'checkbox';
+		 newCheckBox.id = 'ptworkinfo' + "1"; // need unique Ids!
+		 newCheckBox.className = "product_checkbox";
+		 
+		 // newCheckBox.value = check_value[count]
+		 node.appendChild(newCheckBox);
+		 
 		 var textnode = document.createTextNode("Water");
 		 node.appendChild(textnode);
+		 
 		 document.getElementsByClassName("products")[0].appendChild(node);
 
               

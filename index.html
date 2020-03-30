@@ -265,9 +265,12 @@ div.products {
 	 
 	 $(document).ready(function() {
 		 
-		 var myHeight = window.innerHeight - 150;
+		 var myHeight = window.innerHeight - 200;
+		 var myWidth = window.innerWidth -20;
 		 var myNewHeight = myHeight.toString() + 'px';
+		 var myNewWidth = myWidth.toString() + 'px';
 		 $('.products').css('height',myNewHeight);
+		 $('.products').css('width',myNewHeight);
 
               
               	var SDK = lpTag.agentSDK;
@@ -299,9 +302,12 @@ div.products {
 	 
 	 
 	 $(window).resize(function() {
-		 var myHeight = window.innerHeight - 150;
+		 var myHeight = window.innerHeight - 200;
+		 var myWidth = window.innerWidth -20;
 		 var myNewHeight = myHeight.toString() + 'px';
+		 var myNewWidth = myWidth.toString() + 'px';
 		 $('.products').css('height',myNewHeight);
+		 $('.products').css('width',myNewHeight);
 	 });
 	 
 	 

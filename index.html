@@ -528,6 +528,32 @@ div.products {
 	 }
 	 
 	 
+	 function fireNewProduct(){
+		 
+		 const { value: formValues } = await Swal.fire({
+			 title: 'Multiple inputs',
+			 html:
+			 '<input id="swal-input1" class="swal2-input">' +
+			 '<input id="swal-input2" class="swal2-input">',
+			 focusConfirm: false,
+			 preConfirm: () => {
+				 return [
+					 document.getElementById('swal-input1').value,
+					 document.getElementById('swal-input2').value
+				 ]
+			 }
+		 })
+		 
+		 if (formValues) {
+			 console.log(JSON.stringify(formValues));
+			 // Swal.fire(JSON.stringify(formValues))
+		 }
+		 
+		 
+		 
+	 }
+	 
+	 
 	 
 	 function fireDelete(myId){
 		 
@@ -801,7 +827,7 @@ div.products {
 	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
 	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
 	  
-	  <button class="button_add_product" onclick="sendApplePay()"> Add product</button>
+	  <button class="button_add_product" onclick="fireNewProduct()"> Add product</button>
 	  
 	  <div class="products"></div>
 	  

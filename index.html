@@ -530,28 +530,26 @@ div.products {
 	 
 	 function fireNewProduct(){
 		 
-	/*****	 
-		 var formValues = {};
-		 formValues =  Swal.fire({
-			 title: 'Multiple inputs',
-			 html:
-			 '<input id="swal-input1" class="swal2-input">' +
-			 '<input id="swal-input2" class="swal2-input">',
-			 focusConfirm: false,
-			 preConfirm: () => {
-				 return [
-					 document.getElementById('swal-input1').value,
-					 document.getElementById('swal-input2').value
-				 ]
-			 }
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
 		 })
 		 
 		 
-		 ****/
-		 
-
-		 
-		 
+		 swalWithBootstrapButtons.fire({
+			 title: 'Are you sure?',
+			 html:
+			 '<input id="swal-input1" class="swal2-input">' +
+			 '<input id="swal-input2" class="swal2-input">',
+		 }).then((result) => {
+			 if (result.value) {
+				clnsole.log(result);
+			 }
+		 })
+		  
 	 }
 	 
 	 

@@ -7,6 +7,14 @@
 <style>
 	
 	
+.newObjectInput{
+	font-size: 16px;
+	margin: 10px 10px;
+	background-color: #f3f2f2;
+	
+	}
+	
+	
 .button_add_product {
 	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
 	clear: both;
@@ -541,11 +549,17 @@ div.products {
 			 title: 'Please, create your card!',
 			 html:
 			 '<select id="newObjectVertical" class="newObjectVertical"><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="opel">Opel</option><option value="audi">Audi</option></select>' +
-			 '<input id="newObjectTitle" class="newObjectInput" value="Title">' +
-			 '<input id="newObjectSubitle" class="newObjectInput" value="Subtitle">' +
-			 '<input id="newObjectPrice" class="newObjectInput" value="price">' +
-			 '<input id="newObjectTax" class="newObjectInput" value="tax">' +
-			 '<input id="newObjectImage" class="newObjectInput" value="https://something">',
+			 '</br>' +
+			 '<input id="newObjectTitle" class="newObjectInput" placeholder="Title">' +
+			 '</br>' +
+			 '<input id="newObjectSubitle" class="newObjectInput" placeholder="Subtitle">' +
+			 '</br>' +
+			 '<input id="newObjectPrice" class="newObjectInput" placeholder="price">' +
+			 '</br>' +
+			 '<input id="newObjectTax" class="newObjectInput" placeholder="tax">' +
+			 '</br>' +
+			 '<input id="newObjectImage" class="newObjectInput" placeholder="https://something">',
+			 '</br>' +
 		 }).then((result) => {
 			 if (result.value) {
 				 console.log(document.getElementById('swal-input1').value);

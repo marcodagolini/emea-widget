@@ -538,7 +538,7 @@ div.products {
 		 })
 		 
 		 
-		 swalWithBootstrapButtons.fire({
+		 var myResult = swalWithBootstrapButtons.fire({
 			 title: 'Are you sure?',
 			 html:
 			 '<input id="swal-input1" class="swal2-input">' +
@@ -546,9 +546,11 @@ div.products {
 		 }).then((result) => {
 			 if (result.value) {
 				 console.log(result);
-				 return true
+				 return result
 			 }
 		 })
+		 
+		 console.log("result -->. " + myResult);
 		  
 	 }
 	 

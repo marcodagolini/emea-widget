@@ -174,6 +174,88 @@ div.products {
 	 
 	 
 	 
+	 
+	 
+	 
+	 function sendListPicker(){
+		 
+		 var elementsLength = document.querySelectorAll('input[type="checkbox"]:checked').length;
+		 var JSONtoString = "";
+		 for (var a = 0; a < elementsLength; a++){
+			 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[a].id;
+			 var myIdNumber = myIdCheckBox.substring(10, 11);
+			 var idToSearch = "#myLabel" + myIdNumber;
+			 var myProductName = $(idToSearch)[a].innerHTML;
+			 idToSearch = "#myPrice" + myIdNumber;
+			 var myProductPrice = $(idToSearch)[a].innerHTML;
+			 idToSearch = "#myTax" + myIdNumber;
+			 var myProductTax = $(idToSearch)[a].innerHTML;
+			 idToSearch = "#myCurrency" + myIdNumber;
+			 var myProductCurrency = $(idToSearch)[a].innerHTML;
+			 idToSearch = "#myImg" + myIdNumber;
+			 var myProductImg = $(idToSearch)[a].src;
+			 
+			 var myText = myProductName + " - " + myProductCurrency + myProductPrice;
+			 
+			 
+			 var elementToAdd = {"type":"horizontal",
+					     "elements":[{"type":"image",
+							  "url":myProductImg
+							 },{"type":"vertical",
+							    "elements":[{"type":"text",
+									 "tag":"title",
+									 "text":myProductName
+									},{"type":"text",
+									   "tag":"subtitle",
+									   "text":myText}]
+							   }]
+					    }
+			 
+			 JSONtoString = JSONtoString + JSON.stringify(elementToAdd) + ",";
+			 
+			 
+		 }
+		 
+		 
+		 JSONtoString = JSONtoString.substring(0, str.length - 1);
+		 
+		 JSONtoString = '{"type":"vertical","tag":"list","elements":[{"type":"vertical","elements":[{"type":"text","text":""},' + JSONtoString + "]}]}]}]}";
+		 
+		 var listPickerSC = JSON.parse(JSONtoString);
+		 
+		 var metadataSC = [{"type":"BusinessChatMessage",
+				    "multipleSelection":true,
+				    "receivedMessage":{"style":"icon",
+						       "subtitle":"Please select from the below list",
+						       "title":"Choose from one of our available products",
+						       "imageURL":"https://liveengage-abc.herokuapp.com/img/routing/routing_lstpkr_wdgt.png"}
+				   }]
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: listPickerSC,
+			 metadata: metadataSC
+		 };
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 if(err){
+				 console.log(err);
+			 } else{
+				 console.log("done");
+			 }
+		 });
+				 
+
+		  
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
 	 function sendApplePay(){
 		 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[0].id;
 		 var myIdNumber = myIdCheckBox.substring(10, 11);
@@ -559,7 +641,7 @@ div.products {
   <div id="applePayWindow" hidden="true">
 	  
 	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
-	  <button id="sendListPicker" class="sendContent" onclick="sendApplePay()" style="float: right;" disabled>ListPicker</button>
+	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
 	  
 	  <div class="products"></div>
 	  

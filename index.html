@@ -194,12 +194,33 @@ div.products {
 		 var xhr = new XMLHttpRequest();
 		 xhr.addEventListener("readystatechange", function () {
 			 if (this.readyState === 4) {
-				 if (xhr.response === "ok"){
-					 console.log(xhr.response);
 				 
-				 } else{
+				 var total = (parseInt(myProductPrice) + parseInt(myProductTax)).toString();
+				 var titleBubble = "Apple Pay Request | $" + total;
+				 var applePaySC = {
+						"type":"vertical",
+						"tag":"payment",
+						"elements":[
+							{"type":"text","text":titleBubble}
+						]}
+					 
 				 
-				 }
+				 
+				 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+				 var payload = {
+					 json: applePaySC,
+					 metadata: xhr.response
+				 };
+				 
+				 lpTag.agentSDK.command(cmdName, payload, function (err) {
+					 if(err){
+						 console.log(err);
+					 } else{
+						 console.log("done");
+					 }
+				 });
+				 
+
 			 }	
 		 });
 		 var URLforPOST = "https://abc-auth.herokuapp.com/applePayPayload";

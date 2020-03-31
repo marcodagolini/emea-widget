@@ -528,9 +528,9 @@ div.products {
 	 
 	 function fireNewProduct(){
 		 
-		 /******
 		 
-		 const { value: formValues } = await Swal.fire({
+		 var formValues = {};
+		 formValues = await Swal.fire({
 			 title: 'Multiple inputs',
 			 html:
 			 '<input id="swal-input1" class="swal2-input">' +
@@ -548,8 +548,8 @@ div.products {
 			 console.log(JSON.stringify(formValues));
 			 // Swal.fire(JSON.stringify(formValues))
 		 }
+
 		 
-		 *****/
 		 
 	 }
 	 

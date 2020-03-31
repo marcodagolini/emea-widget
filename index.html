@@ -9,6 +9,16 @@
 <style>
 	
 	
+.product_button {
+    background:url(https://res.cloudinary.com/djtjkiytu/image/upload/v1585678931/Web_-_Design_-_Device_128-512.png) no-repeat;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+    float: right;
+}
+	
+	
 .product_container_a{
 	width:100%;
 	height:50px;
@@ -527,6 +537,12 @@ div.products {
 			 newCurrency.id = 'myCurrency' + z;
 			 newCurrency.innerHTML = myProducts.products[z].currency;
 			 node.appendChild(newCurrency);
+			 
+			 var newBtn = document.createElement("BUTTON");
+			 newBtn.className = "product_button";
+			 newBtn.id = 'myButton' + z;
+			 node.appendChild(newBtn);
+			 
 			 
 			 // appending the new product inside the list
 			 document.getElementsByClassName("products")[0].appendChild(node);

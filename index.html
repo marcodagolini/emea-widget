@@ -546,12 +546,13 @@ div.products {
 			 '<input id="swal-input2" class="swal2-input">',
 		 }).then((result) => {
 			 if (result.value) {
+				 console.log(document.getElementById('swal-input1').value);
+				 console.log(document.getElementById('swal-input2').value);
 				 console.log(result);
 				 return result
 			 }
 		 })
 		 
-		 console.log("result -->. " + myResult);
 		  
 	 }
 	 

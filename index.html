@@ -540,10 +540,13 @@ div.products {
 		 
 		 
 		 var myResult = swalWithBootstrapButtons.fire({
-			 title: 'Are you sure?',
+			 title: 'Please, create your card!',
 			 html:
-			 '<input id="swal-input1" class="swal2-input">' +
-			 '<input id="swal-input2" class="swal2-input">',
+			 '<select id="cars"><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="opel">Opel</option><option value="audi">Audi</option></select>' +
+			 '<input id="swal-input1" class="swal2-input" value="Name">' +
+			 '<input id="swal-input1" class="swal2-input" value="price">' +
+			 '<input id="swal-input2" class="swal2-input" value="tax">' +
+			 '<input id="swal-input2" class="swal2-input" value="https://something">',
 		 }).then((result) => {
 			 if (result.value) {
 				 console.log(document.getElementById('swal-input1').value);

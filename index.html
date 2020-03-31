@@ -538,7 +538,8 @@ div.products {
 			 newCurrency.innerHTML = myProducts.products[z].currency;
 			 node.appendChild(newCurrency);
 			 
-			 var newBtn = document.createElement("BUTTON");
+			 var newBtn = document.createElement("input");
+			 newBtn.type = "text";
 			 newBtn.className = "product_button";
 			 newBtn.id = 'myButton' + z;
 			 node.appendChild(newBtn);

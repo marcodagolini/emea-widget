@@ -193,7 +193,7 @@ div.products {
 		 
 		 var xhr = new XMLHttpRequest();
 		 xhr.addEventListener("readystatechange", function () {
-			 if ((this.readyState === 4) && (!isAuthenticated)) {
+			 if (this.readyState === 4) {
 				 if (xhr.response === "ok"){
 					 console.log(xhr.response);
 				 
@@ -205,7 +205,6 @@ div.products {
 		 var URLforPOST = "https://abc-auth.herokuapp.com/applePayPayload";
 		 xhr.open("POST", URLforPOST);
 		 xhr.setRequestHeader("Content-Type", "application/json");
-		 xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 		 var myBodyToSend = JSON.stringify(myBody);
 		 xhr.send(myBodyToSend);
 		  

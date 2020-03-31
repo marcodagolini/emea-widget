@@ -471,6 +471,49 @@ div.products {
 	 }
 	 
 	 
+	 
+	 function fireDelete(myId){
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 swalWithBootstrapButtons.fire({
+			 title: 'Are you sure?',
+			 text: "You won't be able to revert this!",
+			 icon: 'warning',
+			 showCancelButton: true,
+			 confirmButtonText: 'Yes, delete it!',
+			 cancelButtonText: 'No, cancel!',
+			 reverseButtons: true
+		 }).then((result) => {
+			 if (result.value) {
+				 myId = "#" + myId;
+				 $(myId).remove();
+				 swalWithBootstrapButtons.fire(
+					 'Deleted!',
+					 'Your record has been deleted.',
+					 'success'
+				 )
+			 } else if (
+				 /* Read more about handling dismissals below */
+				 result.dismiss === Swal.DismissReason.cancel
+			 ) {
+				 swalWithBootstrapButtons.fire(
+					 'Cancelled',
+					 'Your record is still there :)',
+					 'error'
+				 )
+			 }
+		 })
+		 
+	 }
+	 
+	 
 	 function createObjects(myProducts){
 		 
 		 var product_container = true;
@@ -487,7 +530,7 @@ div.products {
 				 node.className = "product_container_b";
 				 product_container = true;
 			 }
-			 node.id = myProducts.products[z].id;
+			 node.id = 'myContainer' + z;
 			 //appending the checkbox
 			 var newCheckBox = document.createElement('input');
 			 newCheckBox.type = 'checkbox';
@@ -542,7 +585,10 @@ div.products {
 		 }
 		 
 		 $('.product_button').on('click', function(evt) {
-			 console.log(evt.target.id);
+			 var myId = evt.target.id;
+			 var res = myId.replace("myButton", "myContainer");
+			 fireDelete(res);
+
 		 });
 	 
 		 

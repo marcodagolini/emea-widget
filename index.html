@@ -20,6 +20,7 @@
 	font-size: 16px;
 	top: 100px;
 	right: 10px;
+	position: absolute;
 }
 
 .button_add_product:active {
@@ -557,11 +558,14 @@ div.products {
 				 /* Read more about handling dismissals below */
 				 result.dismiss === Swal.DismissReason.cancel
 			 ) {
+				 /****
 				 swalWithBootstrapButtons.fire(
 					 'Cancelled',
 					 'Your record is still there :)',
 					 'error'
 				 )
+				 
+				 *****/
 			 }
 		 })
 		 

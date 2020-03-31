@@ -538,12 +538,11 @@ div.products {
 			 document.getElementsByClassName("products")[0].appendChild(node);
 			 
 			 
-			 $('.product_button').on('click', function(evt) {
-				 console.log(evt);
-			 });
-			 
-			 
 		 }
+		 
+		 $('.product_button').on('click', function(evt) {
+			 console.log(evt.target.id);
+		 });
 	 
 		 
 	 }

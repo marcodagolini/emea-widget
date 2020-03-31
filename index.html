@@ -7,6 +7,24 @@
 <style>
 	
 	
+button_add_product {
+  background: #ededed;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+button_add_product:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+	
+	
 .btn-danger{
 	color: white;
 	background-color: red;
@@ -760,6 +778,8 @@ div.products {
 	  
 	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
 	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
+	  
+	  <button class="button_add_product" style="float: right;" onclick="sendApplePay()"> Add product</button>
 	  
 	  <div class="products"></div>
 	  

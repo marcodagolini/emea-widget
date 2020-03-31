@@ -473,6 +473,8 @@ div.products {
 	 
 	 function createObjects(myProducts){
 		 
+		 var product_container = true;
+		 
 		 var productLength = myProducts.products.length;
 		 
 		 for(var z = 0; z < productLength; z++){
@@ -554,7 +556,7 @@ div.products {
 		 $('.products').css('width',myNewWidth);
 		 $('.product_button').css('right','10px');
 		 
-		 var product_container = true;
+		 
 		 
 		 createObjects(myProducts);
 

@@ -582,6 +582,29 @@ div.products {
 		 
 	 }
 	 
+	 function fireSuccess(msg){
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 swalWithBootstrapButtons.fire({
+			 icon: 'success',
+			 title: msg
+		 })
+		 
+	 }
+	 
+	 
+	 function loadMyNewProduct(objectToPush){
+		 
+		 
+	 }
+	 
 	 
 	 
 	 function checkObjectToPush(objectToPush){
@@ -601,19 +624,22 @@ div.products {
 		 
 		 if (!title) {
 			 console.log("empty title");
-			 fireError("Title should not be empty!");
+			 fireError("The field 'Title' should not be empty!");
 		 } else if (!subtitle) {
 			 console.log("empty subtitle");
-			 fireError("Subtitle should not be empty!");
+			 fireError("The field 'Subtitle' should not be empty!");
 		 } else if (isNaN(price) || !price) {
 			 console.log("nan price");
-			 fireError("Price should be a number!");
+			 fireError("The field 'Price' should be a number!");
 		 } else if (isNaN(tax) || !tax) {
 			 console.log("nan tax");
-			 fireError("Tax should be a number!");
+			 fireError("The field 'Tax' should be a number!");
 		 } else if (!isHttps) {
 			 console.log("not img");
-			 fireError("Image should be hosted in https!");
+			 fireError("Your image should be hosted in https!");
+		 } else {
+			 fireSuccess(msg);
+			 loadMyNewProduct(objectToPush);
 		 }
 		 
 	 }

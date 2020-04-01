@@ -1066,6 +1066,8 @@ div.products {
 		 
 		 
 		 $('.selectVertical').on('change', function() {
+			 $(".product_container_a").remove();
+			 $(".product_container_b").remove();
 			 createObjects(myProducts, this.value);
 		 });
 

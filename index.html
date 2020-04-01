@@ -611,6 +611,8 @@ div.products {
 			 product_container = true;
 		 }
 		 
+		 var myLabelToShow = objectToPush.title
+		 
 		 var z = 100;
 		 
 		 node.id = 'myContainer' + z;
@@ -625,14 +627,14 @@ div.products {
 		 var oImg = document.createElement("img");
 		 oImg.className = "product_img";
 		 oImg.id = 'myImg' + z;
-		 oImg.setAttribute('src', objectToPush.image);
+		 oImg.setAttribute('src', objectToPush.img);
 		 node.appendChild(oImg);
 			 
 		 // appending the label
 		 var newLabel = document.createElement("LABEL");
 		 newLabel.className = "product_name";
 		 newLabel.id = 'myLabel' + z;
-		 newLabel.innerHTML = objectToPush.name;
+		 newLabel.innerHTML = myLabelToShow;
 		 node.appendChild(newLabel);
 			 
 		 var newPrice = document.createElement("LABEL");

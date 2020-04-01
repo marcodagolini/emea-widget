@@ -603,6 +603,66 @@ div.products {
 	 
 	 function loadMyNewProduct(objectToPush){
 		 
+		 var node = document.createElement("div");
+		 if(product_container){
+			 node.className = "product_container_a";
+			 product_container = false;
+		 } else{
+			 node.className = "product_container_b";
+			 product_container = true;
+		 }
+		 
+		 var z = 100;
+		 
+		 node.id = 'myContainer' + z;
+		 //appending the checkbox
+		 var newCheckBox = document.createElement('input');
+		 newCheckBox.type = 'checkbox';
+		 newCheckBox.id = 'myCheckBox' + z;
+		 newCheckBox.className = "product_checkbox";
+		 node.appendChild(newCheckBox);
+			 
+		 //appending the img
+		 var oImg = document.createElement("img");
+		 oImg.className = "product_img";
+		 oImg.id = 'myImg' + z;
+		 oImg.setAttribute('src', objectToPush.image);
+		 node.appendChild(oImg);
+			 
+		 // appending the label
+		 var newLabel = document.createElement("LABEL");
+		 newLabel.className = "product_name";
+		 newLabel.id = 'myLabel' + z;
+		 newLabel.innerHTML = objectToPush.name;
+		 node.appendChild(newLabel);
+			 
+		 var newPrice = document.createElement("LABEL");
+		 newPrice.className = "product_hidden";
+		 newPrice.id = 'myPrice' + z;
+		 newPrice.innerHTML = objectToPush.price;
+		 node.appendChild(newPrice);
+			 
+		 var newTax = document.createElement("LABEL");
+		 newTax.className = "product_hidden";
+		 newTax.id = 'myTax' + z;
+		 newTax.innerHTML = objectToPush.tax;
+		 node.appendChild(newTax);
+			 
+		 var newCurrency = document.createElement("LABEL");
+		 newCurrency.className = "product_hidden";
+		 newCurrency.id = 'myCurrency' + z;
+		 newCurrency.innerHTML = objectToPush.currency;
+		 node.appendChild(newCurrency);
+			 
+		 var newBtn = document.createElement("input");
+		 newBtn.type = "button";
+		 newBtn.className = "product_button";
+		 newBtn.id = 'myButton' + z;
+		 newBtn.setAttribute("style", "right:10px");
+		 node.appendChild(newBtn);
+			 
+		 // appending the new product inside the list
+		 document.getElementsByClassName("products")[0].appendChild(node);
 		 
 	 }
 	 

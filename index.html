@@ -605,9 +605,8 @@ div.products {
 			 reverseButtons: true
 		 }).then((result) => {
 			 if (result.value) {
-				 var myElement = "#myCheckBox" + myId;
-				 $(myElement).prop('checked', false);
-				 myElement = "#myContainer" + myId;
+				 
+				 var myElement = "#myContainer" + myId;
 				 $(myElement).remove();
 				 
 				 const Toast = Swal.mixin({
@@ -734,6 +733,9 @@ div.products {
 		 $('.product_button').on('click', function(evt) {
 			 var myId = evt.target.id;
 			 var res = myId.replace("myButton", "");
+			 var myElement = "#myCheckBox" + myId;
+			 $(myElement).prop('checked', false);
+			 
 			 fireDelete(res);
 
 		 });

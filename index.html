@@ -961,54 +961,12 @@ div.products {
 				 fireSmallSuccess("Product deleted!");
 				 
 				 
-				 /****
-				 const Toast = Swal.mixin({
-					 toast: true,
-					 position: 'top-end',
-					 showConfirmButton: false,
-					 timer: 3000,
-					 timerProgressBar: true,
-					 onOpen: (toast) => {
-						 toast.addEventListener('mouseenter', Swal.stopTimer)
-						 toast.addEventListener('mouseleave', Swal.resumeTimer)
-					 }
-				 })
-				 Toast.fire({
-					 icon: 'success',
-					 title: 'Product deleted!'
-				 })
 				 
-				 ****/
-				 
-				 
-				 /****
-				 
-				 swalWithBootstrapButtons.fire({
-					 position: 'top-end',
-					 icon: 'success',
-					 title: 'Your record has been deleted',
-					 showConfirmButton: false,
-					 timer: 1500
-				 })
-				 
-				 swalWithBootstrapButtons.fire(
-					 'Deleted!',
-					 'Your record has been deleted.',
-					 'success'
-				 )
-				 ******/
 			 } else if (
 				 /* Read more about handling dismissals below */
 				 result.dismiss === Swal.DismissReason.cancel
 			 ) {
-				 /****
-				 swalWithBootstrapButtons.fire(
-					 'Cancelled',
-					 'Your record is still there :)',
-					 'error'
-				 )
-				 
-				 *****/
+				
 			 }
 		 })
 		 
@@ -1021,72 +979,6 @@ div.products {
 		 
 		 for(var z = 0; z < productLength; z++){
 			 //creeating the new product element
-			 
-			 
-			 /******
-			 
-			 var node = document.createElement("div");
-			 if(product_container){
-				 node.className = "product_container_a";
-				 product_container = false;
-			 } else{
-				 node.className = "product_container_b";
-				 product_container = true;
-			 }
-			 node.id = 'myContainer' + z;
-			 //appending the checkbox
-			 var newCheckBox = document.createElement('input');
-			 newCheckBox.type = 'checkbox';
-			 newCheckBox.id = 'myCheckBox' + z;
-			 newCheckBox.className = "product_checkbox";
-			 node.appendChild(newCheckBox);
-			 
-			 //appending the img
-			 var oImg = document.createElement("img");
-			 oImg.className = "product_img";
-			 oImg.id = 'myImg' + z;
-			 oImg.setAttribute('src', myProducts.products[z].image);
-			 node.appendChild(oImg);
-			 
-			 // appending the label
-			 var newLabel = document.createElement("LABEL");
-			 newLabel.className = "product_name";
-			 newLabel.id = 'myLabel' + z;
-			 newLabel.innerHTML = myProducts.products[z].name;
-			 node.appendChild(newLabel);
-			 
-			 var newPrice = document.createElement("LABEL");
-			 newPrice.className = "product_hidden";
-			 newPrice.id = 'myPrice' + z;
-			 newPrice.innerHTML = myProducts.products[z].price;
-			 node.appendChild(newPrice);
-			 
-			 var newTax = document.createElement("LABEL");
-			 newTax.className = "product_hidden";
-			 newTax.id = 'myTax' + z;
-			 newTax.innerHTML = myProducts.products[z].tax;
-			 node.appendChild(newTax);
-			 
-			 var newCurrency = document.createElement("LABEL");
-			 newCurrency.className = "product_hidden";
-			 newCurrency.id = 'myCurrency' + z;
-			 newCurrency.innerHTML = myProducts.products[z].currency;
-			 node.appendChild(newCurrency);
-			 
-			 var newBtn = document.createElement("input");
-			 newBtn.type = "button";
-			 newBtn.className = "product_button";
-			 newBtn.id = 'myButton' + z;
-			 newBtn.setAttribute("style", "right:10px");
-			 node.appendChild(newBtn);
-			 
-			 
-			 // appending the new product inside the list
-			 document.getElementsByClassName("products")[0].appendChild(node);
-			 
-			 
-			 *****/
-			 
 			 
 			 var objectToPush = {"id":"","title":"","subtitle":"","currency":"","vertical":"","price":"","tax":"","img":""};
 			 
@@ -1255,6 +1147,14 @@ div.products {
 	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
 	  
 	  <button class="button_add_product" onclick="fireNewProduct()"> Add product</button>
+	  
+	  <select id="selectVertical" class="selectVertical">
+		  <option value="Telco">Telco</option>
+		  <option value="Airlines">Airlines</option>
+		  <option value="Retail">Retail</option>
+		  <option value="Banking">Banking</option>
+		  <option value="Insurance">Insurance</option>
+	  </select>
 	  
 	  <div class="products"></div>
 	  

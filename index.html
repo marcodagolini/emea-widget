@@ -560,6 +560,12 @@ div.products {
 		 
 	 }
 	 
+	 function checkObjectToPush(objectToPush){
+		 
+		 console.log(JSON.stringify(objectToPush));
+		 
+	 }
+	 
 	 
 	 function fireNewProduct(){
 		 
@@ -592,9 +598,24 @@ div.products {
 			 '</br>',
 		 }).then((result) => {
 			 if (result.value) {
-				 console.log(document.getElementById('swal-input1').value);
-				 console.log(document.getElementById('swal-input2').value);
-				 console.log(result);
+				 var titlePush = document.getElementById('newObjectTitle').value;
+				 var subtitlePush = document.getElementById('newObjectSubitle').value;
+				 var currencyPush = document.getElementById('newObjectCurrency').value;
+				 var pricePush = document.getElementById('newObjectPrice').value;
+				 var taxPush = document.getElementById('newObjectTax').value;
+				 var imgPush = document.getElementById('newObjectImage').value;
+				 
+				 var objectToPush = {"title":titlePush,
+						     "subtitle":subtitlePush,
+						     "currency":currencyPush,
+						     "price":pricePush,
+						     "tax":taxPush,
+						     "img":imgPush
+						    }
+				 
+				 checkObjectToPush(objectToPush);
+				 
+
 				 return result
 			 }
 		 })

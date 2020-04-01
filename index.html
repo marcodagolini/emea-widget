@@ -637,59 +637,71 @@ div.products {
 		 
 		 var myLabelToShow = objectToPush.title
 		 
-		 var z = 100;
+		 var myContainerCheck = "#myContainer";
+		 var myActualContainer = "";
+		 var myCounter = 0;
+		 for (var a = 0; a > -1; a++){
+			 myActualContainer = myContainerCheck + a.toString();
+			 if ($(myActualContainer).length === 0){
+				 myCounter = a;
+				 a = -10;	 
+			 }
+		 }
 		 
-		 node.id = 'myContainer' + z;
+		 console.log(myCounter);
+		 
+	 
+		 node.id = 'myContainer' + myCounter;
 		 //appending the checkbox
 		 var newCheckBox = document.createElement('input');
 		 newCheckBox.type = 'checkbox';
-		 newCheckBox.id = 'myCheckBox' + z;
+		 newCheckBox.id = 'myCheckBox' + myCounter;
 		 newCheckBox.className = "product_checkbox";
 		 node.appendChild(newCheckBox);
 			 
 		 //appending the img
 		 var oImg = document.createElement("img");
 		 oImg.className = "product_img";
-		 oImg.id = 'myImg' + z;
+		 oImg.id = 'myImg' + myCounter;
 		 oImg.setAttribute('src', objectToPush.img);
 		 node.appendChild(oImg);
 			 
 		 // appending the label
 		 var newLabel = document.createElement("LABEL");
 		 newLabel.className = "product_name";
-		 newLabel.id = 'myLabel' + z;
+		 newLabel.id = 'myLabel' + myCounter;
 		 newLabel.innerHTML = myLabelToShow;
 		 node.appendChild(newLabel);
 			 
 		 var newPrice = document.createElement("LABEL");
 		 newPrice.className = "product_hidden";
-		 newPrice.id = 'myPrice' + z;
+		 newPrice.id = 'myPrice' + myCounter;
 		 newPrice.innerHTML = objectToPush.price;
 		 node.appendChild(newPrice);
 			 
 		 var newTax = document.createElement("LABEL");
 		 newTax.className = "product_hidden";
-		 newTax.id = 'myTax' + z;
+		 newTax.id = 'myTax' + myCounter;
 		 newTax.innerHTML = objectToPush.tax;
 		 node.appendChild(newTax);
 			 
 		 var newCurrency = document.createElement("LABEL");
 		 newCurrency.className = "product_hidden";
-		 newCurrency.id = 'myCurrency' + z;
+		 newCurrency.id = 'myCurrency' + myCounter;
 		 newCurrency.innerHTML = objectToPush.currency;
 		 node.appendChild(newCurrency);
 			 
 		 var newBtn = document.createElement("input");
 		 newBtn.type = "button";
 		 newBtn.className = "product_button";
-		 newBtn.id = 'myButton' + z;
+		 newBtn.id = 'myButton' + myCounter;
 		 newBtn.setAttribute("style", "right:10px");
 		 node.appendChild(newBtn);
 			 
 		 // appending the new product inside the list
 		 document.getElementsByClassName("products")[0].appendChild(node);
 		 
-		 var myBtnId = '#myButton' + z;
+		 var myBtnId = '#myButton' + myCounter;
 		 $(myBtnId).on('click', function(evt) {
 			 var myId = evt.target.id;
 			 var res = myId.replace("myButton", "");

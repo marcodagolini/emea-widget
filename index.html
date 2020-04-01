@@ -572,7 +572,7 @@ div.products {
 			 position: 'top-end',
 			 showConfirmButton: false,
 			 timer: 3000,
-			 timerProgressBar: true,
+			 // timerProgressBar: true,
 			 onOpen: (toast) => {
 				 toast.addEventListener('mouseenter', Swal.stopTimer)
 				 toast.addEventListener('mouseleave', Swal.resumeTimer)
@@ -734,7 +734,7 @@ div.products {
 			 console.log("not img");
 			 fireError("Your image should be hosted in https!");
 		 } else {
-			 fireSuccess("Thank you!");
+			 function fireSmallSuccess("Product created!");
 			 loadMyNewProduct(objectToPush);
 		 }
 		 

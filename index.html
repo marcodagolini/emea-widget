@@ -664,6 +664,17 @@ div.products {
 		 // appending the new product inside the list
 		 document.getElementsByClassName("products")[0].appendChild(node);
 		 
+		 var myBtnId = 'myButton' + z;
+		 $(myBtnId).on('click', function(evt) {
+			 var myId = evt.target.id;
+			 var res = myId.replace("myButton", "");
+			 var myElement = "#myCheckBox" + res;
+			 $(myElement).click();
+			 
+			 fireDelete(res);
+
+		 });
+		 
 	 }
 	 
 	 

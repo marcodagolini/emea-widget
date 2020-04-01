@@ -732,7 +732,7 @@ div.products {
 		 $('.product_button').on('click', function(evt) {
 			 var myId = evt.target.id;
 			 var res = myId.replace("myButton", "");
-			 var myElement = "#myCheckBox" + myId;
+			 var myElement = "#myCheckBox" + res;
 			 $(myElement).prop('checked', false);
 			 
 			 fireDelete(res);

@@ -564,6 +564,28 @@ div.products {
 	 }
 	 
 	 
+	 function fireSmallSuccess(msg){
+		 
+		 const Toast = Swal.mixin({
+			 toast: true,
+			 position: 'top-end',
+			 showConfirmButton: false,
+			 timer: 3000,
+			 timerProgressBar: true,
+			 onOpen: (toast) => {
+				 toast.addEventListener('mouseenter', Swal.stopTimer)
+				 toast.addEventListener('mouseleave', Swal.resumeTimer)
+			 }
+		 })
+		 Toast.fire({
+			 icon: 'success',
+			 title: msg
+		 }) 
+		 
+		 
+	 }
+	 
+	 
 	 function fireError(msg){
 		 
 		 const swalWithBootstrapButtons = Swal.mixin({
@@ -800,6 +822,10 @@ div.products {
 				 var myElement = "#myContainer" + myId;
 				 $(myElement).remove();
 				 
+				 fireSmallSuccess("Product deleted!");
+				 
+				 
+				 /****
 				 const Toast = Swal.mixin({
 					 toast: true,
 					 position: 'top-end',
@@ -815,6 +841,8 @@ div.products {
 					 icon: 'success',
 					 title: 'Product deleted!'
 				 })
+				 
+				 ****/
 				 
 				 
 				 /****

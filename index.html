@@ -656,13 +656,8 @@ div.products {
 	 function loadMyNewProduct(objectToPush){
 		 
 		 var node = document.createElement("div");
-		 if(product_container){
-			 node.className = "product_container_a";
-			 product_container = false;
-		 } else{
-			 node.className = "product_container_b";
-			 product_container = true;
-		 }
+		 node.className = "product_container_a";
+			
 		 
 		 var myLabelToShow = objectToPush.title
 		 

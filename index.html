@@ -374,7 +374,7 @@ div.products {
 		 var JSONtoString = "";
 		 for (var a = 0; a < elementsLength; a++){
 			 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[a].id;
-			 var myIdNumber = myIdCheckBox.substring(10, 11);
+			 var myIdNumber = myIdCheckBox.substring(10);
 			 var idToSearch = "#myLabel" + myIdNumber;
 			 var myProductName = $(idToSearch)[0].innerHTML;
 			 idToSearch = "#myPrice" + myIdNumber;

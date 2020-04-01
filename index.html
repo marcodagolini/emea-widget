@@ -632,7 +632,7 @@ div.products {
 		 var myId = "";
 		 var myNumber = "";
 		 for (var a = 0; a < myCounter; a++){
-			 myId = $('.product_checkbox')[0].id;
+			 myId = $('.product_checkbox')[a].id;
 			 myId = myId.replace("myCheckBox", "myContainer");
 			 myId = "#" + myId
 			 $(myId).removeClass();

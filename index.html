@@ -563,6 +563,15 @@ div.products {
 		 
 	 }
 	 
+	 
+	 function fireError(msg){
+		 
+		 
+		 
+	 }
+	 
+	 
+	 
 	 function checkObjectToPush(objectToPush){
 		 
 		 console.log(JSON.stringify(objectToPush));
@@ -580,14 +589,19 @@ div.products {
 		 
 		 if (!title) {
 			 console.log("empty title");
+			 fireError("Title should not be empty!");
 		 } else if (!subtitle) {
 			 console.log("empty subtitle");
+			 fireError("Subtitle should not be empty!");
 		 } else if (isNaN(price) || !price) {
 			 console.log("nan price");
+			 fireError("Price should be a number!");
 		 } else if (isNaN(tax) || !tax) {
 			 console.log("nan tax");
+			 fireError("Tax should be a number!");
 		 } else if (!isHttps) {
 			 console.log("not img");
+			 fireError("Image should be hosted in https!");
 		 }
 		 
 	 }

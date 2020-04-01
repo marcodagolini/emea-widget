@@ -622,6 +622,34 @@ div.products {
 		 
 	 }
 	 
+
+	 function rearrangeProductColors(){
+		 
+		 var product_container = true;
+		 var myCounter = $('.product_checkbox').length;
+		 var myId = "";
+		 var myNumber = "";
+		 for (var a = 0; a < myCounter; a++){
+			 myId = $('.product_checkbox')[0].id;
+			 var myNumber = myId.replace("myCheckBox", "");
+			 myId = #myContainer" + myNumber;
+			 $(myId).removeClass();
+			 
+			 if(product_container){
+				 $(myId).addClass("product_container_a");
+				 product_container = false;
+			 } else{
+				 $(myId).addClass("product_container_b");
+				 product_container = true;
+			 }
+
+			 
+		 }
+		 
+		 
+	 }
+	 
+	 
 	 
 	 function loadMyNewProduct(objectToPush){
 		 
@@ -710,6 +738,8 @@ div.products {
 			 fireDelete(res);
 
 		 });
+		 
+		 rearrangeProductColors();
 		 
 	 }
 	 

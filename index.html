@@ -259,6 +259,7 @@ div.products {
 		 [{"id":"tyiukygoublygi",
 		   "vertical":"telco",
 		   "name":"iPhone X",
+		   "subtitle":"iPhone X",
 		   "price":"499.99",
 		   "tax":"49.99",
 		   "currency":"GBP",
@@ -267,6 +268,7 @@ div.products {
 		 {"id":"uyfguyfuyfuyf",
 		  "vertical":"telco",
 		  "name":"iPhone XR",
+		  "subtitle":"iPhone XR",
 		  "price":"599.99",
 		  "tax":"59.99",
 		  "currency":"GBP",
@@ -930,6 +932,10 @@ div.products {
 		 
 		 for(var z = 0; z < productLength; z++){
 			 //creeating the new product element
+			 
+			 
+			 /******
+			 
 			 var node = document.createElement("div");
 			 if(product_container){
 				 node.className = "product_container_a";
@@ -988,6 +994,20 @@ div.products {
 			 
 			 // appending the new product inside the list
 			 document.getElementsByClassName("products")[0].appendChild(node);
+			 
+			 
+			 *****/
+			 
+			 
+			 var objectToPush = {"title":"","subtitle":"","currency":"","price":"","tax":"","img":""};
+			 objectToPush.title = myProducts.products[z].name;
+			 objectToPush.subtitle = myProducts.products[z].subtitle;
+			 objectToPush.currency = myProducts.products[z].currency;
+			 objectToPush.price = myProducts.products[z].price;
+			 objectToPush.tax = myProducts.products[z].tax;
+			 objectToPush.img = myProducts.products[z].image;
+			 
+			 loadMyNewProduct(objectToPush)
 			 
 			 
 		 }

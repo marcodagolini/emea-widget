@@ -989,26 +989,30 @@ div.products {
 	 }
 	 
 	 
-	 function createObjects(myProducts){
+	 function createObjects(myProducts, myVertical){
 		 
+
 		 var productLength = myProducts.products.length;
 		 
 		 for(var z = 0; z < productLength; z++){
-			 //creeating the new product element
 			 
-			 var objectToPush = {"id":"","title":"","subtitle":"","currency":"","vertical":"","price":"","tax":"","img":""};
-			 
-			 objectToPush.id = myProducts.products[z].id;
-			 objectToPush.title = myProducts.products[z].name;
-			 objectToPush.subtitle = myProducts.products[z].subtitle;
-			 objectToPush.currency = myProducts.products[z].currency;
-			 objectToPush.vertical = myProducts.products[z].vertical;
-			 objectToPush.price = myProducts.products[z].price;
-			 objectToPush.tax = myProducts.products[z].tax;
-			 objectToPush.img = myProducts.products[z].image;
-			 
-			 loadMyNewProduct(objectToPush)
-			 
+			 if (myProducts.products[z].vertical === myVertical){
+				 //creeating the new product element
+				 
+				 var objectToPush = {"id":"","title":"","subtitle":"","currency":"","vertical":"","price":"","tax":"","img":""};
+				 
+				 objectToPush.id = myProducts.products[z].id;
+				 objectToPush.title = myProducts.products[z].name;
+				 objectToPush.subtitle = myProducts.products[z].subtitle;
+				 objectToPush.currency = myProducts.products[z].currency;
+				 objectToPush.vertical = myProducts.products[z].vertical;
+				 objectToPush.price = myProducts.products[z].price;
+				 objectToPush.tax = myProducts.products[z].tax;
+				 objectToPush.img = myProducts.products[z].image;
+				 
+				 loadMyNewProduct(objectToPush)	 
+				 
+			 }	  
 			 
 		 }
 		 
@@ -1040,8 +1044,14 @@ div.products {
 		 $('.product_button').css('right','10px');
 		 
 		 
+		 var myVertical = $('.selectVertical').find(":selected").text();
+		 createObjects(myProducts, myVertical);
 		 
-		 createObjects(myProducts);
+		 
+		 
+		 $('.selectVertical').on('change', function() {
+			 createObjects(myProducts, this.value);
+		 });
 
 		 
 		 

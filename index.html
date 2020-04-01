@@ -297,6 +297,8 @@ div.products {
 			 var myProductName = $(idToSearch)[0].innerHTML;
 			 idToSearch = "#myPrice" + myIdNumber;
 			 var myProductPrice = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#mySubtitle" + myIdNumber;
+			 var myProductSubtitle = $(idToSearch)[0].innerHTML;
 			 idToSearch = "#myTax" + myIdNumber;
 			 var myProductTax = $(idToSearch)[0].innerHTML;
 			 idToSearch = "#myCurrency" + myIdNumber;
@@ -304,7 +306,7 @@ div.products {
 			 idToSearch = "#myImg" + myIdNumber;
 			 var myProductImg = $(idToSearch)[0].src;
 			 
-			 var myText = myProductName + " - " + myProductCurrency + myProductPrice;
+			 // var myText = myProductName + " - " + myProductCurrency + myProductPrice;
 			 
 			 
 			 var elementToAdd = {"type":"horizontal",
@@ -316,7 +318,7 @@ div.products {
 									 "text":myProductName
 									},{"type":"text",
 									   "tag":"subtitle",
-									   "text":myText}]
+									   "text":myProductSubtitle}]
 							   }]
 					    }
 			 

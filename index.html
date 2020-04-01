@@ -713,6 +713,18 @@ div.products {
 		 newCurrency.id = 'myCurrency' + myCounter;
 		 newCurrency.innerHTML = objectToPush.currency;
 		 node.appendChild(newCurrency);
+		 
+		 var newId = document.createElement("LABEL");
+		 newId.className = "product_hidden";
+		 newId.id = 'myId' + myCounter;
+		 newId.innerHTML = objectToPush.id;
+		 node.appendChild(newId);
+		 
+		 var newSubtitle = document.createElement("LABEL");
+		 newSubtitle.className = "product_hidden";
+		 newSubtitle.id = 'mySubtitle' + myCounter;
+		 newSubtitle.innerHTML = objectToPush.subtitle;
+		 node.appendChild(newSubtitle);
 			 
 		 var newBtn = document.createElement("input");
 		 newBtn.type = "button";
@@ -992,10 +1004,13 @@ div.products {
 			 *****/
 			 
 			 
-			 var objectToPush = {"title":"","subtitle":"","currency":"","price":"","tax":"","img":""};
+			 var objectToPush = {"id":"","title":"","subtitle":"","currency":"","vertical":"","price":"","tax":"","img":""};
+			 
+			 objectToPush.id = myProducts.products[z].id;
 			 objectToPush.title = myProducts.products[z].name;
 			 objectToPush.subtitle = myProducts.products[z].subtitle;
 			 objectToPush.currency = myProducts.products[z].currency;
+			 objectToPush.vertical = myProducts.products[z].vertical;
 			 objectToPush.price = myProducts.products[z].price;
 			 objectToPush.tax = myProducts.products[z].tax;
 			 objectToPush.img = myProducts.products[z].image;

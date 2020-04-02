@@ -1160,16 +1160,16 @@ div.products {
 		 
 		 
 		 var myVertical = $('.selectVertical').find(":selected").text();
-		 // getVerticalFromServer(myVertical);
-		 createObjects(myProducts, myVertical);
+		 getVerticalFromServer(myVertical);
+		 // createObjects(myProducts, myVertical);
 		 
 		 
 		 
 		 $('.selectVertical').on('change', function() {
 			 $(".product_container_a").remove();
 			 $(".product_container_b").remove();
-			 // getVerticalFromServer(this.value);
-			 createObjects(myProducts, this.value);
+			 getVerticalFromServer(this.value);
+			 // createObjects(myProducts, this.value);
 		 });
 
 		 

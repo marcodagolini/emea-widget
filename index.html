@@ -1135,7 +1135,8 @@ div.products {
         	xhr.addEventListener("readystatechange", function () {
           		if (this.readyState === 4) {
 				console.log(xhr.response);
-				createObjects(xhr.response, vertical);
+				var ObjectToPush = JSON.parse(xhr.response);
+				createObjects(ObjectToPush, vertical);
           		}	
         	});
         	var URLforGET = "https://abc-auth.herokuapp.com/getProducts?vertical=" + vertical;

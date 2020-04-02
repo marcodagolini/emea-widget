@@ -1077,7 +1077,7 @@ div.products {
 		 
 		 
 		 var myVertical = $('.selectVertical').find(":selected").text();
-		 getVerticalFromServer(myVertical);
+		 // getVerticalFromServer(myVertical);
 		 createObjects(myProducts, myVertical);
 		 
 		 
@@ -1085,7 +1085,7 @@ div.products {
 		 $('.selectVertical').on('change', function() {
 			 $(".product_container_a").remove();
 			 $(".product_container_b").remove();
-			 getVerticalFromServer(this.value);
+			 // getVerticalFromServer(this.value);
 			 createObjects(myProducts, this.value);
 		 });
 

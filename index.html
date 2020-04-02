@@ -1043,6 +1043,22 @@ div.products {
 	 
 		 
 	 }
+	 
+	 function getVerticalFromServer(vertical){
+		 
+		var xhr = new XMLHttpRequest();
+        	xhr.addEventListener("readystatechange", function () {
+          		if (this.readyState === 4) {
+				
+          		}	
+        	});
+        	var URLforGET = "https://abc-auth.herokuapp.com/retrievedata/getProducts?vertical=" + vertical;
+		console.log(URLforGET);
+		xhr.open("GET", URLforGET);
+        	xhr.send();
+		 
+		 
+	 }
 
 	 
 	 
@@ -1060,6 +1076,7 @@ div.products {
 		 
 		 
 		 var myVertical = $('.selectVertical').find(":selected").text();
+		 getVerticalFromServer(myVertical);
 		 createObjects(myProducts, myVertical);
 		 
 		 
@@ -1067,6 +1084,7 @@ div.products {
 		 $('.selectVertical').on('change', function() {
 			 $(".product_container_a").remove();
 			 $(".product_container_b").remove();
+			 getVerticalFromServer(this.value);
 			 createObjects(myProducts, this.value);
 		 });
 

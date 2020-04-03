@@ -1265,6 +1265,23 @@ div.products {
 		 
 	 }
 	 
+	 function populateAugmented(Value){
+		 var myJSON = {
+			 [{"value":"Guitar", "img":"resources/guitar.jpg", "link":"resources/guitar.usdz"},
+			 {"value":"TV", "img":"resources/tv.jpg", "link":"resources/tv.usdz"},
+			 {"value":"Chair", "img":"resources/chair.jpg", "link":"resources/chair.usdz"},
+			 {"value":"Teapot", "img":"resources/teapot.jpg", "link":"resources/teapot.usdz"},
+			 {"value":"Gramophone", "img":"resources/gramophone.jpg", "link":"resources/gramophone.usdz"}
+			 ]};
+		 if(Value === "Choose"){
+			 
+		 }
+			 
+				 
+		 
+		 
+	 }
+	 
 	 function getVerticalFromServer(vertical){
 		 
 		var xhr = new XMLHttpRequest();
@@ -1308,6 +1325,10 @@ div.products {
 			 $(".product_container_b").remove();
 			 getVerticalFromServer(this.value);
 			 // createObjects(myProducts, this.value);
+		 });
+		 
+		 $('.selectAugmented').on('change', function() {
+			 populateAugmented(this.value);
 		 });
 
               
@@ -1436,7 +1457,7 @@ div.products {
 	<input id="newLinkImage" class="newLinkInput" placeholder="Your https:// image here"></br>
 	<input id="newLinkTitle" class="newLinkInput" placeholder="Title"></br>
 
-	<label style="float:left; margin:20px">Some aumented reality cards: </label>
+	<label style="float:left; margin:20px">Some augmented reality cards: </label>
 	  
 
 	  

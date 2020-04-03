@@ -744,6 +744,9 @@ div.products {
 					 $('#customerEmail').html(myResponse.email);
 					 console.log(myResponse.name);
 					 $('#customerName').html(myResponse.name);
+					 console.log(myResponse.expirationDate);
+					 $('#customerExpirationDate').html(myResponse.expirationDate);
+					 
 					 $('#customerData').removeAttr('hidden');
 					 return true;
 				 }
@@ -1316,6 +1319,9 @@ div.products {
 		<img id="customerPicture" src="" width="200" height="200"></br></br>
 		<label>Name: </label> <div id="customerName"></div></br></br>
 		<label>Email: </label> <div id="customerEmail"></div>
+		<label>Expiration date: </label> <div id="customerExpirationDate"></div>
+
+
 	
 	</div>
 	  <button id="back" class="back" onclick="back()">Back</button>

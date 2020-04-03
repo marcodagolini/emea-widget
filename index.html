@@ -867,8 +867,6 @@ div.products {
 			 }
 		 }
 		 
-		 console.log(myCounter);
-		 
 	 
 		 node.id = 'myContainer' + myCounter;
 		 //appending the checkbox
@@ -1156,7 +1154,7 @@ div.products {
 		var xhr = new XMLHttpRequest();
         	xhr.addEventListener("readystatechange", function () {
           		if (this.readyState === 4) {
-				console.log(xhr.response);
+				// console.log(xhr.response);
 				var ObjectToPush = JSON.parse(xhr.response);
 				createObjects(ObjectToPush, vertical);
           		}	

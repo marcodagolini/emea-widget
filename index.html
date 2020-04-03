@@ -728,6 +728,13 @@ div.products {
 		 $('#applePayWindow').removeAttr('hidden');
 	 }
 	 
+	 function showRichLink(){
+		 $("#main").attr("hidden", "true");
+		 $('#richLinkWindow').removeAttr('hidden');
+	 }
+	 
+	 
+	 
 	 
 	 function back(){
 		 $('#main').removeAttr('hidden');
@@ -1318,8 +1325,9 @@ div.products {
 <div id="main">
   
 <div class="btn-group">
-  <button id="authentication" onclick="showAuthentication()">ABC - Authentication</button>
-  <button id="applepay" onclick="showApplePay()">ABC - ApplePay & ListPicker</button>
+	<button id="authentication" onclick="showAuthentication()" hidden="true">ABC - Authentication</button>
+	<button id="applepay" onclick="showApplePay()">ABC - ApplePay & ListPicker</button>
+	<button id="richlink" onclick="showRichLink()">Rich Links & Augmented Reality</button>
 </div>
   
   
@@ -1365,6 +1373,34 @@ div.products {
 	  </select>
 	  
 	  <div class="products"></div>
+	  
+	  <button id="back" class="back" onclick="back()">Back</button>
+	  
+  
+    
+    
+</div>
+
+
+<div id="richLinkWindow" hidden="true">
+	
+	<button id="sendRichLink" class="sendContent" onclick="sendRichLink()" disabled>Send it!</button>
+	
+	<input id="newLinkURL" class="newLinkInput" placeholder="your URL here">
+	<input id="newLinkImage" class="newLinkInput" placeholder="your https:// image here">
+	<input id="newLinkTitle" class="newLinkInput" placeholder="Title">
+	  
+
+	  
+	  <select id="selectVertical" class="selectVertical">
+		  <option value="Telco">Telco</option>
+		  <option value="Airlines">Airlines</option>
+		  <option value="Retail">Retail</option>
+		  <option value="Banking">Banking</option>
+		  <option value="Insurance">Insurance</option>
+	  </select>
+	  
+
 	  
 	  <button id="back" class="back" onclick="back()">Back</button>
 	  

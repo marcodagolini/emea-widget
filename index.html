@@ -848,6 +848,32 @@ div.products {
 	 
 	 
 	 
+	 function pushProductToServer(objectToPush){
+		 
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+				 
+				 // xhr.response
+				 
+
+			 }	
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/pushProduct";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(objectToPush);
+		 xhr.send(myBodyToSend);
+		  
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
 	 function loadMyNewProduct(objectToPush, sendToServer){
 		 
 
@@ -855,8 +881,19 @@ div.products {
 		 console.log(JSON.stringify(objectToPush));
 		 
 		 if(sendToServer){
+			 
+			 var myFinalObjectToPush = {"id":myRandomId,
+						    "vertical":objectToPush.vertical,
+						    "name":objectToPush.name,
+						    "subtitle":objectToPush.subtitle,
+						    "price":objectToPush.price,
+						    "tax":objectToPush.tax,
+						    "currency":objectToPush.currency,
+						    "image":objectToPush.img
+						   }
+			 
 			 console.log("sending this to server");
-			 // send this to server
+			 pushProductToServer(myFinalObjectToPush);
 		 }
 		 
 		 

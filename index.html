@@ -1281,11 +1281,13 @@ div.products {
 			 $("#newLinkTitle").val("")
 		 }
 		 
+		 var myPage = window.location.href;
+		 
 		 for (var a = 0; a < myJSON.length; a++){
 			 if(myJSON[a].value === Value){
-				 $("#newLinkURL").val(myJSON[a].link);
-				 $("#newLinkImage").val(myJSON[a].img);
-				 $("#newLinkTitle").val(myJSON[a].value)
+				 $("#newLinkURL").val(myPage + myJSON[a].link);
+				 $("#newLinkImage").val(myPage + myJSON[a].img);
+				 $("#newLinkTitle").val(myPage + myJSON[a].value)
 				 a = myJSON.length;
 			 }
 			  

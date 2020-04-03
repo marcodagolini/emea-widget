@@ -1278,20 +1278,21 @@ div.products {
 			 $("#newLinkURL").val("");
 			 $("#newLinkImage").val("");
 			 $("#newLinkTitle").val("")
-		 }
-		 
-		 var myPage = window.location.href;
-		 
-		 for (var a = 0; a < myJSON.length; a++){
-			 if(myJSON[a].value === Value){
-				 $("#newLinkURL").val(myPage + myJSON[a].link);
-				 $("#newLinkImage").val(myPage + myJSON[a].img);
-				 $("#newLinkTitle").val(myPage + myJSON[a].value)
-				 a = myJSON.length;
+		 } else{
+			 var myPage = window.location.href;
+			 for (var a = 0; a < myJSON.length; a++){
+				 if(myJSON[a].value === Value){
+					 $("#newLinkURL").val((myPage + myJSON[a].link));
+					 $("#newLinkImage").val((myPage + myJSON[a].img));
+					 $("#newLinkTitle").val((myPage + myJSON[a].value))
+					 a = myJSON.length;
+				 }
 			 }
-			  
-			 
 		 }
+		 
+		 
+		 
+		 
 			 
 				 
 

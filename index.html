@@ -849,6 +849,9 @@ div.products {
 	 
 	 function loadMyNewProduct(objectToPush){
 		 
+		 var myRandomId = uuidv4();
+		 console.log(JSON.stringify(objectToPush));
+		 
 		 var node = document.createElement("div");
 		 node.className = "product_container_a";
 			

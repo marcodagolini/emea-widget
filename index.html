@@ -943,6 +943,32 @@ div.products {
 
 		 });
 		 
+		 var myCheckBoxID = '#myCheckBox' + myCounter;
+		 
+		 $(myCheckBoxID).click(function () {
+			 
+			 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
+			 if ($(this).is(":checked")) {
+				 console.log("my checkboxes1  --> " + myNumber);
+			 } else {
+				 console.log("my checkboxes1  --> " + myNumber);
+			 }
+			 if(myNumber === 0){
+				 $("#sendApplePay").prop( "disabled", true );
+				 $("#sendListPicker").prop( "disabled", true );
+				 
+			 } else if (myNumber === 1){
+				 $("#sendApplePay").prop( "disabled", false );
+				 $("#sendListPicker").prop( "disabled", false );
+				 
+			 } else{
+				 $("#sendApplePay").prop( "disabled", true );
+				 $("#sendListPicker").prop( "disabled", false );
+			 }
+			 
+			 
+		 });
+		 
 		 rearrangeProductColors();
 		 
 	 }
@@ -1170,35 +1196,6 @@ div.products {
 			 getVerticalFromServer(this.value);
 			 // createObjects(myProducts, this.value);
 		 });
-
-		 
-		 
-		 $(".product_checkbox").click(function () {
-			 
-			 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
-			 if ($(this).is(":checked")) {
-				 console.log("my checkboxes1  --> " + myNumber);
-			 } else {
-				 console.log("my checkboxes1  --> " + myNumber);
-			 }
-			 if(myNumber === 0){
-				 $("#sendApplePay").prop( "disabled", true );
-				 $("#sendListPicker").prop( "disabled", true );
-				 
-			 } else if (myNumber === 1){
-				 $("#sendApplePay").prop( "disabled", false );
-				 $("#sendListPicker").prop( "disabled", false );
-				 
-			 } else{
-				 $("#sendApplePay").prop( "disabled", true );
-				 $("#sendListPicker").prop( "disabled", false );
-			 }
-			 
-			 
-		 });
-		 
-		 
-		 
 
               
               	var SDK = lpTag.agentSDK;

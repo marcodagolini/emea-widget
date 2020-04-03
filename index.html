@@ -582,7 +582,7 @@ div.products {
 			 if (this.readyState === 4) {
 				 
 				 var total = (parseInt(myProductPrice) + parseInt(myProductTax)).toString();
-				 var titleBubble = "Apple Pay Request | $" + total;
+				 var titleBubble = "Apple Pay Request | " + total + " " + myProductCurrency;
 				 var applePaySC = {
 						"type":"vertical",
 						"tag":"payment",

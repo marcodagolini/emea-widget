@@ -1268,26 +1268,33 @@ div.products {
 	 
 	 function populateAugmented(Value){
 		 
-		 /*****
+
 		 
-		 var myJSON = {
+		 var myJSON = 
 			 [{"value":"Guitar", "img":"resources/guitar.jpg", "link":"resources/guitar.usdz"},
 			 {"value":"TV", "img":"resources/tv.jpg", "link":"resources/tv.usdz"},
 			 {"value":"Chair", "img":"resources/chair.jpg", "link":"resources/chair.usdz"},
 			 {"value":"Teapot", "img":"resources/teapot.jpg", "link":"resources/teapot.usdz"},
 			 {"value":"Gramophone", "img":"resources/gramophone.jpg", "link":"resources/gramophone.usdz"}
-			 ]}
-		 };
+			 ];
 		 if(Value === "Choose"){
-			 $('#newLinkURL').attr('value', '')
-			 
-			 $('#newLinkImage').attr('value', '')
-			 
+			 $("#newLinkURL").val("");
+			 $("#newLinkImage").val("");
+			 $("#newLinkTitle").val("")
+		 }
+		 
+		 for (var a = 0; a < myJSON.length; a++){
+			 if(myJSON[a].value === Value){
+				 $("#newLinkURL").val(myJSON[a].link);
+				 $("#newLinkImage").val(myJSON[a].limg);
+				 $("#newLinkTitle").val(myJSON[a].value)
+			 }
+			  a = myJSON.length;
 			 
 		 }
 			 
 				 
-		 ******/
+
 		 
 	 }
 	 

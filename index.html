@@ -1319,11 +1319,11 @@ div.products {
 
 		 
 		 var myJSON = 
-			 [{"value":"Guitar", "img":"resources/guitar.jpg", "link":"resources/guitar.usdz"},
-			 {"value":"TV", "img":"resources/tv.jpg", "link":"resources/tv.usdz"},
-			 {"value":"Chair", "img":"resources/chair.jpg", "link":"resources/chair.usdz"},
-			 {"value":"Teapot", "img":"resources/teapot.jpg", "link":"resources/teapot.usdz"},
-			 {"value":"Gramophone", "img":"resources/gramophone.jpg", "link":"resources/gramophone.usdz"}
+			 [{"value":"Guitar", "img":"https://marcodagolini.github.io/emea-widget/resources/guitar.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/guitar.usdz"},
+			 {"value":"TV", "img":"https://marcodagolini.github.io/emea-widget/resources/tv.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/tv.usdz"},
+			 {"value":"Chair", "img":"https://marcodagolini.github.io/emea-widget/resources/chair.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/chair.usdz"},
+			 {"value":"Teapot", "img":"https://marcodagolini.github.io/emea-widget/resources/teapot.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/teapot.usdz"},
+			 {"value":"Gramophone", "img":"https://marcodagolini.github.io/emea-widget/resources/gramophone.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/gramophone.usdz"}
 			 ];
 		 if(Value === "Choose"){
 			 $("#newLinkURL").val("");
@@ -1333,8 +1333,8 @@ div.products {
 			 var myPage = window.location.href;
 			 for (var a = 0; a < myJSON.length; a++){
 				 if(myJSON[a].value === Value){
-					 $("#newLinkURL").val((myPage + myJSON[a].link));
-					 $("#newLinkImage").val((myPage + myJSON[a].img));
+					 $("#newLinkURL").val(myJSON[a].link);
+					 $("#newLinkImage").val(myJSON[a].img);
 					 $("#newLinkTitle").val(Value)
 					 a = myJSON.length;
 				 }

@@ -1364,6 +1364,7 @@ div.products {
 		var re = /^(https:\/\/www\.|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?(usdz)$/;
 		if(re.test(url)){
 			console.log("augmented");
+			$("#sendRichLink").prop( "disabled", false );
 		} else{
 			console.log("not augmented")
 			var myUrlToSend = {"url":url};
@@ -1379,6 +1380,7 @@ div.products {
 						$("#newLinkTitle").val(myResponse.data.ogTitle);
 					} else{
 						$("#newLinkURL").css('background-color','#ffb2b2');
+						$("#sendRichLink").prop( "disabled", true );
 					}
 				}	
 			});

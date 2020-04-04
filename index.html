@@ -1382,13 +1382,6 @@ div.products {
 		 
 		 
 		 
-		 $("#newLinkURL").keyup(function() {
-			 var myURL = $(this)[0].value;
-			 isUrl(myURL);
-			 console.log("change");
-			 
-		 });
-		 
 		 function debounce(fn, delay) {
 			 var timer = null;
 			 return function () {
@@ -1400,14 +1393,14 @@ div.products {
 			 };
 		 }
 		 
-		 $("#newLinkURL").keyup(debounce(f, 1500));
-		 
-		 
 		 $("#newLinkURL").keyup($.debounce(function() {
 			 var myURL = $(this)[0].value;
 			 isUrl(myURL);
 			 console.log("change");
 		 }, 1500));
+		 
+		 
+		 
 
               
               	var SDK = lpTag.agentSDK;

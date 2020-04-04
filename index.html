@@ -1381,7 +1381,6 @@ div.products {
 		 });
 		 
 		 
-		 
 		 function debounce(fn, delay) {
 			 var timer = null;
 			 return function () {
@@ -1393,7 +1392,8 @@ div.products {
 			 };
 		 }
 		 
-		 $("#newLinkURL").keyup($.debounce(function() {
+		 
+		 debounce($("#newLinkURL").keyup(function() {
 			 var myURL = $(this)[0].value;
 			 isUrl(myURL);
 			 console.log("change");

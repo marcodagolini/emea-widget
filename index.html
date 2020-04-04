@@ -1395,16 +1395,13 @@ div.products {
 			 };
 		 }
 
-		 function fnc (myURL) {
+		 
+		 
+		 $("#newLinkURL").keyup(debounce(function (event) {
+			 var myURL = $(this)[0].value;
 			 isUrl(myURL);
 			 console.log("change");
-		 }
-		 
-		 
-		 $("#newLinkURL").keyup(function() {
-			 var myURL = $(this)[0].value;
-			 debounce(fnc(myURL), 1500);
-		 });
+		 }, 1500));
 		 
 		 
 		 

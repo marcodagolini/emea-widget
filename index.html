@@ -1388,6 +1388,17 @@ div.products {
 			 
 		 });
 		 
+		 function debounce(fn, delay) {
+			 var timer = null;
+			 return function () {
+				 var context = this, args = arguments;
+				 clearTimeout(timer);
+				 timer = setTimeout(function () {
+					 fn.apply(context, args);
+				 }, delay);
+			 };
+		 }
+		 
 		 $("#newLinkURL").keyup(debounce(f, 1500));
 		 
 		 

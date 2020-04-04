@@ -1332,7 +1332,7 @@ div.products {
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
 					console.log(xhr.response);
-					var myResponse = xhr.response;
+					var myResponse = JSON.parse(xhr.response);
 					if(myResponse.hasOwnProperty('data')){
 						$("#newLinkURL").css('background-color','#c1ffb2');
 						$("#newLinkImage").val(myResponse.data.ogImage.url);

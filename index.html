@@ -1320,7 +1320,6 @@ div.products {
 		var re = /^(https:\/\/www\.|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?(usdz)$/;
 		if(re){
 			console.log("augmented");
-			$("#newLinkURL").css('background-color','#fdc4c4');
 		} else{
 			console.log("not augmented")
 			var myUrlToSend = {"url":url};
@@ -1329,6 +1328,8 @@ div.products {
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
 					console.log(xhr.response);
+					// $("#newLinkURL").css('background-color','#c1ffb2'); ok
+					// $("#newLinkURL").css('background-color','#ffb2b2'); ko
 				
 			
 				}	
@@ -1373,6 +1374,7 @@ div.products {
 		 
 		 $('.selectAugmented').on('change', function() {
 			 populateAugmented(this.value);
+			 $("#newLinkURL").css('background-color','#c1ffb2');
 		 });
 		 
 		 $("#newLinkURL").keypress(function() {

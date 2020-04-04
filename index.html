@@ -1333,10 +1333,14 @@ div.products {
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
 					console.log(xhr.response);
-					// $("#newLinkURL").css('background-color','#c1ffb2'); ok
-					// $("#newLinkURL").css('background-color','#ffb2b2'); ko
-				
-			
+					var myResponse = xhr.response;
+					if(myResponse.hasOwnProperty('data')){
+						$("#newLinkURL").css('background-color','#c1ffb2');
+						$("#newLinkImage").val(myResponse.data.ogImage.url);
+						$("#newLinkTitle").val(myResponse.data.ogTitle);
+					} else{
+						$("#newLinkURL").css('background-color','#ffb2b2');
+					}
 				}	
 			});
 			var URLforPOST = "https://abc-auth.herokuapp.com/isURL";

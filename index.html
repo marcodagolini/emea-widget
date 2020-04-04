@@ -1324,6 +1324,22 @@ div.products {
 			return re.test(url);
 		} else{
 			
+			var myUrlToSend = {"url":url};
+			
+			var xhr = new XMLHttpRequest();
+			xhr.addEventListener("readystatechange", function () {
+				if (this.readyState === 4) {
+				
+				
+				}	
+			});
+			var URLforPOST = "https://abc-auth.herokuapp.com/isURL";
+			xhr.open("POST", URLforPOST);
+			xhr.setRequestHeader("Content-Type", "application/json");
+			var myBodyToSend = JSON.stringify(myUrlToSend);
+			xhr.send(myBodyToSend);
+
+			
 		}
 		
 	};

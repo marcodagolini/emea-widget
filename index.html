@@ -685,6 +685,41 @@ div.products {
 	 }
 	 
 	 
+	 function sendRichLink(){
+		 
+		 var rl_image = "";
+		 var file_url = "";
+		 
+		 let richSC = {
+			 "json":{"type":"vertical",
+				 "tag":"richLink",
+				 "elements":[{"type":"image",
+					      "url": rl_image},{
+						      "type":"button",
+						      "title": "Tap here to view in AR",
+						      "click":{
+							      "actions":[{"type":"link",
+									  "uri": file_url}
+									]}
+					      }]
+				}
+		 };
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: richSC,
+			 metadata: null
+		 };
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 
+		 });
+		 
+		 
+		 
+	 }
+	 
+	 
 
 	 function sendAuthentication(){
 		 // do something

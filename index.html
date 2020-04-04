@@ -1373,6 +1373,7 @@ div.products {
 		if(re.test(url)){
 			console.log("augmented");
 			$("#sendRichLink").prop( "disabled", false );
+			$("#newLinkURL").css('background-color','#c1ffb2');
 		} else{
 			console.log("not augmented")
 			var myUrlToSend = {"url":url};
@@ -1434,6 +1435,7 @@ div.products {
 		 $('.selectAugmented').on('change', function() {
 			 populateAugmented(this.value);
 			 $("#newLinkURL").css('background-color','#c1ffb2');
+			 $("#sendRichLink").prop( "disabled", false );
 		 });
 		 
 		 

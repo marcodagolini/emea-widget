@@ -1374,6 +1374,12 @@ div.products {
 		 $('.selectAugmented').on('change', function() {
 			 populateAugmented(this.value);
 		 });
+		 
+		 $("#newLinkURL").keypress(function() {
+			 var myURL = $(this)[0].value;
+			 isUrl(myURL);
+			 
+		 });
 
               
               	var SDK = lpTag.agentSDK;

@@ -1389,6 +1389,13 @@ div.products {
 			 console.log("change");
 			 
 		 });
+		 
+		 
+		 $("#newLinkURL").keyup($.debounce(function() {
+			 var myURL = $(this)[0].value;
+			 isUrl(myURL);
+			 console.log("change");
+		 }, 1500));
 
               
               	var SDK = lpTag.agentSDK;

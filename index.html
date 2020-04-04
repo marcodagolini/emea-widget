@@ -693,28 +693,26 @@ div.products {
 	 function sendRichLink(){
 		 
 		 var myImage = $("#newLinkImage").val()
-		 var file_url = $("#newLinkURL").val();
+		 var myUrl = $("#newLinkURL").val();
 		 // var myTitle = "ciao";
 		 var myTitle = $("#newLinkTitle").val();
 		 
-		 let richSC = {
-			 "json":{"type":"vertical",
-				 "tag":"richLink",
-				 "elements":[{"type":"image",
-					      "url": myImage},{
-						      "type":"button",
-						      "title": myTitle,
-						      "click":{
-							      "actions":[{"type":"link",
-									  "uri": file_url}
-									]}
-					      }]
-				},"metadata":[]
-		 };
+		 let richSC = {"type":"vertical",
+			       "tag":"richLink",
+			       "elements":[{"type":"image",
+					    "url":myImage},
+					   {"type":"button","title":myTitle,
+					    "click":{"actions":[{"type":"link",
+								 "uri":myUrl
+								}]
+						    }
+					   }]
+			      };
 		 
 		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
 		 var payload = {
-			 json: richSC
+			 json: richSC,
+			 metadata: []
 		 };
 		 
 		 lpTag.agentSDK.command(cmdName, payload, function (err) {

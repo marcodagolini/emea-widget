@@ -1401,6 +1401,18 @@ div.products {
 		 }, 1500));
 		 
 		 
+		 function fnc (myURL) {
+			 isUrl(myURL);
+			 console.log("change");
+		 }
+		 
+		 
+		 $("#newLinkURL").keyup(function() {
+			 var myURL = $(this)[0].value;
+			 debounce(fnc(myURL), 1500);
+		 });
+		 
+		 
 		 
 
               

@@ -1319,7 +1319,7 @@ div.products {
 	 
 	 function isUrl(url) {
 		var re = /^(https:\/\/www\.|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?(usdz)$/;
-		if(re){
+		if(re.test(url)){
 			console.log("augmented");
 		} else{
 			console.log("not augmented")
@@ -1377,6 +1377,8 @@ div.products {
 			 populateAugmented(this.value);
 			 $("#newLinkURL").css('background-color','#c1ffb2');
 		 });
+		 
+		 
 		 
 		 $("#newLinkURL").keypress(function() {
 			 var myURL = $(this)[0].value;

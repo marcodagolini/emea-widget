@@ -718,6 +718,9 @@ div.products {
 		 };
 		 
 		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 if(err){
+				 console.log(err);
+			 }
 			 
 		 });
 		 

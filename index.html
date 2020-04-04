@@ -1320,10 +1320,10 @@ div.products {
 	 function isUrl(url) {
 		var re = /^(https:\/\/www\.|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?(usdz)$/g;
 		if(re){
+			console.log("augmented");
 			$("#newLinkURL").css('background-color','#fdc4c4');
-			return re.test(url);
 		} else{
-			
+			console.log("not augmented")
 			var myUrlToSend = {"url":url};
 			
 			var xhr = new XMLHttpRequest();

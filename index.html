@@ -691,16 +691,17 @@ div.products {
 	 
 	 function sendRichLink(){
 		 
-		 var rl_image = "";
-		 var file_url = "";
+		 var myImage = $("#newLinkImage").val()
+		 var file_url = $("#newLinkURL").val();
+		 var myTitle = $("#newLinkTitle").val();
 		 
 		 let richSC = {
 			 "json":{"type":"vertical",
 				 "tag":"richLink",
 				 "elements":[{"type":"image",
-					      "url": rl_image},{
+					      "url": myImage},{
 						      "type":"button",
-						      "title": "Tap here to view in AR",
+						      "title": myTitle,
 						      "click":{
 							      "actions":[{"type":"link",
 									  "uri": file_url}

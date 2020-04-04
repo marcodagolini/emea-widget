@@ -1384,6 +1384,7 @@ div.products {
 						$("#newLinkURL").css('background-color','#c1ffb2');
 						$("#newLinkImage").val(myResponse.data.ogImage.url);
 						$("#newLinkTitle").val(myResponse.data.ogTitle);
+						$("#sendRichLink").prop( "disabled", false );
 					} else{
 						$("#newLinkURL").css('background-color','#ffb2b2');
 						$("#sendRichLink").prop( "disabled", true );

@@ -1382,12 +1382,14 @@ div.products {
 		 
 		 
 		 
-		 $("#newLinkURL").keypress(function() {
+		 $("#newLinkURL").keyup(function() {
 			 var myURL = $(this)[0].value;
 			 isUrl(myURL);
 			 console.log("change");
 			 
 		 });
+		 
+		 $("#newLinkURL").keyup(debounce(f, 1500));
 		 
 		 
 		 $("#newLinkURL").keyup($.debounce(function() {

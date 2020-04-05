@@ -1029,18 +1029,19 @@ div.products {
 		 var myRandomId = uuidv4();
 		 // console.log(JSON.stringify(objectToPush));
 		 
+		 var myFinalObjectToPush = {
+			 "id":myRandomId,
+			 "vertical":objectToPush.vertical,
+			 "name":objectToPush.name,
+			 "subtitle":objectToPush.subtitle,
+			 "price":objectToPush.price,
+			 "tax":objectToPush.tax,
+			 "currency":objectToPush.currency,
+			 "image":objectToPush.img
+		 }
+		 
 		 if(sendToServer){
-			 
-			 var myFinalObjectToPush = {"id":myRandomId,
-						    "vertical":objectToPush.vertical,
-						    "name":objectToPush.name,
-						    "subtitle":objectToPush.subtitle,
-						    "price":objectToPush.price,
-						    "tax":objectToPush.tax,
-						    "currency":objectToPush.currency,
-						    "image":objectToPush.img
-						   }
-			 
+
 			 console.log("sending this to server");
 			 pushProductToServer(myFinalObjectToPush);
 		 }

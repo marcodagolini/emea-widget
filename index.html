@@ -1358,10 +1358,13 @@ div.products {
 				 rearrangeProductColors();
 				 
 				 var myVertical = $('.selectVertical').val();
-				 console.log("myId --> " + myId);
+				 
+				 myElement = "#myId" + myId;
+				 var myIdToPass = $(myElement).text()
+				 console.log("myId --> " + myIdToPass);
 				 console.log("myVertical --> " + myVertical);
 				 
-				 deleteFromServer(myId, myVertical);
+				 deleteFromServer(myIdToPass, myVertical);
 				 
 				 /****
 				 myElement = "#myId" + myId;

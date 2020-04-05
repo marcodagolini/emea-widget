@@ -1354,14 +1354,19 @@ div.products {
 			 if (result.value) {
 				 
 				 console.log("myId --> " + myId);
-				 var myElement = "#myContainer" + myId;
-				 $(myElement).remove();
-				 rearrangeProductColors();
+				 
+				 var myElement = "#myId" + myId;
+				 var myIdToPass = $(myElement).text()
 				 
 				 var myVertical = $('.selectVertical').val();
 				 
-				 myElement = "#myId" + myId;
-				 var myIdToPass = $(myElement).text()
+				 myElement = "#myContainer" + myId;
+				 $(myElement).remove();
+				 rearrangeProductColors();
+				 
+				 
+				 
+				 
 				 console.log("myIdToPass --> " + myIdToPass);
 				 console.log("myVertical --> " + myVertical);
 				 

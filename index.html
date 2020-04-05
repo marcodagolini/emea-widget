@@ -689,20 +689,7 @@ div.products {
 		 
 	 }
 	 
-	 
-	 function sendRichLink(){
-		 
-		 var myUrl = $("#newLinkURL").val();
-		 var myImage = $("#newLinkImage").val()
-		 var myTitle = $("#newLinkTitle").val();
-		 
-		 if (myImage === ""){
-			 myImage = "https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png";
-		 }
-		 
-		 if (myTitle === ""){
-			 myTitle = "Title";
-		 }
+	 function sendmyCheckedRichLink(myUrl, myImage, myTitle){
 		 
 		 let richSC = {"type":"vertical",
 			       "tag":"richLink",
@@ -729,6 +716,40 @@ div.products {
 			 
 		 });
 		 
+	 }
+	 
+	 
+	 function sendRichLink(){
+		 
+		 var myUrl = $("#newLinkURL").val();
+		 var myImage = $("#newLinkImage").val()
+		 var myTitle = $("#newLinkTitle").val();
+		 
+		 if (myTitle === ""){
+			 myTitle = "Title";
+
+		 }
+		 
+		 
+		 var xhr = new XMLHttpRequest();
+			xhr.addEventListener("readystatechange", function () {
+				if (this.readyState === 4) {
+					console.log(xhr.response);
+					var myResponse = JSON.parse(xhr.response);
+					if(myResponse.hasOwnProperty('data')){
+						sendmyCheckedRichLink(myUrl, myImage, myTitle);
+					} else{
+						myImage = "https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png";
+						sendmyCheckedRichLink(myUrl, myImage, myTitle);
+					}
+				}	
+			});
+		 var URLforPOST = "https://abc-auth.herokuapp.com/isURL";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(myUrlToSend);
+		 xhr.send(myBodyToSend);
+
 		 
 		 
 	 }

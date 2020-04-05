@@ -1000,7 +1000,8 @@ div.products {
 			 if (this.readyState === 4) {
 				 
 				 console.log(xhr.response);
-				 createObjects(xhr.response, xhr.response.products[0].vertical);
+				 var myObjectToPush = JSON.parse(xhr.response);
+				 createObjects(myObjectToPush, myObjectToPush[0].vertical);
 
 				 
 

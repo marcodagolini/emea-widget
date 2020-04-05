@@ -1316,7 +1316,7 @@ div.products {
 			 confirmButtonText: 'Yes, delete it!',
 			 cancelButtonText: 'No, cancel!',
 			 reverseButtons: true
-		 }).then((result) => {
+		 }).then((result, myId) => {
 			 if (result.value) {
 				 
 				 var myElement = "#myContainer" + myId;

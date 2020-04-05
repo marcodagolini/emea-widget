@@ -1002,7 +1002,7 @@ div.products {
 				 
 				 console.log(xhr.response);
 				 var myObjectToPush = JSON.parse(xhr.response);
-				 createObjects(myObjectToPush, myObjectToPush[0].vertical);
+				 createObjects(xhr.response, myObjectToPush.products[0].vertical);
 
 				 
 

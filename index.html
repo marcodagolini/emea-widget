@@ -1134,9 +1134,13 @@ div.products {
 				 var myId = evt.target.id;
 				 var res = myId.replace("myButton", "");
 				 var myElement = "#myCheckBox" + res;
+				 
 				 $(myElement).click();
+				 
+				 myElement = "#myId" + res;
+				 var myId = $(myElement).val();
 			 
-				 fireDelete(res);
+				 fireDelete(res, myId);
 
 			 });
 		 

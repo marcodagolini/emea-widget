@@ -1047,130 +1047,124 @@ div.products {
 		 
 		 
 		 if(myFinalObjectToPush.vertical === $('.selectVertical').val()){
+			 
+			 
 			 console.log("uguale");
-		 
-		 
-		 }
-		 
-		 
-		 var node = document.createElement("div");
-		 node.className = "product_container_a";
-			
-		 
-		 var myLabelToShow = objectToPush.title
-		 
-		 var myContainerCheck = "#myContainer";
-		 var myActualContainer = "";
-		 var myCounter = 0;
-		 for (var a = 0; a > -1; a++){
-			 myActualContainer = myContainerCheck + a.toString();
-			 if ($(myActualContainer).length === 0){
-				 myCounter = a;
-				 a = -10;	 
+			 var node = document.createElement("div");
+			 node.className = "product_container_a";
+			 
+			 var myLabelToShow = objectToPush.title
+			 var myContainerCheck = "#myContainer";
+			 var myActualContainer = "";
+			 var myCounter = 0;
+			 for (var a = 0; a > -1; a++){
+				 myActualContainer = myContainerCheck + a.toString();
+				 if ($(myActualContainer).length === 0){
+					 myCounter = a;
+					 a = -10;	 
+				 }
 			 }
-		 }
 		 
 	 
-		 node.id = 'myContainer' + myCounter;
-		 //appending the checkbox
-		 var newCheckBox = document.createElement('input');
-		 newCheckBox.type = 'checkbox';
-		 newCheckBox.id = 'myCheckBox' + myCounter;
-		 newCheckBox.className = "product_checkbox";
-		 node.appendChild(newCheckBox);
+			 node.id = 'myContainer' + myCounter;
+			 //appending the checkbox
+			 var newCheckBox = document.createElement('input');
+			 newCheckBox.type = 'checkbox';
+			 newCheckBox.id = 'myCheckBox' + myCounter;
+			 newCheckBox.className = "product_checkbox";
+			 node.appendChild(newCheckBox);
 			 
-		 //appending the img
-		 var oImg = document.createElement("img");
-		 oImg.className = "product_img";
-		 oImg.id = 'myImg' + myCounter;
-		 oImg.setAttribute('src', objectToPush.img);
-		 node.appendChild(oImg);
+			 //appending the img
+			 var oImg = document.createElement("img");
+			 oImg.className = "product_img";
+			 oImg.id = 'myImg' + myCounter;
+			 oImg.setAttribute('src', objectToPush.img);
+			 node.appendChild(oImg);
 			 
-		 // appending the label
-		 var newLabel = document.createElement("LABEL");
-		 newLabel.className = "product_name";
-		 newLabel.id = 'myLabel' + myCounter;
-		 newLabel.innerHTML = myLabelToShow;
-		 node.appendChild(newLabel);
+			 // appending the label
+			 var newLabel = document.createElement("LABEL");
+			 newLabel.className = "product_name";
+			 newLabel.id = 'myLabel' + myCounter;
+			 newLabel.innerHTML = myLabelToShow;
+			 node.appendChild(newLabel);
 			 
-		 var newPrice = document.createElement("LABEL");
-		 newPrice.className = "product_hidden";
-		 newPrice.id = 'myPrice' + myCounter;
-		 newPrice.innerHTML = objectToPush.price;
-		 node.appendChild(newPrice);
+			 var newPrice = document.createElement("LABEL");
+			 newPrice.className = "product_hidden";
+			 newPrice.id = 'myPrice' + myCounter;
+			 newPrice.innerHTML = objectToPush.price;
+			 node.appendChild(newPrice);
 			 
-		 var newTax = document.createElement("LABEL");
-		 newTax.className = "product_hidden";
-		 newTax.id = 'myTax' + myCounter;
-		 newTax.innerHTML = objectToPush.tax;
-		 node.appendChild(newTax);
+			 var newTax = document.createElement("LABEL");
+			 newTax.className = "product_hidden";
+			 newTax.id = 'myTax' + myCounter;
+			 newTax.innerHTML = objectToPush.tax;
+			 node.appendChild(newTax);
 			 
-		 var newCurrency = document.createElement("LABEL");
-		 newCurrency.className = "product_hidden";
-		 newCurrency.id = 'myCurrency' + myCounter;
-		 newCurrency.innerHTML = objectToPush.currency;
-		 node.appendChild(newCurrency);
+			 var newCurrency = document.createElement("LABEL");
+			 newCurrency.className = "product_hidden";
+			 newCurrency.id = 'myCurrency' + myCounter;
+			 newCurrency.innerHTML = objectToPush.currency;
+			 node.appendChild(newCurrency);
 		 
-		 var newId = document.createElement("LABEL");
-		 newId.className = "product_hidden";
-		 newId.id = 'myId' + myCounter;
-		 newId.innerHTML = objectToPush.id;
-		 node.appendChild(newId);
+			 var newId = document.createElement("LABEL");
+			 newId.className = "product_hidden";
+			 newId.id = 'myId' + myCounter;
+			 newId.innerHTML = objectToPush.id;
+			 node.appendChild(newId);
 		 
-		 var newSubtitle = document.createElement("LABEL");
-		 newSubtitle.className = "product_hidden";
-		 newSubtitle.id = 'mySubtitle' + myCounter;
-		 newSubtitle.innerHTML = objectToPush.subtitle;
-		 node.appendChild(newSubtitle);
+			 var newSubtitle = document.createElement("LABEL");
+			 newSubtitle.className = "product_hidden";
+			 newSubtitle.id = 'mySubtitle' + myCounter;
+			 newSubtitle.innerHTML = objectToPush.subtitle;
+			 node.appendChild(newSubtitle);
 			 
-		 var newBtn = document.createElement("input");
-		 newBtn.type = "button";
-		 newBtn.className = "product_button";
-		 newBtn.id = 'myButton' + myCounter;
-		 newBtn.setAttribute("style", "right:10px");
-		 node.appendChild(newBtn);
+			 var newBtn = document.createElement("input");
+			 newBtn.type = "button";
+			 newBtn.className = "product_button";
+			 newBtn.id = 'myButton' + myCounter;
+			 newBtn.setAttribute("style", "right:10px");
+			 node.appendChild(newBtn);
 			 
-		 // appending the new product inside the list
-		 document.getElementsByClassName("products")[0].appendChild(node);
+			 // appending the new product inside the list
+			 document.getElementsByClassName("products")[0].appendChild(node);
 		 
-		 var myBtnId = '#myButton' + myCounter;
-		 $(myBtnId).on('click', function(evt) {
-			 var myId = evt.target.id;
-			 var res = myId.replace("myButton", "");
-			 var myElement = "#myCheckBox" + res;
-			 $(myElement).click();
+			 var myBtnId = '#myButton' + myCounter;
+			 $(myBtnId).on('click', function(evt) {
+				 var myId = evt.target.id;
+				 var res = myId.replace("myButton", "");
+				 var myElement = "#myCheckBox" + res;
+				 $(myElement).click();
 			 
-			 fireDelete(res);
+				 fireDelete(res);
 
-		 });
+			 });
 		 
-		 var myCheckBoxID = '#myCheckBox' + myCounter;
+			 var myCheckBoxID = '#myCheckBox' + myCounter;
 		 
-		 $(myCheckBoxID).click(function () {
+			 $(myCheckBoxID).click(function () {
 			 
-			 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
-			 if ($(this).is(":checked")) {
-				 console.log("my checkboxes1  --> " + myNumber);
-			 } else {
-				 console.log("my checkboxes1  --> " + myNumber);
-			 }
-			 if(myNumber === 0){
-				 $("#sendApplePay").prop( "disabled", true );
-				 $("#sendListPicker").prop( "disabled", true );
+				 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
+				 if ($(this).is(":checked")) {
+
+					 console.log("my checkboxes1  --> " + myNumber);
+				 } else {
+					 console.log("my checkboxes1  --> " + myNumber);
+				 }
+				 if(myNumber === 0){
+					 $("#sendApplePay").prop( "disabled", true );
+					 $("#sendListPicker").prop( "disabled", true );
 				 
-			 } else if (myNumber === 1){
-				 $("#sendApplePay").prop( "disabled", false );
-				 $("#sendListPicker").prop( "disabled", false );
-				 
-			 } else{
-				 $("#sendApplePay").prop( "disabled", true );
-				 $("#sendListPicker").prop( "disabled", false );
-			 }
-			 
-			 
-		 });
+				 } else if (myNumber === 1){
+					 $("#sendApplePay").prop( "disabled", false );
+					 $("#sendListPicker").prop( "disabled", false );
+				 } else{
+					 $("#sendApplePay").prop( "disabled", true );
+					 $("#sendListPicker").prop( "disabled", false );
+				 }
+			 });
 		 
-		 rearrangeProductColors();
+			 rearrangeProductColors();
+		 }
 		 
 	 }
 	 

@@ -1317,13 +1317,14 @@ div.products {
 			 confirmButtonText: 'Yes, delete it!',
 			 cancelButtonText: 'No, cancel!',
 			 reverseButtons: true
-		 }).then((result, myId) => {
+		 }).then((result) => {
 			 if (result.value) {
 				 
 				 var myElement = "#myContainer" + myId;
 				 $(myElement).remove();
 				 rearrangeProductColors();
 				 
+				 /****
 				 myElement = "#myId" + myId;
 				 var myId = $(myElement).text();
 				 var myVertical = $('.selectVertical').val()
@@ -1342,6 +1343,8 @@ div.products {
 				 xhr.setRequestHeader("Content-Type", "application/json");
 				 var myBodyToSend = JSON.stringify({"vertical": myVertical, "id": myId});
 				 xhr.send(myBodyToSend);
+				 
+				 *****/
 				 
 				 
 				 

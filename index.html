@@ -1297,6 +1297,30 @@ div.products {
 	 }
 	 
 	 
+	 function deleteFromServer(myId, myVertical){
+		 
+		 myElement = "#myId" + myId;
+		 var myId = $(myElement).text();
+		 var myVertical = $('.selectVertical').val()
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+			 
+			 }
+		 
+		 });
+		 
+		 var URLforPOST = "https://abc-auth.herokuapp.com/deleteProduct";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify({"vertical": myVertical, "id": myId});
+		 xhr.send(myBodyToSend);
+		 
+		 
+	 }
+	 
+	 
 	 
 	 function fireDelete(myId){
 		 
@@ -1324,6 +1348,8 @@ div.products {
 				 var myElement = "#myContainer" + myId;
 				 $(myElement).remove();
 				 rearrangeProductColors();
+				 
+				 deleteFromServer(myId, myVertical);
 				 
 				 /****
 				 myElement = "#myId" + myId;

@@ -1261,6 +1261,7 @@ div.products {
 			 '</br>',
 		 }).then((result) => {
 			 if (result.value) {
+				 var verticalPush = document.getElementById('newObjectVertical').value;
 				 var titlePush = document.getElementById('newObjectTitle').value;
 				 var subtitlePush = document.getElementById('newObjectSubitle').value;
 				 var currencyPush = document.getElementById('newObjectCurrency').value;
@@ -1268,13 +1269,15 @@ div.products {
 				 var taxPush = document.getElementById('newObjectTax').value;
 				 var imgPush = document.getElementById('newObjectImage').value;
 				 
-				 var objectToPush = {"title":titlePush,
-						     "subtitle":subtitlePush,
-						     "currency":currencyPush,
-						     "price":pricePush,
-						     "tax":taxPush,
-						     "img":imgPush
-						    }
+				 var objectToPush = {
+					 "vertical":verticalPush'
+					 "title":titlePush,
+					 "subtitle":subtitlePush,
+					 "currency":currencyPush,
+					 "price":pricePush,
+					 "tax":taxPush,
+					 "img":imgPush
+				 }
 				 
 				 checkObjectToPush(objectToPush);
 				 

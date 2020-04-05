@@ -690,10 +690,17 @@ div.products {
 	 
 	 function sendRichLink(){
 		 
-		 var myImage = $("#newLinkImage").val()
 		 var myUrl = $("#newLinkURL").val();
-		 // var myTitle = "ciao";
+		 var myImage = $("#newLinkImage").val()
 		 var myTitle = $("#newLinkTitle").val();
+		 
+		 if (myImage === ""){
+			 myImage = "https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png";
+		 }
+		 
+		 if (myTitle === ""){
+			 myTitle = "Title";
+		 }
 		 
 		 let richSC = {"type":"vertical",
 			       "tag":"richLink",

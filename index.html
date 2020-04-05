@@ -1000,10 +1000,9 @@ div.products {
 		 xhr.addEventListener("readystatechange", function () {
 			 if (this.readyState === 4) {
 				 
-				 createObjects(xhr.response, xhr.response.products[0].vertical);
-				 
 				 console.log(xhr.response);
-				 // xhr.response
+				 createObjects(xhr.response, xhr.response.products[0].vertical);
+
 				 
 
 			 }	

@@ -1352,6 +1352,7 @@ div.products {
 		 }).then((result) => {
 			 if (result.value) {
 				 
+				 console.log("myId --> " + myId);
 				 var myElement = "#myContainer" + myId;
 				 $(myElement).remove();
 				 rearrangeProductColors();

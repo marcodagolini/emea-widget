@@ -1300,11 +1300,12 @@ div.products {
 	 }
 	 
 	 
-	 function deleteFromServer(myId, myVertical){
+	 function deleteFromServer(myIdtoSearch, myVertical){
 		 
-		 myElement = "#myId" + myId;
+		 myElement = "#myId" + myIdtoSearch;
 		 var myId = $(myElement).text();
-		 console.log("myId --> " + myId);
+		 console.log("myId --> " + myIdtoSearch);
+		 console.log("myVertical --> " + myVertical);
 		 var myVertical = $('.selectVertical').val()
 		 
 		 var xhr = new XMLHttpRequest();

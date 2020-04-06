@@ -734,9 +734,8 @@ div.products {
 		 var xhr = new XMLHttpRequest();
 			xhr.addEventListener("readystatechange", function () {
 				if (this.readyState === 4) {
-					console.log(xhr.response);
-					var myResponse = JSON.parse(xhr.response);
-					if(myResponse.hasOwnProperty('data')){
+
+					if(xhr.response === "ok"){
 						sendmyCheckedRichLink(myUrl, myImage, myTitle);
 					} else{
 						myImage = "https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png";

@@ -1210,7 +1210,8 @@ div.products {
 			 fireError("Your image should be hosted in https!");
 		 } else {
 			 fireSmallSuccess("Product created!");
-			 loadMyNewProduct(objectToPush, sendToServer);
+			 loadMyNewProduct(objectToPush);
+			 pushProductToServer(objectToPush);
 		 }
 		 
 	 }

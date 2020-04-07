@@ -1001,9 +1001,9 @@ div.products {
 		 xhr.addEventListener("readystatechange", function () {
 			 if (this.readyState === 4) {
 				 
-				 console.log(xhr.response);
-				 var myObjectToPush = JSON.parse(xhr.response);
-				 createObjects(myObjectToPush, myObjectToPush.products[0].vertical);
+				 // console.log(xhr.response);
+				 // var myObjectToPush = JSON.parse(xhr.response);
+				 createObjects(objectToPush, objectToPush.products[0].vertical);
 
 				 
 

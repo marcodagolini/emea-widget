@@ -1023,23 +1023,8 @@ div.products {
 	 
 	 function loadMyNewProduct(objectToPush){
 		 
-
-		 var myRandomId = uuidv4();
-		 // console.log(JSON.stringify(objectToPush));
-		 
-		 var myFinalObjectToPush = {
-			 "id":myRandomId,
-			 "vertical":objectToPush.vertical,
-			 "name":objectToPush.title,
-			 "subtitle":objectToPush.subtitle,
-			 "price":objectToPush.price,
-			 "tax":objectToPush.tax,
-			 "currency":objectToPush.currency,
-			 "image":objectToPush.img
-		 }
-		 
 		
-		 if(myFinalObjectToPush.vertical === $('.selectVertical').val()){
+		 if(objectToPush.vertical === $('.selectVertical').val()){
 			 
 			 
 			 console.log("uguale");

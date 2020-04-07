@@ -737,7 +737,7 @@ div.products {
 		 xhr.addEventListener("readystatechange", function () {
 			if (this.readyState === 4) {
 					
-				myImage = xhr.response.url;
+				myImage = JSON.parse(xhr.response).url;
 				sendmyCheckedRichLink(myUrl, myImage, myTitle);
 				$("#newLinkImage").val(myImage)
 

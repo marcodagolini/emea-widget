@@ -733,17 +733,15 @@ div.products {
 		 var myUrlToSend = {"url":myImage};
 		 
 		 var xhr = new XMLHttpRequest();
-			xhr.addEventListener("readystatechange", function () {
-				if (this.readyState === 4) {
+		 xhr.addEventListener("readystatechange", function () {
+			if (this.readyState === 4) {
+					
+				myImage = xhr.response.url;
+				sendmyCheckedRichLink(myUrl, myImage, myTitle);
+				$("#newLinkImage").val(myImage)
 
-					if(xhr.response === "ok"){
-						sendmyCheckedRichLink(myUrl, myImage, myTitle);
-					} else{
-						myImage = "https://res.cloudinary.com/djtjkiytu/image/upload/v1585524331/broken-1.png";
-						sendmyCheckedRichLink(myUrl, myImage, myTitle);
-					}
-				}	
-			});
+			}	
+		 });
 		 var URLforPOST = "https://abc-auth.herokuapp.com/isImage";
 		 xhr.open("POST", URLforPOST);
 		 xhr.setRequestHeader("Content-Type", "application/json");

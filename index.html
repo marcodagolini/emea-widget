@@ -1274,7 +1274,10 @@ div.products {
 				 var taxPush = document.getElementById('newObjectTax').value;
 				 var imgPush = document.getElementById('newObjectImage').value;
 				 
+				 var myRandomID = uuidv4();
+				 
 				 var objectToPush = {
+					 "id":myRandomID,
 					 "vertical":verticalPush,
 					 "title":titlePush,
 					 "subtitle":subtitlePush,

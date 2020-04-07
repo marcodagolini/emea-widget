@@ -1032,7 +1032,7 @@ div.products {
 			 var node = document.createElement("div");
 			 node.className = "product_container_a";
 			 
-			 var myLabelToShow = objectToPush.title
+			 var myLabelToShow = objectToPush.name
 			 var myContainerCheck = "#myContainer";
 			 var myActualContainer = "";
 			 var myCounter = 0;
@@ -1057,7 +1057,7 @@ div.products {
 			 var oImg = document.createElement("img");
 			 oImg.className = "product_img";
 			 oImg.id = 'myImg' + myCounter;
-			 oImg.setAttribute('src', objectToPush.img);
+			 oImg.setAttribute('src', objectToPush.image);
 			 node.appendChild(oImg);
 			 
 			 // appending the label

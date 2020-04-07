@@ -1410,7 +1410,6 @@ div.products {
 	 
 	 function createObjects(myProducts, myVertical){
 		 
-		 var sendToServer = false;
 		 var productLength = myProducts.products.length;
 		 
 		 for(var z = 0; z < productLength; z++){
@@ -1429,7 +1428,7 @@ div.products {
 				 objectToPush.tax = myProducts.products[z].tax;
 				 objectToPush.img = myProducts.products[z].image;
 				 
-				 loadMyNewProduct(objectToPush, sendToServer)	 
+				 loadMyNewProduct(objectToPush)	 
 				 
 			 }	  
 			 

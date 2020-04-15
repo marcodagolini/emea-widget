@@ -552,10 +552,10 @@ div.products {
 	 
 	 function sendListPicker(){
 		 
-		 var elementsLength = document.querySelectorAll('input[type="checkbox"]:checked').length;
+		 var elementsLength = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked').length;
 		 var JSONtoString = "";
 		 for (var a = 0; a < elementsLength; a++){
-			 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[a].id;
+			 var myIdCheckBox = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked')[a].id;
 			 var myIdNumber = myIdCheckBox.substring(10);
 			 var idToSearch = "#myLabel" + myIdNumber;
 			 var myProductName = $(idToSearch)[0].innerHTML;
@@ -632,7 +632,7 @@ div.products {
 	 
 	 
 	 function sendApplePay(){
-		 var myIdCheckBox = document.querySelectorAll('input[type="checkbox"]:checked')[0].id;
+		 var myIdCheckBox = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked')[0].id;
 		 var myIdNumber = myIdCheckBox.substring(10, 11);
 		 var idToSearch = "#myLabel" + myIdNumber;
 		 var myProductName = $(idToSearch)[0].innerHTML;
@@ -1128,7 +1128,7 @@ div.products {
 		 
 			 $(myCheckBoxID).click(function () {
 			 
-				 var myNumber = document.querySelectorAll('input[type="checkbox"]:checked').length;
+				 var myNumber = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked').length;
 				 if ($(this).is(":checked")) {
 
 					 console.log("my checkboxes1  --> " + myNumber);

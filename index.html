@@ -554,6 +554,11 @@ div.products {
 	 
 	 function sendListPicker(){
 		 
+		 var multipleSelection = false;
+		 if(document.querySelectorAll('input.multiple[type="checkbox"]:checked').length > 0){
+			 multipleSelection = true;
+		 }
+		 
 		 var elementsLength = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked').length;
 		 var JSONtoString = "";
 		 for (var a = 0; a < elementsLength; a++){
@@ -601,7 +606,7 @@ div.products {
 		 var listPickerSC = JSON.parse(JSONtoString);
 		 
 		 var metadataSC = [{"type":"BusinessChatMessage",
-				    "multipleSelection":false,
+				    "multipleSelection":multipleSelection,
 				    "receivedMessage":{"style":"icon",
 						       "subtitle":"Please select...",
 						       "title":"Choose from our available products",

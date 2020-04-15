@@ -1682,8 +1682,10 @@ div.products {
 	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
 	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
 	  </br>
-	  <input type="checkbox" id="multiple" name="multiple" value="multiple" style="float: right;">
-	  <label for="multiple" style="float: right;"> Multiple choice</label><br>
+	<div style="float: right;">
+	  <input type="checkbox" id="multiple" name="multiple" value="multiple">
+	  <label for="multiple"> Multiple choice</label><br>
+	</div>
 	  
 	  <button class="add_product" onclick="fireNewProduct()"> Add product</button>
 	  

@@ -22,29 +22,30 @@
 
 
 $(document).ready(function() {
-var customerID
-var SDK = lpTag.agentSDK;
-              	SDK.init();
+	var customerID
+	var SDK = lpTag.agentSDK;
+	SDK.init();
+	
+	var onSuccess = function(data) {
+		customerID = data;
+		if(customerID.includes("apple")){
+			location.replace("/abc.html")
+		}
+		else if(customerID.includes("whatsapp")){
+			
+		}
+		else{
+			
+		}
+	};
+	
+	var onError = function(data) {
+		customerID = null;
+	};
+	
+	SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);
 
-		
-                var onSuccess1 = function(data) {
-                // Do something with the returning data
-                	customerID = data;
-                  retrieveData();
-                  };
-                
-                var onError1 = function(data) {
-                // Do something with the returning data
-                	convID = null;
-                };
-		
-		
-             
-                SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);
-		
-               
-              
-           });
+});
 	 
 	 
 	 

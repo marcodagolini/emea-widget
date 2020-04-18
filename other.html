@@ -337,207 +337,7 @@ div.products {
 	 var refreshIntervalId;
 
 	 
-	 var myProducts = {
-		 "products":
-		 [{"id":"tyiukygoublygi",
-		   "vertical":"Telco",
-		   "name":"iPhone 8",
-		   "subtitle":"A new generation of iPhone",
-		   "price":"399",
-		   "tax":"80",
-		   "currency":"GBP",
-		   "image":"https://tdurbin.github.io/images/abc/iphone8.png"
-		 },
-		 {"id":"uyfguyfuyfuyf",
-		  "vertical":"Telco",
-		  "name":"iPhone XR",
-		  "subtitle":"Brilliant. In every way. Make room for color.",
-		  "price":"524",
-		  "tax":"105",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/iphoneXR.png"
-		 },
-		 {"id":"87t6ufyguh8y7t6",
-		  "vertical":"Telco",
-		  "name":"iPhone 11",
-		  "subtitle":"Just the right amount of everything.",
-		  "price":"607",
-		  "tax":"122",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/iphone11.png"
-		 },
-		 {"id":"7865e4sxt54serd",
-		  "vertical":"Telco",
-		  "name":"iPhone 11 Pro",
-		  "subtitle":"And then there was Pro. Pro Cameras. Pro Display. Pro Performance.",
-		  "price":"875",
-		  "tax":"174",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/iphone11pro.png"
-		 },
-		 {"id":"juygvhb098uh",
-		  "vertical":"Telco",
-		  "name":"iPhone 11 Pro Max",
-		  "subtitle":"And then there was Pro. Pro Cameras. Pro Display. Pro Performance.",
-		  "price":"958",
-		  "tax":"191",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/iphone11promax.png"
-		 },
-		 {"id":"7yt6uyuhu98y7igu",
-		  "vertical":"Telco",
-		  "name":"Pixel 3",
-		  "subtitle":"Life by you, phone by Google",
-		  "price":"615",
-		  "tax":"124",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel3.png"
-		 },
-		 {"id":"ho87gyft5re4dr",
-		  "vertical":"Telco",
-		  "name":"Pixel 3 XL",
-		  "subtitle":"Life by you, phone by Google",
-		  "price":"725",
-		  "tax":"144",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel3.png"
-		 },
-		 {"id":"098uy7t6ygvcftr5erd",
-		  "vertical":"Telco",
-		  "name":"Pixel 3a",
-		  "subtitle":"Everything you need in a phone.",
-		  "price":"275",
-		  "tax":"54",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel3a.png"
-		 },
-		 {"id":"hu8y7gytf6r5ft",
-		  "vertical":"Telco",
-		  "name":"Pixel 3a XL",
-		  "subtitle":"Everything you need in a phone.",
-		  "price":"333",
-		  "tax":"66",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel3a.png"
-		 },
-		 {"id":"5re4drcfdrt",
-		  "vertical":"Telco",
-		  "name":"Pixel 4",
-		  "subtitle":"The Google phone.",
-		  "price":"558",
-		  "tax":"111",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel4.png"
-		 },
-		 {"id":"uh8y7hugyy7it",
-		  "vertical":"Telco",
-		  "name":"Pixel 4 XL",
-		  "subtitle":"The Google phone.",
-		  "price":"690",
-		  "tax":"139",
-		  "currency":"GBP",
-		  "image":"https://tdurbin.github.io/images/abc/pixel4.png"
-		 },
-		 {"id":"igyfvhbhugyuvhb",
-		  "vertical":"Airlines",
-		  "name":"Vienna",
-		  "subtitle":"The birthplace of Mozart, yodelling and lederhosen-clad men.",
-		  "price":"76",
-		  "tax":"27",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/w3Zpa6U.png"
-		 },
-		 {"id":"iu7yghuy76tghbj",
-		  "vertical":"Airlines",
-		  "name":"Paris",
-		  "subtitle":"Paris je t'aime.",
-		  "price":"54",
-		  "tax":"18",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/HelNRgy.png"
-		 },
-		 {"id":"iyukyhbknogoyh",
-		  "vertical":"Airlines",
-		  "name":"Antwerp",
-		  "subtitle":"Enjoy exquisite chocolates, world's best beer and famous waffles.",
-		  "price":"66",
-		  "tax":"22",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/dcnbKjW.png"
-		 },
-		 {"id":"i78oiuyhhugyuf7t",
-		  "vertical":"Airlines",
-		  "name":"London",
-		  "subtitle":"The cultural heart of Europe.",
-		  "price":"49",
-		  "tax":"32",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/cqEmQoc.png"
-		 },
-		 {"id":"u7y8tugyu7gy",
-		  "vertical":"Airlines",
-		  "name":"Prague",
-		  "subtitle":"The country’s fairytale capital afield national parks and medieval towns.",
-		  "price":"88",
-		  "tax":"27",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/VVJKX2s.png"
-		 },
-		 {"id":"uh8y7t6uytdre4s",
-		  "vertical":"Airlines",
-		  "name":"Cyprus",
-		  "subtitle":"Offering sophisticated resorts, archaeological treats and beaches.",
-		  "price":"67",
-		  "tax":"28",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/cQ2PvOM.png"
-		 },
-		 {"id":"uh8y7t6uy23tdre4s",
-		  "vertical":"Airlines",
-		  "name":"Berlin",
-		  "subtitle":"Offering sophisticated resorts, archaeological treats and beaches.",
-		  "price":"55",
-		  "tax":"30",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/NMn5Q95.png"
-		 },
-		 {"id":"uh8y7t6uy23dre4s",
-		  "vertical":"Airlines",
-		  "name":"Cairo",
-		  "subtitle":"In the land of Pharaohs, pyramids, underground tombs, and deserts.",
-		  "price":"73",
-		  "tax":"15",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/zDeHf5Y.png"
-		 },
-		 {"id":"ytdrtcr4e5t",
-		  "vertical":"Airlines",
-		  "name":"Copenhagen",
-		  "subtitle":"More than just good pastries, bacon and Lego.",
-		  "price":"44",
-		  "tax":"24",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/umzTTyv.png"
-		 },
-		 {"id":"ytdtcr4e5t",
-		  "vertical":"Airlines",
-		  "name":"Zurich",
-		  "subtitle":"Delve into the youthful cutting edge music and club scene of Zurich.",
-		  "price":"64",
-		  "tax":"17",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/ZZHDTy6.png"
-		 },
-		 {"id":"hy78t6uty9iio",
-		  "vertical":"Airlines",
-		  "name":"Rome",
-		  "subtitle":"The centre of the once powerful Roman Empire.",
-		  "price":"60",
-		  "tax":"20",
-		  "currency":"GBP",
-		  "image":"https://i.imgur.com/wswsM5V.png"
-		 }]
-	 };
+	 
 	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -843,32 +643,7 @@ div.products {
 	 }
 	 
 	 
-	 
-	 
-	 function showAuthentication(){
-		 $("#main").attr("hidden", "true");
-		 $('#authenticationWindow').removeAttr('hidden');
-	 }
-	 
-	 function showApplePay(){
-		 $("#main").attr("hidden", "true");
-		 $('#applePayWindow').removeAttr('hidden');
-	 }
-	 
-	 function showRichLink(){
-		 $("#main").attr("hidden", "true");
-		 $('#richLinkWindow').removeAttr('hidden');
-	 }
-	 
-	 
-	 
-	 
-	 function back(){
-		 $('#main').removeAttr('hidden');
-		 $("#authenticationWindow").attr("hidden", "true");
-		 $("#applePayWindow").attr("hidden", "true");
-		 $("#richLinkWindow").attr("hidden", "true");
-	 }
+
 	 
 	 
 	 
@@ -1358,34 +1133,7 @@ div.products {
 				 console.log("myVertical --> " + myVertical);
 				 
 				 deleteFromServer(myIdToPass, myVertical);
-				 
-				 /****
-				 myElement = "#myId" + myId;
-				 var myId = $(myElement).text();
-				 var myVertical = $('.selectVertical').val()
-				 
-				 var xhr = new XMLHttpRequest();
-				 xhr.addEventListener("readystatechange", function () {
-					 if (this.readyState === 4) {
-					 
-					 
-					 }
-		 
-				 });
-				 
-				 var URLforPOST = "https://abc-auth.herokuapp.com/deleteProduct";
-				 xhr.open("POST", URLforPOST);
-				 xhr.setRequestHeader("Content-Type", "application/json");
-				 var myBodyToSend = JSON.stringify({"vertical": myVertical, "id": myId});
-				 xhr.send(myBodyToSend);
-				 
-				 *****/
-				 
-				 
-				 
-				 
-				 
-				 
+
 				 fireSmallSuccess("Product deleted!");
 				 
 				 
@@ -1679,7 +1427,7 @@ div.products {
 	  
 	  <div class="products"></div>
 	  
-	  <button id="back" class="back" onclick="back()">Back</button>
+
 	  
   
     

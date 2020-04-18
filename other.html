@@ -354,6 +354,9 @@ div.products {
 	 
 	 
 	 
+	 
+	 
+	 
 	 function sendListPicker(){
 		 
 		 var multipleSelection = false;
@@ -382,18 +385,26 @@ div.products {
 			 // var myText = myProductName + " - " + myProductCurrency + myProductPrice;
 			 
 			 
-			 var elementToAdd = {"type":"horizontal",
-					     "elements":[{"type":"image",
-							  "url":myProductImg
-							 },{"type":"vertical",
-							    "elements":[{"type":"text",
-									 "tag":"title",
-									 "text":myProductName
-									},{"type":"text",
-									   "tag":"subtitle",
-									   "text":myProductSubtitle}]
-							   }]
-					    }
+			 var elementToAdd = {
+				 "type": "vertical",
+				 "tag": "generic",
+				 "elements": [{"type": "vertical",
+					       "elements": [{"type": "image",
+							     "url": myProductImg,
+							     "tooltip": myProductName},
+							    {"type": "text",
+							     "tag": "title",
+							     "text": myProductName,
+							     "tooltip": myProductName},
+							    {"type": "button",
+							     "tooltip": "Choose this one",
+							     "title": "Choose this one",
+							     "click": {"actions": [{"type": "publishText",
+										    "text": myProductName}]
+								      }
+							    }]
+					      }]
+			 }
 			 
 			 JSONtoString = JSONtoString + JSON.stringify(elementToAdd) + ",";
 			 
@@ -403,31 +414,12 @@ div.products {
 		 
 		 JSONtoString = JSONtoString.substring(0, JSONtoString.length - 1);
 		 
-		 JSONtoString = '{"type":"vertical","tag":"list","elements":[{"type":"vertical","elements":[{"type":"text","text":""},' + JSONtoString + "]}]}";
+		 JSONtoString = '{"type": "carousel","padding": 10,"elements": [' + JSONtoString + ']}';
 		 
-		 var listPickerSC = JSON.parse(JSONtoString);
+		 JSONtoString = JSON.parse(JSONtoString);
 		 
-		 var metadataSC = [{"type":"BusinessChatMessage",
-				    "multipleSelection":multipleSelection,
-				    "receivedMessage":{"style":"icon",
-						       "subtitle":"Please select...",
-						       "title":"Choose from our available products",
-						       "imageURL":"https://tdurbin.github.io/images/abc/touch.png"}
-				   }]
 		 
-		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
-		 var payload = {
-			 json: listPickerSC,
-			 metadata: metadataSC
-		 };
-		 
-		 lpTag.agentSDK.command(cmdName, payload, function (err) {
-			 if(err){
-				 console.log(err);
-			 } else{
-				 console.log("done");
-			 }
-		 });
+		 sendSC(JSONtoString);
 				 
 
 		  
@@ -1346,6 +1338,13 @@ div.products {
               
               	var SDK = lpTag.agentSDK;
               	SDK.init();
+		function sendSC(json) {
+			var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+			var data = {json:json};
+			lpTag.agentSDK.command(cmdName, data, function (err) {
+				outputLog.value = err ? err : 'done';
+			});
+		}
 
 		
                 var onSuccess1 = function(data) {

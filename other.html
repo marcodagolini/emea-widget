@@ -352,7 +352,13 @@ div.products {
 	 
 	 
 	 
-	 
+	 function sendSC(json) {
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var data = {json:json};
+		 lpTag.agentSDK.command(cmdName, data, function (err) {
+			 outputLog.value = err ? err : 'done';
+		 });
+	 }
 	 
 	 
 	 
@@ -396,6 +402,10 @@ div.products {
 							    {"type": "text",
 							     "tag": "title",
 							     "text": myProductName,
+							     "tooltip": myProductName},
+							    {"type": "text",
+							     "tag": "subtitle",
+							     "text": myProductSubtitle,
 							     "tooltip": myProductName},
 							    {"type": "button",
 							     "tooltip": "Choose this one",
@@ -1339,13 +1349,7 @@ div.products {
               
               	var SDK = lpTag.agentSDK;
               	SDK.init();
-		function sendSC(json) {
-			var cmdName = lpTag.agentSDK.cmdNames.writeSC;
-			var data = {json:json};
-			lpTag.agentSDK.command(cmdName, data, function (err) {
-				outputLog.value = err ? err : 'done';
-			});
-		}
+		
 
 		
                 var onSuccess1 = function(data) {

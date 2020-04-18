@@ -361,15 +361,13 @@ div.products {
 	 
 	 function sendQuickReplies(){
 		 
-		 var data = {json: 
-			     {"type": "text",
+		 var data = {{"type": "text",
 			      "text": "do you like Messaging?",
 			      "tooltip": "text tooltip",
 			      "style": {"bold": true,
 					"size": "large"
 				       }
-			     },
-			     quickReplies: {"type": "quickReplies",
+			     },{"type": "quickReplies",
 					    "itemsPerRow": 8,
 					    "replies": [{"type": "button",
 							 "tooltip": "yes i do",

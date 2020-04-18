@@ -1,0 +1,68 @@
+<html>
+	
+
+
+	
+	
+	
+<style>
+
+</style>
+  
+  
+  <head>
+	  <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	 
+    
+ <script>
+	 
+
+
+
+$(document).ready(function() {
+var customerID
+var SDK = lpTag.agentSDK;
+              	SDK.init();
+
+		
+                var onSuccess1 = function(data) {
+                // Do something with the returning data
+                	customerID = data;
+                  retrieveData();
+                  };
+                
+                var onError1 = function(data) {
+                // Do something with the returning data
+                	convID = null;
+                };
+		
+		
+             
+                SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);
+		
+               
+              
+           });
+	 
+	 
+	 
+	 
+	 
+
+   
+   
+    </script>
+
+</head>
+  
+  
+  
+<body>
+
+
+  
+
+</body>
+</html>

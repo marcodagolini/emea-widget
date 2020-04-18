@@ -29,7 +29,7 @@ $(document).ready(function() {
 	var onSuccess = function(data) {
 		customerID = data;
 		if(customerID.includes("apple")){
-			location.replace("/abc.html")
+			location.replace("./abc.html")
 		}
 		else if(customerID.includes("whatsapp")){
 			
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	};
 	
 	var onError = function(data) {
-		location.replace("/abc.html")
+		location.replace("./abc.html")
 	};
 	
 	SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);

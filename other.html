@@ -1,0 +1,1703 @@
+<html>
+	
+
+
+	
+	
+	
+<style>
+
+	
+	
+.augmented {
+	top: 300px;
+	position: absolute;
+	}
+	
+	
+.sendRichLink {
+    background-color: #4D4F72;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+    float:right;
+
+}
+.sendRichLink:hover {
+    background-color: #060837;
+    color: white;	
+}
+	
+.sendRichLink:disabled,
+.sendRichLink[disabled]{
+  background-color: #AAB5B2;
+  opacity: 0.5;
+}
+	
+	
+.selectAugmented{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 16px;
+	margin: 2px 20px;
+	color: #ffffff;
+	background-color: #4D4F72;
+
+	}
+	
+label {
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	clear: both;
+	color: black;
+	padding: 4px;
+	float: left;
+}
+	
+.customerDetails {
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	color: black;
+	padding: 4px;
+}
+	
+::placeholder {
+  color: #ffb0b0;
+}
+	
+.newLinkInput{
+	clear: both;
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	margin: 4px 20px;
+	font-size: 16px;
+	background-color: #f3f2f2;
+	width: 70%;
+	}
+	
+.banner_title{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 30px;
+	}
+	
+.selectVertical{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 16px;
+	margin: 20px 20px;
+	color: #ffffff;
+	background-color: #4D4F72;
+	position: absolute;
+	top: 90px;
+	right: 0px;
+	}
+	
+.newObjectVertical{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 16px;
+	margin: 20px 20px;
+	background-color: #f3f2f2;
+	}
+	
+.newObjectCurrency{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 16px;
+	margin: 10px 10px;
+	background-color: #f3f2f2;
+	clear: both;
+	float: left;
+	}
+	
+.newObjectInput{
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	font-size: 16px;
+	margin: 10px 10px;
+	background-color: #f3f2f2;
+	clear: both;
+	float: left;
+	width: 90%;
+	
+	}
+	
+	
+.add_product {
+
+	clear: both;
+	background-color: #4D4F72;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 4px;
+	cursor: pointer;
+	border-radius: 4px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+	top: 90px;
+	left: 4px;
+	position: absolute;
+}
+
+.add_product:hover {
+	background-color: #060837;
+	color: white;	
+}
+	
+	
+.btn-danger{
+	color: white;
+	background-color: red;
+	font-size: 16px;
+	padding: 15px 32px;
+	text-align: center;
+	margin: 4px 4px;
+	cursor:pointer;
+	}
+.btn-danger:hover {
+    background-color: #da0707;
+    color: white;	
+}
+	
+.btn-success{
+	color: white;
+	background-color: green;
+	font-size: 16px;
+	padding: 15px 32px;
+	text-align: center;
+	margin: 4px 4px;
+	cursor:pointer;
+	}
+.btn-success:hover {
+    background-color: #006b00;
+    color: white;	
+}
+	
+.product_button {
+    background:url(https://res.cloudinary.com/djtjkiytu/image/upload/v1585678931/Web_-_Design_-_Device_128-512.png) no-repeat;
+    cursor:pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-size: cover;
+    position: absolute;
+}
+	
+	
+.product_container_a{
+	width:100%;
+	height:50px;
+	background-color: #AAB5B2;
+	display: flex;
+	align-items: center
+
+}
+.product_container_b{
+	width:100%;
+	height:50px;
+	background-color: #C7D4D1;
+	display: flex;
+	align-items: center
+
+}
+.product_checkbox{
+	margin:20px;
+}
+.product_img{
+	height:90%;
+}
+.product_name{
+	position: absolute;
+	margin-left:150px;
+}
+.product_hidden{
+	display: none;
+}
+	
+	
+div.products {
+  height: 300px;
+  width: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 150px;
+}
+		
+  #alertBind {
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+	  font-size: 26px;
+}
+	
+ #customerData {
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+    position: absolute;
+    top: 150px;
+    left: 20px;
+}
+	
+	
+  .sendContent {
+    background-color: #4D4F72;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+
+}
+.sendContent:hover {
+    background-color: #060837;
+    color: white;	
+}
+	
+.sendContent:disabled,
+.sendContent[disabled]{
+  background-color: #AAB5B2;
+  opacity: 0.5;
+}
+  
+  .back {
+    background-color: #4D4F72;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.back:hover {
+    background-color: #060837;
+    color: white;	
+}
+  
+.btn-group button {
+  background-color: #4D4F72;
+  border: 1px solid #060837;
+  color: white; /* White text */
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #060837;
+}
+</style>
+  
+  
+  <head>
+	  <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  
+	  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	 
+    
+    
+ <script>
+	 
+	 var convID;
+	 var isAuthenticated = false;
+	 var refreshIntervalId;
+
+	 
+	 var myProducts = {
+		 "products":
+		 [{"id":"tyiukygoublygi",
+		   "vertical":"Telco",
+		   "name":"iPhone 8",
+		   "subtitle":"A new generation of iPhone",
+		   "price":"399",
+		   "tax":"80",
+		   "currency":"GBP",
+		   "image":"https://tdurbin.github.io/images/abc/iphone8.png"
+		 },
+		 {"id":"uyfguyfuyfuyf",
+		  "vertical":"Telco",
+		  "name":"iPhone XR",
+		  "subtitle":"Brilliant. In every way. Make room for color.",
+		  "price":"524",
+		  "tax":"105",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/iphoneXR.png"
+		 },
+		 {"id":"87t6ufyguh8y7t6",
+		  "vertical":"Telco",
+		  "name":"iPhone 11",
+		  "subtitle":"Just the right amount of everything.",
+		  "price":"607",
+		  "tax":"122",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/iphone11.png"
+		 },
+		 {"id":"7865e4sxt54serd",
+		  "vertical":"Telco",
+		  "name":"iPhone 11 Pro",
+		  "subtitle":"And then there was Pro. Pro Cameras. Pro Display. Pro Performance.",
+		  "price":"875",
+		  "tax":"174",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/iphone11pro.png"
+		 },
+		 {"id":"juygvhb098uh",
+		  "vertical":"Telco",
+		  "name":"iPhone 11 Pro Max",
+		  "subtitle":"And then there was Pro. Pro Cameras. Pro Display. Pro Performance.",
+		  "price":"958",
+		  "tax":"191",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/iphone11promax.png"
+		 },
+		 {"id":"7yt6uyuhu98y7igu",
+		  "vertical":"Telco",
+		  "name":"Pixel 3",
+		  "subtitle":"Life by you, phone by Google",
+		  "price":"615",
+		  "tax":"124",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel3.png"
+		 },
+		 {"id":"ho87gyft5re4dr",
+		  "vertical":"Telco",
+		  "name":"Pixel 3 XL",
+		  "subtitle":"Life by you, phone by Google",
+		  "price":"725",
+		  "tax":"144",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel3.png"
+		 },
+		 {"id":"098uy7t6ygvcftr5erd",
+		  "vertical":"Telco",
+		  "name":"Pixel 3a",
+		  "subtitle":"Everything you need in a phone.",
+		  "price":"275",
+		  "tax":"54",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel3a.png"
+		 },
+		 {"id":"hu8y7gytf6r5ft",
+		  "vertical":"Telco",
+		  "name":"Pixel 3a XL",
+		  "subtitle":"Everything you need in a phone.",
+		  "price":"333",
+		  "tax":"66",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel3a.png"
+		 },
+		 {"id":"5re4drcfdrt",
+		  "vertical":"Telco",
+		  "name":"Pixel 4",
+		  "subtitle":"The Google phone.",
+		  "price":"558",
+		  "tax":"111",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel4.png"
+		 },
+		 {"id":"uh8y7hugyy7it",
+		  "vertical":"Telco",
+		  "name":"Pixel 4 XL",
+		  "subtitle":"The Google phone.",
+		  "price":"690",
+		  "tax":"139",
+		  "currency":"GBP",
+		  "image":"https://tdurbin.github.io/images/abc/pixel4.png"
+		 },
+		 {"id":"igyfvhbhugyuvhb",
+		  "vertical":"Airlines",
+		  "name":"Vienna",
+		  "subtitle":"The birthplace of Mozart, yodelling and lederhosen-clad men.",
+		  "price":"76",
+		  "tax":"27",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/w3Zpa6U.png"
+		 },
+		 {"id":"iu7yghuy76tghbj",
+		  "vertical":"Airlines",
+		  "name":"Paris",
+		  "subtitle":"Paris je t'aime.",
+		  "price":"54",
+		  "tax":"18",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/HelNRgy.png"
+		 },
+		 {"id":"iyukyhbknogoyh",
+		  "vertical":"Airlines",
+		  "name":"Antwerp",
+		  "subtitle":"Enjoy exquisite chocolates, world's best beer and famous waffles.",
+		  "price":"66",
+		  "tax":"22",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/dcnbKjW.png"
+		 },
+		 {"id":"i78oiuyhhugyuf7t",
+		  "vertical":"Airlines",
+		  "name":"London",
+		  "subtitle":"The cultural heart of Europe.",
+		  "price":"49",
+		  "tax":"32",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/cqEmQoc.png"
+		 },
+		 {"id":"u7y8tugyu7gy",
+		  "vertical":"Airlines",
+		  "name":"Prague",
+		  "subtitle":"The country’s fairytale capital afield national parks and medieval towns.",
+		  "price":"88",
+		  "tax":"27",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/VVJKX2s.png"
+		 },
+		 {"id":"uh8y7t6uytdre4s",
+		  "vertical":"Airlines",
+		  "name":"Cyprus",
+		  "subtitle":"Offering sophisticated resorts, archaeological treats and beaches.",
+		  "price":"67",
+		  "tax":"28",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/cQ2PvOM.png"
+		 },
+		 {"id":"uh8y7t6uy23tdre4s",
+		  "vertical":"Airlines",
+		  "name":"Berlin",
+		  "subtitle":"Offering sophisticated resorts, archaeological treats and beaches.",
+		  "price":"55",
+		  "tax":"30",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/NMn5Q95.png"
+		 },
+		 {"id":"uh8y7t6uy23dre4s",
+		  "vertical":"Airlines",
+		  "name":"Cairo",
+		  "subtitle":"In the land of Pharaohs, pyramids, underground tombs, and deserts.",
+		  "price":"73",
+		  "tax":"15",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/zDeHf5Y.png"
+		 },
+		 {"id":"ytdrtcr4e5t",
+		  "vertical":"Airlines",
+		  "name":"Copenhagen",
+		  "subtitle":"More than just good pastries, bacon and Lego.",
+		  "price":"44",
+		  "tax":"24",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/umzTTyv.png"
+		 },
+		 {"id":"ytdtcr4e5t",
+		  "vertical":"Airlines",
+		  "name":"Zurich",
+		  "subtitle":"Delve into the youthful cutting edge music and club scene of Zurich.",
+		  "price":"64",
+		  "tax":"17",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/ZZHDTy6.png"
+		 },
+		 {"id":"hy78t6uty9iio",
+		  "vertical":"Airlines",
+		  "name":"Rome",
+		  "subtitle":"The centre of the once powerful Roman Empire.",
+		  "price":"60",
+		  "tax":"20",
+		  "currency":"GBP",
+		  "image":"https://i.imgur.com/wswsM5V.png"
+		 }]
+	 };
+	 
+	 function uuidv4() {
+		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			 var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			 return v.toString(16);
+		 });
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 function sendListPicker(){
+		 
+		 var multipleSelection = false;
+		 if(document.querySelectorAll('input.multiple[type="checkbox"]:checked').length > 0){
+			 multipleSelection = true;
+		 }
+		 
+		 var elementsLength = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked').length;
+		 var JSONtoString = "";
+		 for (var a = 0; a < elementsLength; a++){
+			 var myIdCheckBox = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked')[a].id;
+			 var myIdNumber = myIdCheckBox.substring(10);
+			 var idToSearch = "#myLabel" + myIdNumber;
+			 var myProductName = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#myPrice" + myIdNumber;
+			 var myProductPrice = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#mySubtitle" + myIdNumber;
+			 var myProductSubtitle = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#myTax" + myIdNumber;
+			 var myProductTax = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#myCurrency" + myIdNumber;
+			 var myProductCurrency = $(idToSearch)[0].innerHTML;
+			 idToSearch = "#myImg" + myIdNumber;
+			 var myProductImg = $(idToSearch)[0].src;
+			 
+			 // var myText = myProductName + " - " + myProductCurrency + myProductPrice;
+			 
+			 
+			 var elementToAdd = {"type":"horizontal",
+					     "elements":[{"type":"image",
+							  "url":myProductImg
+							 },{"type":"vertical",
+							    "elements":[{"type":"text",
+									 "tag":"title",
+									 "text":myProductName
+									},{"type":"text",
+									   "tag":"subtitle",
+									   "text":myProductSubtitle}]
+							   }]
+					    }
+			 
+			 JSONtoString = JSONtoString + JSON.stringify(elementToAdd) + ",";
+			 
+			 
+		 }
+		 
+		 
+		 JSONtoString = JSONtoString.substring(0, JSONtoString.length - 1);
+		 
+		 JSONtoString = '{"type":"vertical","tag":"list","elements":[{"type":"vertical","elements":[{"type":"text","text":""},' + JSONtoString + "]}]}";
+		 
+		 var listPickerSC = JSON.parse(JSONtoString);
+		 
+		 var metadataSC = [{"type":"BusinessChatMessage",
+				    "multipleSelection":multipleSelection,
+				    "receivedMessage":{"style":"icon",
+						       "subtitle":"Please select...",
+						       "title":"Choose from our available products",
+						       "imageURL":"https://tdurbin.github.io/images/abc/touch.png"}
+				   }]
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: listPickerSC,
+			 metadata: metadataSC
+		 };
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 if(err){
+				 console.log(err);
+			 } else{
+				 console.log("done");
+			 }
+		 });
+				 
+
+		  
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 function sendApplePay(){
+		 var myIdCheckBox = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked')[0].id;
+		 var myIdNumber = myIdCheckBox.substring(10, 11);
+		 var idToSearch = "#myLabel" + myIdNumber;
+		 var myProductName = $(idToSearch)[0].innerHTML;
+		 idToSearch = "#myPrice" + myIdNumber;
+		 var myProductPrice = $(idToSearch)[0].innerHTML;
+		 idToSearch = "#myTax" + myIdNumber;
+		 var myProductTax = $(idToSearch)[0].innerHTML;
+		 idToSearch = "#myCurrency" + myIdNumber;
+		 var myProductCurrency = $(idToSearch)[0].innerHTML;
+		 
+		 var myBody = {"convid": convID,"nameitem": myProductName,"price": myProductPrice,"tax": myProductTax,"currency": myProductCurrency}
+		 
+		 console.log(myBody);
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+				 
+				 // console.log(xhr.response);
+				 
+				 var total = (parseInt(myProductPrice) + parseInt(myProductTax)).toString();
+				 var titleBubble = "Apple Pay Request | " + total + " " + myProductCurrency;
+				 var applePaySC = {
+						"type":"vertical",
+						"tag":"payment",
+						"elements":[
+							{"type":"text","text":titleBubble}
+						]}
+					 
+				 
+				 
+				 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+				 var payload = {
+					 json: applePaySC,
+					 metadata: xhr.response
+				 };
+				 
+				 lpTag.agentSDK.command(cmdName, payload, function (err) {
+					 if(err){
+						 console.log(err);
+					 } else{
+						 console.log("done");
+					 }
+				 });
+				 
+
+			 }	
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/applePayPayload";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(myBody);
+		 xhr.send(myBodyToSend);
+		  
+		 
+		 
+	 }
+	 
+	 function sendmyCheckedRichLink(myUrl, myImage, myTitle){
+		 
+		 let richSC = {"type":"vertical",
+			       "tag":"richLink",
+			       "elements":[{"type":"image",
+					    "url":myImage},
+					   {"type":"button","title":myTitle,
+					    "click":{"actions":[{"type":"link",
+								 "uri":myUrl
+								}]
+						    }
+					   }]
+			      };
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: richSC,
+			 metadata: []
+		 };
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 if(err){
+				 console.log(err);
+			 }
+			 
+		 });
+		 
+	 }
+	 
+	 
+	 function sendRichLink(){
+		 
+		 var myUrl = $("#newLinkURL").val();
+		 var myImage = $("#newLinkImage").val()
+		 var myTitle = $("#newLinkTitle").val();
+		 
+		 if (myTitle === ""){
+			 myTitle = "Title";
+
+		 }
+		 
+		 var myUrlToSend = {"url":myImage};
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			if (this.readyState === 4) {
+					
+				myImage = JSON.parse(xhr.response).url;
+				sendmyCheckedRichLink(myUrl, myImage, myTitle);
+				$("#newLinkImage").val(myImage)
+
+			}	
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/isImage";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(myUrlToSend);
+		 xhr.send(myBodyToSend);
+
+		 
+		 
+	 }
+	 
+	 
+
+	 function sendAuthentication(){
+		 // do something
+		 
+		 var myRandomRequest = uuidv4();
+		 
+		 var authSC = {"type":"vertical",
+			       "tag":"authentication",
+			       "elements":[{"type":"text",
+					    "text":"Authentication Request"}]
+			      };
+		 var authSCMetadata = [{"type":"BusinessChatMessage",
+					"receivedMessage":{"title":"Tap here to sign in",
+							   "subtitle":"Thank you",
+							   "imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png",
+							   "style":"small"},
+					"replyMessage":{"title":"Successfully signed in!",
+							"subtitle":"Thank you",
+							"imageURL":"https://s3.amazonaws.com/sc-tasks/Assets/misc/lplogo.png",
+							"style":"small"}},
+				       {"type":"ConnectorAuthenticationRequest",
+					"requestIdentifier":myRandomRequest}];
+		 
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 var payload = {
+			 json: authSC,
+			 metadata: authSCMetadata
+		 };
+
+		 
+		 lpTag.agentSDK.command(cmdName, payload, function (err) {
+			 if(err){
+				 console.log(err);
+			 } else{
+				 console.log("done");
+				 
+				 var xhr = new XMLHttpRequest();
+				 xhr.addEventListener("readystatechange", function () {
+					 if ((this.readyState === 4) && (!isAuthenticated)) {
+						 if (xhr.response === "ok"){
+							 document.getElementById("alertBind").innerHTML = "...waiting for some authenticated data...";
+							 document.getElementById("alertBind").style = "color : black";
+							 console.log(xhr.response);
+							 
+							 window.clearInterval(refreshIntervalId);
+							 refreshIntervalId = setInterval(()=>{
+								 
+								 if(isAuthenticated){
+									 clearInterval(refreshIntervalId);
+								 } else{
+									 console.log("***ping***");
+									 retrieveData();
+								 }
+							 
+							 }, 10000);
+
+						 } else{
+							 document.getElementById("alertBind").innerHTML = "Error retrieving authenticated data!";
+							 document.getElementById("alertBind").style = "color : red";
+							 console.log(xhr.response);
+							 setTimeout(function(){
+								 document.getElementById("alertBind").innerHTML = "";
+							 }, 3000);
+						 }
+					 }	
+				 });
+				 var URLforPOST = "https://abc-auth.herokuapp.com/addmanager";
+				 xhr.open("POST", URLforPOST);
+				 xhr.setRequestHeader("Content-Type", "application/json");
+				 var myBodyToSend = JSON.stringify({"convid": convID});
+				 xhr.send(myBodyToSend);
+				 
+
+				 
+			 }
+		 });
+		 
+		 
+ 
+	 }
+	 
+	 
+	 
+	 
+	 function showAuthentication(){
+		 $("#main").attr("hidden", "true");
+		 $('#authenticationWindow').removeAttr('hidden');
+	 }
+	 
+	 function showApplePay(){
+		 $("#main").attr("hidden", "true");
+		 $('#applePayWindow').removeAttr('hidden');
+	 }
+	 
+	 function showRichLink(){
+		 $("#main").attr("hidden", "true");
+		 $('#richLinkWindow').removeAttr('hidden');
+	 }
+	 
+	 
+	 
+	 
+	 function back(){
+		 $('#main').removeAttr('hidden');
+		 $("#authenticationWindow").attr("hidden", "true");
+		 $("#applePayWindow").attr("hidden", "true");
+		 $("#richLinkWindow").attr("hidden", "true");
+	 }
+	 
+	 
+	 
+	 function retrieveData(){
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+				 console.log(xhr.response);
+				 if((xhr.response === "ko") || (xhr.response === "")){
+					 document.getElementById("alertBind").innerHTML = "Customer not authenticated!";
+					 document.getElementById("alertBind").style = "color : red";
+					 return false;
+				 } else{
+					 isAuthenticated = true;
+					 document.getElementById("alertBind").innerHTML = "Customer authenticated!";
+					 document.getElementById("alertBind").style = "color : green";
+					 var myResponse = JSON.parse(xhr.response);
+					 console.log(myResponse.picture);
+					 $('#customerPicture').attr('src', myResponse.picture);
+					 console.log(myResponse.email);
+					 $('#customerEmail').html(myResponse.email);
+					 console.log(myResponse.name);
+					 $('#customerName').html(myResponse.name);
+					 console.log(myResponse.expirationDate);
+					 $('#customerExpirationDate').html(myResponse.expirationDate);
+					 
+					 $('#customerData').removeAttr('hidden');
+					 return true;
+				 }
+			 } else{
+				 return false;
+			 }
+		 
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/retrievedata";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify({"convid": convID});
+		 xhr.send(myBodyToSend);
+		 
+		 
+	 }
+	 
+	 
+	 function fireSmallSuccess(msg){
+		 
+		 const Toast = Swal.mixin({
+			 toast: true,
+			 position: 'top-end',
+			 showConfirmButton: false,
+			 timer: 3000,
+			 // timerProgressBar: true,
+			 onOpen: (toast) => {
+				 toast.addEventListener('mouseenter', Swal.stopTimer)
+				 toast.addEventListener('mouseleave', Swal.resumeTimer)
+			 }
+		 })
+		 Toast.fire({
+			 icon: 'success',
+			 title: msg
+		 }) 
+		 
+		 
+	 }
+	 
+	 
+	 function fireError(msg){
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 swalWithBootstrapButtons.fire({
+			 icon: 'error',
+			 title: 'Oops...',
+			 text: msg
+		 })
+		 
+	 }
+	 
+	 function fireSuccess(msg){
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 swalWithBootstrapButtons.fire({
+			 icon: 'success',
+			 title: msg
+		 })
+		 
+	 }
+	 
+
+	 function rearrangeProductColors(){
+		 
+		 var product_container = true;
+		 var myCounter = $('.product_checkbox').length;
+		 var myId = "";
+		 var myNumber = "";
+		 for (var a = 0; a < myCounter; a++){
+			 myId = $('.product_checkbox')[a].id;
+			 myId = myId.replace("myCheckBox", "myContainer");
+			 myId = "#" + myId
+			 $(myId).removeClass();
+			 
+			 if(product_container){
+				 $(myId).addClass("product_container_a");
+				 product_container = false;
+			 } else{
+				 $(myId).addClass("product_container_b");
+				 product_container = true;
+			 }
+
+			 
+		 }
+		 
+		 
+	 }
+	 
+	 
+	 
+	 function pushProductToServer(objectToPush){
+		 
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+				 
+				 // console.log(xhr.response);
+				 // var myObjectToPush = JSON.parse(xhr.response);
+				 loadMyNewProduct(objectToPush);
+
+				 
+
+			 }	
+		 });
+		 var URLforPOST = "https://abc-auth.herokuapp.com/pushProduct";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify(objectToPush);
+		 xhr.send(myBodyToSend);
+		  
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
+	 function loadMyNewProduct(objectToPush){
+		 
+		
+		 if(objectToPush.vertical === $('.selectVertical').val()){
+			 
+			 
+			 console.log("uguale");
+			 var node = document.createElement("div");
+			 node.className = "product_container_a";
+			 
+			 var myLabelToShow = objectToPush.name
+			 var myContainerCheck = "#myContainer";
+			 var myActualContainer = "";
+			 var myCounter = 0;
+			 for (var a = 0; a > -1; a++){
+				 myActualContainer = myContainerCheck + a.toString();
+				 if ($(myActualContainer).length === 0){
+					 myCounter = a;
+					 a = -10;	 
+				 }
+			 }
+		 
+	 
+			 node.id = 'myContainer' + myCounter;
+			 //appending the checkbox
+			 var newCheckBox = document.createElement('input');
+			 newCheckBox.type = 'checkbox';
+			 newCheckBox.id = 'myCheckBox' + myCounter;
+			 newCheckBox.className = "product_checkbox";
+			 node.appendChild(newCheckBox);
+			 
+			 //appending the img
+			 var oImg = document.createElement("img");
+			 oImg.className = "product_img";
+			 oImg.id = 'myImg' + myCounter;
+			 oImg.setAttribute('src', objectToPush.image);
+			 node.appendChild(oImg);
+			 
+			 // appending the label
+			 var newLabel = document.createElement("LABEL");
+			 newLabel.className = "product_name";
+			 newLabel.id = 'myLabel' + myCounter;
+			 newLabel.innerHTML = myLabelToShow;
+			 node.appendChild(newLabel);
+			 
+			 var newPrice = document.createElement("LABEL");
+			 newPrice.className = "product_hidden";
+			 newPrice.id = 'myPrice' + myCounter;
+			 newPrice.innerHTML = objectToPush.price;
+			 node.appendChild(newPrice);
+			 
+			 var newTax = document.createElement("LABEL");
+			 newTax.className = "product_hidden";
+			 newTax.id = 'myTax' + myCounter;
+			 newTax.innerHTML = objectToPush.tax;
+			 node.appendChild(newTax);
+			 
+			 var newCurrency = document.createElement("LABEL");
+			 newCurrency.className = "product_hidden";
+			 newCurrency.id = 'myCurrency' + myCounter;
+			 newCurrency.innerHTML = objectToPush.currency;
+			 node.appendChild(newCurrency);
+		 
+			 var newId = document.createElement("LABEL");
+			 newId.className = "product_hidden";
+			 newId.id = 'myId' + myCounter;
+			 newId.innerHTML = objectToPush.id;
+			 node.appendChild(newId);
+		 
+			 var newSubtitle = document.createElement("LABEL");
+			 newSubtitle.className = "product_hidden";
+			 newSubtitle.id = 'mySubtitle' + myCounter;
+			 newSubtitle.innerHTML = objectToPush.subtitle;
+			 node.appendChild(newSubtitle);
+			 
+			 var newBtn = document.createElement("input");
+			 newBtn.type = "button";
+			 newBtn.className = "product_button";
+			 newBtn.id = 'myButton' + myCounter;
+			 newBtn.setAttribute("style", "right:10px");
+			 node.appendChild(newBtn);
+			 
+			 // appending the new product inside the list
+			 document.getElementsByClassName("products")[0].appendChild(node);
+		 
+			 var myBtnId = '#myButton' + myCounter;
+			 $(myBtnId).on('click', function(evt) {
+				 var myId = evt.target.id;
+				 var res = myId.replace("myButton", "");
+				 var myElement = "#myCheckBox" + res;
+				 if($(myElement).is(":checked")){
+					 $(myElement).click();
+				 }
+				 
+				 
+				 myElement = "#myId" + res;
+				 var myId = $(myElement).text();
+			 
+				 fireDelete(res, myId);
+
+			 });
+		 
+			 var myCheckBoxID = '#myCheckBox' + myCounter;
+		 
+			 $(myCheckBoxID).click(function () {
+			 
+				 var myNumber = document.querySelectorAll('input.product_checkbox[type="checkbox"]:checked').length;
+				 if ($(this).is(":checked")) {
+
+					 console.log("my checkboxes1  --> " + myNumber);
+				 } else {
+					 console.log("my checkboxes1  --> " + myNumber);
+				 }
+				 if(myNumber === 0){
+					 $("#sendApplePay").prop( "disabled", true );
+					 $("#sendListPicker").prop( "disabled", true );
+				 
+				 } else if (myNumber === 1){
+					 $("#sendApplePay").prop( "disabled", false );
+					 $("#sendListPicker").prop( "disabled", false );
+				 } else{
+					 $("#sendApplePay").prop( "disabled", true );
+					 $("#sendListPicker").prop( "disabled", false );
+				 }
+			 });
+		 
+			 rearrangeProductColors();
+		 }
+		 
+	 }
+	 
+	 
+	 
+	 function checkObjectToPush(objectToPush){
+		 
+		 
+		 console.log(JSON.stringify(objectToPush));
+		 // {"title":"","subtitle":"","currency":"GBP","price":"","tax":"","img":""}
+		 
+		 var title = objectToPush.name;
+		 var subtitle = objectToPush.subtitle;
+		 var price = objectToPush.price;
+		 var tax = objectToPush.tax;
+		 var img = objectToPush.image;
+		 
+		 var myRegex = new RegExp("https://", "i");
+		 var isHttps = myRegex.test(img);
+
+		 
+		 if (!title) {
+			 console.log("empty title");
+			 fireError("The field 'Title' should not be empty!");
+		 } else if (!subtitle) {
+			 console.log("empty subtitle");
+			 fireError("The field 'Subtitle' should not be empty!");
+		 } else if (isNaN(price) || !price) {
+			 console.log("nan price");
+			 fireError("The field 'Price' should be a number!");
+		 } else if (isNaN(tax) || !tax) {
+			 console.log("nan tax");
+			 fireError("The field 'Tax' should be a number!");
+		 } else if (!isHttps) {
+			 console.log("not img");
+			 fireError("Your image should be hosted in https!");
+		 } else {
+			 fireSmallSuccess("Product created!");
+			 // loadMyNewProduct(objectToPush);
+			 pushProductToServer(objectToPush);
+		 }
+		 
+	 }
+	 
+	 
+	 function fireNewProduct(){
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 title: 'banner_title',
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 
+		  
+		 
+		 
+		 
+		 
+		 var myResult = swalWithBootstrapButtons.fire({
+			 title: 'Please, create your card!',
+			 html:
+			 '<select id="newObjectVertical" class="newObjectVertical">' + 
+			 '<option value="Telco">Telco</option>' + 
+			 '<option value="Airlines">Airlines</option>' + 
+			 '<option value="Retail">Retail</option>' + 
+			 '<option value="Banking">Banking</option>' + 
+			 '<option value="Insurance">Insurance</option>' +
+			 
+			 '<option value="Tom">Tom</option>' +
+			 '<option value="Achim">Achim</option>' +
+			 '<option value="Christian">Christian</option>' +
+			 '<option value="Debbie">Debbie</option>' +
+			 '<option value="Edna">Edna</option>' +
+			 '<option value="Marco">Marco</option>' +
+			 '<option value="Markos">Markos</option>' +
+			 '<option value="Mel">Mel</option>' +
+			 '<option value="Sam">Sam</option></select>' +
+			 
+			 '</br>' +
+			 '<input id="newObjectTitle" class="newObjectInput" placeholder="Title">' +
+			 '</br>' +
+			 '<input id="newObjectSubitle" class="newObjectInput" placeholder="Subtitle">' +
+			 '</br>' +
+			 
+			 '<select id="newObjectCurrency" class="newObjectCurrency">' +
+			 '<option value="GBP">GBP</option>' +
+			 '<option value="EUR">EUR</option>' +
+			 '<option value="USD">USD</option></select>' +
+			 
+			 '</br>' +
+			 '<input id="newObjectPrice" class="newObjectInput" placeholder="Price">' +
+			 '</br>' +
+			 '<input id="newObjectTax" class="newObjectInput" placeholder="Tax">' +
+			 '</br>' +
+			 '<input id="newObjectImage" class="newObjectInput" placeholder="https://something">' +
+			 '</br>',
+		 }).then((result) => {
+			 if (result.value) {
+				 var verticalPush = document.getElementById('newObjectVertical').value;
+				 var titlePush = document.getElementById('newObjectTitle').value;
+				 var subtitlePush = document.getElementById('newObjectSubitle').value;
+				 var currencyPush = document.getElementById('newObjectCurrency').value;
+				 var pricePush = document.getElementById('newObjectPrice').value;
+				 var taxPush = document.getElementById('newObjectTax').value;
+				 var imgPush = document.getElementById('newObjectImage').value;
+				 
+				 var myRandomID = uuidv4();
+				 
+				 var objectToPush = {
+					 "id":myRandomID,
+					 "vertical":verticalPush,
+					 "name":titlePush,
+					 "subtitle":subtitlePush,
+					 "currency":currencyPush,
+					 "price":pricePush,
+					 "tax":taxPush,
+					 "image":imgPush
+				 }
+				 
+				 checkObjectToPush(objectToPush);
+				 
+
+				 return result
+			 }
+		 })
+		 
+		  
+	 }
+	 
+	 
+	 function deleteFromServer(myIdtoSearch, myVertical){
+		 
+		 myElement = "#myId" + myIdtoSearch;
+		 var myId = $(myElement).text();
+		 console.log("myId --> " + myIdtoSearch);
+		 console.log("myVertical --> " + myVertical);
+		 var myVertical = $('.selectVertical').val()
+		 
+		 var xhr = new XMLHttpRequest();
+		 xhr.addEventListener("readystatechange", function () {
+			 if (this.readyState === 4) {
+			 
+			 }
+		 
+		 });
+		 
+		 var URLforPOST = "https://abc-auth.herokuapp.com/deleteProduct";
+		 xhr.open("POST", URLforPOST);
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 var myBodyToSend = JSON.stringify({"vertical": myVertical, "id": myIdtoSearch});
+		 xhr.send(myBodyToSend);
+		 
+		 
+	 }
+	 
+	 
+	 
+	 function fireDelete(myId){
+		 
+		 console.log("myId --> " + myId);
+		 
+		 const swalWithBootstrapButtons = Swal.mixin({
+			 customClass: {
+				 confirmButton: 'btn btn-success',
+				 cancelButton: 'btn btn-danger'
+			 },
+			 buttonsStyling: false
+		 })
+		 
+		 swalWithBootstrapButtons.fire({
+			 title: 'Are you sure?',
+			 text: "You won't be able to revert this!",
+			 icon: 'warning',
+			 showCancelButton: true,
+			 confirmButtonText: 'Yes, delete it!',
+			 cancelButtonText: 'No, cancel!',
+			 reverseButtons: true
+		 }).then((result) => {
+			 if (result.value) {
+				 
+				 console.log("myId --> " + myId);
+				 
+				 var myElement = "#myId" + myId;
+				 var myIdToPass = $(myElement).text()
+				 
+				 var myVertical = $('.selectVertical').val();
+				 
+				 myElement = "#myContainer" + myId;
+				 $(myElement).remove();
+				 rearrangeProductColors();
+				 
+				 
+				 
+				 
+				 console.log("myIdToPass --> " + myIdToPass);
+				 console.log("myVertical --> " + myVertical);
+				 
+				 deleteFromServer(myIdToPass, myVertical);
+				 
+				 /****
+				 myElement = "#myId" + myId;
+				 var myId = $(myElement).text();
+				 var myVertical = $('.selectVertical').val()
+				 
+				 var xhr = new XMLHttpRequest();
+				 xhr.addEventListener("readystatechange", function () {
+					 if (this.readyState === 4) {
+					 
+					 
+					 }
+		 
+				 });
+				 
+				 var URLforPOST = "https://abc-auth.herokuapp.com/deleteProduct";
+				 xhr.open("POST", URLforPOST);
+				 xhr.setRequestHeader("Content-Type", "application/json");
+				 var myBodyToSend = JSON.stringify({"vertical": myVertical, "id": myId});
+				 xhr.send(myBodyToSend);
+				 
+				 *****/
+				 
+				 
+				 
+				 
+				 
+				 
+				 fireSmallSuccess("Product deleted!");
+				 
+				 
+				 
+			 } else if (
+				 /* Read more about handling dismissals below */
+				 result.dismiss === Swal.DismissReason.cancel
+			 ) {
+				
+			 }
+		 })
+		 
+	 }
+	 
+	 
+	 function createObjects(myProducts, myVertical){
+		 
+		 var productLength = myProducts.products.length;
+		 
+		 for(var z = 0; z < productLength; z++){
+			 
+			 if (myProducts.products[z].vertical === myVertical){
+				 //creeating the new product element
+				 
+				 var objectToPush = {"id":"","name":"","subtitle":"","currency":"","vertical":"","price":"","tax":"","image":""};
+				 
+				 objectToPush.id = myProducts.products[z].id;
+				 objectToPush.name = myProducts.products[z].name;
+				 objectToPush.subtitle = myProducts.products[z].subtitle;
+				 objectToPush.currency = myProducts.products[z].currency;
+				 objectToPush.vertical = myProducts.products[z].vertical;
+				 objectToPush.price = myProducts.products[z].price;
+				 objectToPush.tax = myProducts.products[z].tax;
+				 objectToPush.image = myProducts.products[z].image;
+				 
+				 loadMyNewProduct(objectToPush)	 
+				 
+			 }	  
+			 
+		 }
+		 
+		 
+		 /****
+		 
+		 $('.product_button').on('click', function(evt) {
+			 var myId = evt.target.id;
+			 var res = myId.replace("myButton", "");
+			 var myElement = "#myCheckBox" + res;
+			 $(myElement).click();
+			 
+			 fireDelete(res);
+		 });
+		 
+		 
+		 ****/
+	 
+		 
+	 }
+	 
+	 function populateAugmented(Value){
+		 
+
+		 
+		 var myJSON = 
+			 [{"value":"Guitar", "img":"https://marcodagolini.github.io/emea-widget/resources/guitar.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/guitar.usdz"},
+			 {"value":"TV", "img":"https://marcodagolini.github.io/emea-widget/resources/tv.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/tv.usdz"},
+			 {"value":"Chair", "img":"https://marcodagolini.github.io/emea-widget/resources/chair.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/chair.usdz"},
+			 {"value":"Teapot", "img":"https://marcodagolini.github.io/emea-widget/resources/teapot.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/teapot.usdz"},
+			 {"value":"Gramophone", "img":"https://marcodagolini.github.io/emea-widget/resources/gramophone.jpg", "link":"https://marcodagolini.github.io/emea-widget/resources/gramophone.usdz"}
+			 ];
+		 if(Value === "Choose"){
+			 $("#newLinkURL").val("");
+			 $("#newLinkImage").val("");
+			 $("#newLinkTitle").val("")
+		 } else{
+			 var myPage = window.location.href;
+			 for (var a = 0; a < myJSON.length; a++){
+				 if(myJSON[a].value === Value){
+					 $("#newLinkURL").val(myJSON[a].link);
+					 $("#newLinkImage").val(myJSON[a].img);
+					 $("#newLinkTitle").val(Value)
+					 a = myJSON.length;
+				 }
+			 }
+		 }
+		 
+		 
+		 
+		 
+			 
+				 
+
+		 
+	 }
+	 
+	 function getVerticalFromServer(vertical){
+		 
+		var xhr = new XMLHttpRequest();
+        	xhr.addEventListener("readystatechange", function () {
+          		if (this.readyState === 4) {
+				// console.log(xhr.response);
+				var ObjectToPush = JSON.parse(xhr.response);
+				createObjects(ObjectToPush, vertical);
+          		}	
+        	});
+        	var URLforGET = "https://abc-auth.herokuapp.com/getProducts?vertical=" + vertical;
+		console.log(URLforGET);
+		xhr.open("GET", URLforGET);
+        	xhr.send();
+		 
+		 
+	 }
+	 
+	 function isUrl(url) {
+		var re = /^(https:\/\/www\.|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?(usdz)$/;
+		if(re.test(url)){
+			console.log("augmented");
+			$("#sendRichLink").prop( "disabled", false );
+			$("#newLinkURL").css('background-color','#c1ffb2');
+		} else{
+			console.log("not augmented")
+			var myUrlToSend = {"url":url};
+			
+			var xhr = new XMLHttpRequest();
+			xhr.addEventListener("readystatechange", function () {
+				if (this.readyState === 4) {
+					console.log(xhr.response);
+					var myResponse = JSON.parse(xhr.response);
+					if(myResponse.hasOwnProperty('data')){
+						$("#newLinkURL").css('background-color','#c1ffb2');
+						$("#newLinkImage").val(myResponse.data.ogImage.url);
+						$("#newLinkTitle").val(myResponse.data.ogTitle);
+						$("#sendRichLink").prop( "disabled", false );
+					} else{
+						$("#newLinkURL").css('background-color','#ffb2b2');
+						$("#sendRichLink").prop( "disabled", true );
+					}
+				}	
+			});
+			var URLforPOST = "https://abc-auth.herokuapp.com/isURL";
+			xhr.open("POST", URLforPOST);
+			xhr.setRequestHeader("Content-Type", "application/json");
+			var myBodyToSend = JSON.stringify(myUrlToSend);
+			xhr.send(myBodyToSend);
+
+			
+		}
+		
+	};
+
+
+	 
+	 $(document).ready(function() {
+		 
+		 var myHeight = window.innerHeight - 250;
+		 var myWidth = window.innerWidth -20;
+		 var myNewHeight = myHeight.toString() + 'px';
+		 var myNewWidth = myWidth.toString() + 'px';
+		 $('.products').css('height',myNewHeight);
+		 $('.products').css('width',myNewWidth);
+		 $('#customerData').css('width',myNewWidth);
+		 $('.product_button').css('right','10px');
+		 
+		 
+		 var myVertical = $('.selectVertical').find(":selected").text();
+		 getVerticalFromServer(myVertical);
+		 // createObjects(myProducts, myVertical);
+		 
+		 
+		 
+		 $('.selectVertical').on('change', function() {
+			 $(".product_container_a").remove();
+			 $(".product_container_b").remove();
+			 getVerticalFromServer(this.value);
+			 // createObjects(myProducts, this.value);
+		 });
+		 
+		 $('.selectAugmented').on('change', function() {
+			 populateAugmented(this.value);
+			 $("#newLinkURL").css('background-color','#c1ffb2');
+			 $("#sendRichLink").prop( "disabled", false );
+		 });
+		 
+		 
+		 function debounce(fn, delay) {
+			 var timer = null;
+			 return function () {
+				 var context = this, args = arguments;
+				 clearTimeout(timer);
+				 timer = setTimeout(function () {
+					 fn.apply(context, args);
+				 }, delay);
+			 };
+		 }
+
+		 
+		 
+		 $("#newLinkURL").keyup(debounce(function (event) {
+			 var myURL = $(this)[0].value;
+			 isUrl(myURL);
+			 console.log("change");
+		 }, 1000));
+		 
+		 
+		 
+
+              
+              	var SDK = lpTag.agentSDK;
+              	SDK.init();
+
+		
+                var onSuccess1 = function(data) {
+                // Do something with the returning data
+                	convID = data;
+			retrieveData();
+
+		};
+                
+                var onError1 = function(data) {
+                // Do something with the returning data
+                	convID = null;
+                };
+		
+		
+             
+                SDK.get('chatInfo.rtSessionId', onSuccess1, onError1);
+		
+               
+              
+           });
+	 
+	 
+	 
+	 
+	 
+	 $(window).resize(function() {
+		 var myHeight = window.innerHeight - 250;
+		 var myWidth = window.innerWidth -20;
+		 var myNewHeight = myHeight.toString() + 'px';
+		 var myNewWidth = myWidth.toString() + 'px';
+		 $('.products').css('height',myNewHeight);
+		 $('.products').css('width',myNewWidth);
+		 $('#customerData').css('width',myNewWidth);
+		 $('.product_button').css('right','10px');
+		 
+	 });
+	 
+	 
+	 
+	 
+
+   
+   
+    </script>
+
+</head>
+  
+  
+  
+<body>
+
+
+
+
+  <div id="sendRich">
+	  
+
+	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>ListPicker</button>
+	  </br>
+	<div style="float: right;">
+	  <input type="checkbox" class="multiple" id="multiple" name="multiple" value="multiple" style="margin: 8px;" checked >
+	  <label for="multiple"> Multiple choice</label><br>
+	</div>
+	  
+	  <button class="add_product" onclick="fireNewProduct()"> Add product</button>
+	  
+	  <select id="selectVertical" class="selectVertical">
+		  <option value="Telco">Telco</option>
+		  <option value="Airlines">Airlines</option>
+		  <option value="Retail">Retail</option>
+		  <option value="Banking">Banking</option>
+		  <option value="Insurance">Insurance</option>
+		  
+		  <option value="Tom">Tom</option>
+		  <option value="Achim">Achim</option>
+		  <option value="Christian">Christian</option>
+		  <option value="Debbie">Debbie</option>
+		  <option value="Edna">Edna</option>
+		  <option value="Marco">Marco</option>
+		  <option value="Markos">Markos</option>
+		  <option value="Mel">Mel</option>
+		  <option value="Sam">Sam</option>
+	  </select>
+	  
+	  <div class="products"></div>
+	  
+	  <button id="back" class="back" onclick="back()">Back</button>
+	  
+  
+    
+    
+</div>
+
+
+  
+
+
+  
+  
+  
+  
+  
+
+</body>
+</html>

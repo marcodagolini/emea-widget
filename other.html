@@ -426,7 +426,12 @@ div.products {
 		 
 		 JSONtoString = JSONtoString.substring(0, JSONtoString.length - 1);
 		 
-		 JSONtoString = '{"type": "carousel","padding": 10,"elements": [' + JSONtoString + ']}';
+		 if(elementsLength > 1){
+			 
+			 JSONtoString = '{"type": "carousel","padding": 10,"elements": [' + JSONtoString + ']}';
+			 
+		 }
+		 
 		 
 		 JSONtoString = JSON.parse(JSONtoString);
 		 

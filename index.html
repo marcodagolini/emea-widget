@@ -26,6 +26,7 @@ $(document).ready(function() {
 	SDK.init();
 	
 	var onSuccess = function(data) {
+		console.log(data);
 		customerID = data;
 		if(customerID.includes("apple")){
 			location.replace("./abc.html")

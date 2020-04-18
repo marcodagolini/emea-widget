@@ -40,7 +40,7 @@ $(document).ready(function() {
 	};
 	
 	var onError = function(data) {
-		customerID = null;
+		location.replace("/abc.html")
 	};
 	
 	SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);

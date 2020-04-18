@@ -912,14 +912,14 @@ div.products {
 					 console.log("my checkboxes1  --> " + myNumber);
 				 }
 				 if(myNumber === 0){
-					 $("#sendApplePay").prop( "disabled", true );
+					 
 					 $("#sendListPicker").prop( "disabled", true );
 				 
-				 } else if (myNumber === 1){
-					 $("#sendApplePay").prop( "disabled", false );
-					 $("#sendListPicker").prop( "disabled", false );
+				 } else if (myNumber > 10){
+					 
+					 $("#sendListPicker").prop( "disabled", true );
 				 } else{
-					 $("#sendApplePay").prop( "disabled", true );
+					 
 					 $("#sendListPicker").prop( "disabled", false );
 				 }
 			 });

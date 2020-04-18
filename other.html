@@ -361,13 +361,15 @@ div.products {
 	 
 	 function sendQuickReplies(){
 		 
-		 var data = {{"type": "text",
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
+		 
+		 var data = {json:{"type": "text",
 			      "text": "do you like Messaging?",
 			      "tooltip": "text tooltip",
 			      "style": {"bold": true,
 					"size": "large"
 				       }
-			     },{"type": "quickReplies",
+			     },quickReplies:{"type": "quickReplies",
 					    "itemsPerRow": 8,
 					    "replies": [{"type": "button",
 							 "tooltip": "yes i do",
@@ -393,7 +395,9 @@ div.products {
 					 "id": "soccer486"}]
 			    };
 		 
-		 sendSC(data);
+		 lpTag.agentSDK.command(cmdName, data, function (err) {
+			 outputLog.value = err ? err : 'done';
+		 });
 	 }
 	 
 	 

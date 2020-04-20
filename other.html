@@ -364,7 +364,13 @@ div.products {
 		 var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write SC"
 		 var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies":[{"type":"button","tooltip":"yes","title":"yes","click":{"actions":[{"type":"publishText","text":"yes"}]}},{"type":"button","tooltip":"no","title":"no","click":{"actions":[{"type":"publishText","text":"no"}]}}]}};
 		 
-		 sendSC(data)
+		 $window.lpTag.agentSDK.command(cmdName, data, function (err) {
+			 if (err) {
+				 console.log('Error sending quickReplies ', err);
+				 callback && callback(err);
+			 }
+			 console.log('Completed quickReplies Send')
+		 });
 
 	 }
 	 

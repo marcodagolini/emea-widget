@@ -361,14 +361,10 @@ div.products {
 	 
 	 function sendQuickReplies(){
 		 
-		
-		  		                var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write SC"
-    var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies":[{"type":"button","tooltip":"yes","title":"yes","click":{"actions":[{"type":"publishText","text":"yes"}]}},{"type":"button","tooltip":"no","title":"no","click":{"actions":[{"type":"publishText","text":"no"}]}}]}};
-
-    lpTag.agentSDK.command(cmdName, data, function (err) {
-               outputLog.value = err ? err : 'done';
-            });
-		
+		 var cmdName = lpTag.agentSDK.cmdNames.writeSC; // = "Write SC"
+		 var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies":[{"type":"button","tooltip":"yes","title":"yes","click":{"actions":[{"type":"publishText","text":"yes"}]}},{"type":"button","tooltip":"no","title":"no","click":{"actions":[{"type":"publishText","text":"no"}]}}]}};
+		 
+		 sendSC(data)
 
 	 }
 	 

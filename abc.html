@@ -1132,6 +1132,17 @@ div.products {
 				 fireDelete(res, myId);
 
 			 });
+			 
+			 var myBtnId = '#myContainer' + myCounter;
+			 $(myBtnId).on('click', function(evt) {
+				 var myId = evt.target.id;
+				 var res = myId.replace("myContainer", "");
+				 var myElement = "#myCheckBox" + res;
+				 $(myElement).click();
+
+
+			 });
+			 
 		 
 			 var myCheckBoxID = '#myCheckBox' + myCounter;
 		 

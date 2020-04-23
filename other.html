@@ -1075,6 +1075,28 @@ div.products {
 		}
 		
 	};
+	 
+	 
+	 function mainRichContent(){
+		 $("#main").attr("hidden", "true");
+		 $('#sendRich').removeAttr('hidden');
+	 }
+	 
+	 function mainQuickReplies(){
+		 $("#main").attr("hidden", "true");
+		 $('#applePayWindow').removeAttr('hidden');
+	 }
+	 
+	 
+	 
+	 
+	 
+	 function back(){
+		 $('#main').removeAttr('hidden');
+		 $("#authenticationWindow").attr("hidden", "true");
+		 $("#applePayWindow").attr("hidden", "true");
+		 $("#richLinkWindow").attr("hidden", "true");
+	 }
 
 
 	 
@@ -1186,11 +1208,19 @@ div.products {
   
   
 <body>
+	
+	
+	<div id="main">
+  
+<div class="btn-group">
+	<button id="mainRichContent" onclick="mainRichContent()">Carousels & Quick Replies</button>
+	<button id="mainQuickReplies" onclick="mainQuickReplies()">...coming soon...</button>
+</div>
 
 
 
 
-  <div id="sendRich">
+  <div id="sendRich hidden="true"">
 	  
 
 	  

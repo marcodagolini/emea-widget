@@ -1103,10 +1103,10 @@ div.products {
 		 }
 		 
 		 
-		 $(myBtnId).on('click', function(evt) {
+		 $(newBtn).on('click', function(evt) {
 			 var myId = evt.target.id;
 			 var res = myId.replace("eliminateBubble", "");
-			 myElement = "#bubble" + res;
+			 var myElement = "#bubble" + res;
 			 $(myElement).remove();
 			 $("#addChip").prop( "disabled", false );
 		 });

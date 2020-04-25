@@ -369,7 +369,10 @@ div.products {
 	 var refreshIntervalId;
 
 	 
-	 
+	 function expand(obj){
+		 if (!obj.savesize) obj.savesize=obj.size;
+		 obj.size=Math.max(obj.savesize,obj.value.length);
+	 }
 	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -1303,7 +1306,8 @@ div.products {
 
 <div id="bubbleContainer">
 	<div class="speech">
-	<textarea id="bubble1" class="myTextBubble" rows="20" cols="1" maxlength="20">yes</textarea>
+		
+	<input type="text" id="bubble1" class="myTextBubble" size="3" onkeyup="expand(this);" value="yes">
 	</div>
 	
 	<div class="speech">no</div>

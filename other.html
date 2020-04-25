@@ -370,11 +370,8 @@ div.products {
 	 var isAuthenticated = false;
 	 var refreshIntervalId;
 
+
 	 
-	 function expand(obj){
-		 // if (!obj.savesize) obj.savesize=obj.size;
-		 // obj.size=Math.max(obj.savesize,obj.value.length);
-	 }
 	 
 	 function uuidv4() {
 		 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -1309,7 +1306,7 @@ div.products {
 <div id="bubbleContainer">
 	<div class="speech">
 		
-		<div id="bubble1" class="myTextBubble" contenteditable="plaintext-only">Yes</div>
+		<div id="bubble1" class="myTextBubble" contenteditable="plaintext-only" onkeypress="return (this.innerText.length <= 20)">Yes</div>
 		
 	</div>
 	

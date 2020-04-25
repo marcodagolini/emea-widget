@@ -1316,14 +1316,21 @@ div.products {
 </br>
 
 <div id="bubbleContainer">
-	<div class="speech">
+	<div id="bubble0" class="speech">
 		
-		<div id="bubble1" class="myTextBubble" contenteditable="plaintext-only" onkeypress="return (this.innerText.length <= 20)">Yes</div>
-		<input type="button" class="bubble_button" id="eliminateBubble0" style="right:10px">
+		<div id="textBubble0" class="myTextBubble" contenteditable="plaintext-only" onkeypress="return (this.innerText.length <= 20)">Yes</div>
+		<input type="button" id="eliminateBubble0" class="bubble_button">
 		
 	</div>
 	
-	<div class="speech">no</div>
+	<div id="bubble1" class="speech">
+		
+		<div id="textBubble1" class="myTextBubble" contenteditable="plaintext-only" onkeypress="return (this.innerText.length <= 20)">No</div>
+		<input type="button" id="eliminateBubble1" class="bubble_button">
+		
+	</div>
+	
+	
 	
 </div>
 

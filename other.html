@@ -470,7 +470,19 @@ div.products {
 		 
 		 var cmdName = window.lpTag.agentSDK.cmdNames.write;
 		 
-		 var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies":[{"type":"button","tooltip":"yes","title":"yes","click":{"actions":[{"type":"publishText","text":"yes"}]}},{"type":"button","tooltip":"no","title":"no","click":{"actions":[{"type":"publishText","text":"no"}]}}]}};
+		 var myDynamicArray = [];
+		 var elementToAdd = {};
+		 
+		 var myLength = $(".myTextBubble").length;
+		 var myValue;
+		 for(var a = 0; a < myLength; a++){
+			 myValue = $(".myTextBubble")[a].innerHTML;
+			 elementToAdd = {"type":"button","tooltip": myValue,"title": myValue,"click":{"actions":[{"type":"publishText","text": myValue}]}};
+			 myDynamicArray.push(elementToAdd);
+		 }
+		 
+		 
+		 var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies": myDynamicArray}};
 		 
 		 window.lpTag.agentSDK.command(cmdName, data, function (err) {
 			 if (err) {

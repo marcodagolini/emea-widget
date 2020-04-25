@@ -372,7 +372,7 @@ div.products {
 	 
 	 function expand(obj){
 		 if (!obj.savesize) obj.savesize=obj.size;
-		 obj.size=Math.max(obj.savesize,obj.value.length);
+		 obj.size=(Math.max(obj.savesize,obj.value.length)-1);
 	 }
 	 
 	 function uuidv4() {

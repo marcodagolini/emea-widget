@@ -318,6 +318,12 @@ div.products {
     background-color: #060837;
     color: white;	
 }
+
+.sendContent:disabled,
+.sendContent[disabled]{
+  background-color: #AAB5B2;
+  opacity: 0.5;
+}
 	
 .addChip {
     clear: both;
@@ -343,8 +349,8 @@ div.products {
     color: white;	
 }
 	
-.sendContent:disabled,
-.sendContent[disabled]{
+.addChip:disabled,
+.addChip[disabled]{
   background-color: #AAB5B2;
   opacity: 0.5;
 }
@@ -1091,7 +1097,7 @@ div.products {
 
 		 node.append(newBtn);
 		 
-		 if($(".speech").length > 11){
+		 if($(".speech").length === 11){
 			 $("#addChip").prop( "disabled", true );
 		 }
 		 

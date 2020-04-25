@@ -1087,7 +1087,7 @@ div.products {
 	 
 	 function mainQuickReplies(){
 		 $("#main").attr("hidden", "true");
-		 $('#applePayWindow').removeAttr('hidden');
+		 $('#sendQuickReplies').removeAttr('hidden');
 	 }
 	 
 	 
@@ -1096,9 +1096,8 @@ div.products {
 	 
 	 function back(){
 		 $('#main').removeAttr('hidden');
-		 $("#authenticationWindow").attr("hidden", "true");
-		 $("#applePayWindow").attr("hidden", "true");
-		 $("#richLinkWindow").attr("hidden", "true");
+		 $("#sendRich").attr("hidden", "true");
+		 $("#sendQuickReplies").attr("hidden", "true");
 	 }
 
 
@@ -1259,6 +1258,26 @@ div.products {
 	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="right: 0px;" disabled>Send Content</button>
 	  
 
+	  
+  
+    
+    
+</div>
+
+
+
+<div id="sendQuickReplies" hidden="true">
+	
+	
+	</br>
+	</br>
+	</br>
+	
+
+	
+
+	  
+	  <button id="back" class="back" onclick="back()">Back</button>
 	  
   
     

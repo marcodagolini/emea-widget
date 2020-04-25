@@ -1071,13 +1071,21 @@ div.products {
 		 node.className = "speech";
 		 $('#bubbleContainer').append(node);
 		 
-		 var e = $('<div id="textBubble' + myCounter + '" class="myTextBubble" contenteditable="plaintext-only" onkeypress="return (this.innerText.length <= 20)">Insert Value</div>');
-		 node.append(e);
+		 var myText = document.createElement("div");
+		 myText.id = 'textBubble' + myCounter;
+		 myText.className = "myTextBubble";
+		 myText.setAttribute('contenteditable', 'plaintext-only');
+		 myText.setAttribute('onkeypress', 'return (this.innerText.length <= 20)');
+		 myText.innerHTML = 'Insert Value';
 		 
-		 var e = $('<input type="button" id="eliminateBubble' + myCounter + '" class="bubble_button">');
-		 node.append(e);
+		 node.append(myText);
+		 
+		 var newBtn = document.createElement("input");
+		 newBtn.type = "button";
+		 newBtn.className = "bubble_button";
+		 newBtn.id = 'eliminateBubble' + myCounter;
 
-		 
+		 node.append(newBtn);
 		 
 		 
 	 }

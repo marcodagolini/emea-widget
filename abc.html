@@ -1701,7 +1701,13 @@ div.products {
 
   <div id="applePayWindow" hidden="true">
 	  
-	  
+	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
+	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>Send ListPicker</button>
+	  </br>
+	<div style="float: right;">
+	  <input type="checkbox" class="multiple" id="multiple" name="multiple" value="multiple" style="margin: 8px;" checked >
+	  <label for="multiple"> Multiple choice</label><br>
+	</div>
 	  
 	  <button class="add_product" onclick="fireNewProduct()"> Add product</button>
 	  
@@ -1725,15 +1731,9 @@ div.products {
 	  
 	  <div class="products"></div>
 	  
-	  </br></br>
+
 	  
-	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
-	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>Send ListPicker</button>
-	  </br>
-	<div style="float: right;">
-	  <input type="checkbox" class="multiple" id="multiple" name="multiple" value="multiple" style="margin: 8px;" checked >
-	  <label for="multiple"> Multiple choice</label><br>
-	</div>
+	  
 	  
 	  <button id="back" class="back" onclick="back()">Back</button>
 	  

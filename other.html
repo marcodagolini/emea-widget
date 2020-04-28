@@ -469,6 +469,7 @@ div.products {
 		 
 		 var cmdName = window.lpTag.agentSDK.cmdNames.write;
 		 
+		 var myText = $("#testQuickReplies").val();
 		 var myDynamicArray = [];
 		 var elementToAdd = {};
 		 
@@ -481,7 +482,7 @@ div.products {
 		 }
 		 
 		 
-		 var data = {"text":"test","quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies": myDynamicArray}};
+		 var data = {"text":myText,"quickReplies":{"type":"quickReplies","itemsPerRow":8,"replies": myDynamicArray}};
 		 
 		 window.lpTag.agentSDK.command(cmdName, data, function (err) {
 			 if (err) {

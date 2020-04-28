@@ -91,7 +91,6 @@ label {
 	margin: 4px 10px;
 	color: #ffffff;
 	position: absolute;
-	top: 90px;
 	right: 0px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -146,7 +145,6 @@ label {
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
 	font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
-	top: 90px;
 	left: 4px;
 	position: absolute;
 }
@@ -232,7 +230,7 @@ div.products {
   width: 200px;
   overflow-y: auto;
   position: absolute;
-  top: 150px;
+  top: 90px;
 }
 		
   #alertBind {
@@ -1701,13 +1699,7 @@ div.products {
 
   <div id="applePayWindow" hidden="true">
 	  
-	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
-	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>Send ListPicker</button>
-	  </br>
-	<div style="float: right;">
-	  <input type="checkbox" class="multiple" id="multiple" name="multiple" value="multiple" style="margin: 8px;" checked >
-	  <label for="multiple"> Multiple choice</label><br>
-	</div>
+	  
 	  
 	  <button class="add_product" onclick="fireNewProduct()"> Add product</button>
 	  
@@ -1730,6 +1722,14 @@ div.products {
 	  </select>
 	  
 	  <div class="products"></div>
+	  
+	  <button id="sendApplePay" class="sendContent" onclick="sendApplePay()" disabled>ApplePay</button>
+	  <button id="sendListPicker" class="sendContent" onclick="sendListPicker()" style="float: right;" disabled>Send ListPicker</button>
+	  </br>
+	<div style="float: right;">
+	  <input type="checkbox" class="multiple" id="multiple" name="multiple" value="multiple" style="margin: 8px;" checked >
+	  <label for="multiple"> Multiple choice</label><br>
+	</div>
 	  
 
 	  

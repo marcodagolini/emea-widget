@@ -709,6 +709,8 @@ div.products {
 					 metadata: xhr.response
 				 };
 				 
+				 console.log(JSON.stringify(payload));
+				 
 				 lpTag.agentSDK.command(cmdName, payload, function (err) {
 					 if(err){
 						 console.log(err);

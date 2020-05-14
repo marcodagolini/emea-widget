@@ -754,6 +754,8 @@ div.products {
 			 metadata: []
 		 };
 		 
+		 console.log(JSON.stringify(payload));
+		 
 		 lpTag.agentSDK.command(cmdName, payload, function (err) {
 			 if(err){
 				 console.log(err);

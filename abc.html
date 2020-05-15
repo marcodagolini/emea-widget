@@ -703,11 +703,10 @@ div.products {
 						]}
 					 
 				 
-				 var metadata = JSON.parse(xhr.response);
 				 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
 				 var payload = {
 					 json: applePaySC,
-					 metadata: metadata
+					 metadata: xhr.response
 				 };
 				 
 				 console.log(JSON.stringify(payload));

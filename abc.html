@@ -693,8 +693,9 @@ div.products {
 		 xhr.addEventListener("readystatechange", function () {
 			 if (this.readyState === 4) {
 				 
-				 console.log(xhr.response);
-				 // var marco = xhr.response;
+				 // console.log(xhr.response);
+				 var appleBody = xhr.response;
+				 appleBody = delete appleBody[1].apple.data.payment.operationalAnalyticsIdentifier
 				 
 				 var total = (parseInt(myProductPrice) + parseInt(myProductTax)).toString();
 				 var titleBubble = "Apple Pay Request | " + total + " " + myProductCurrency;
@@ -709,7 +710,7 @@ div.products {
 				 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
 				 var payload = {
 					 json: applePaySC,
-					 metadata: xhr.response
+					 metadata: appleBody
 				 };
 				 
 				 console.log(JSON.stringify(payload));

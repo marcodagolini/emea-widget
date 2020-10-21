@@ -646,6 +646,10 @@ div.products {
 						       "imageURL":"https://tdurbin.github.io/images/abc/touch.png"}
 				   }]
 		 
+		 console.log(JSON.stringify(listPickerSC));
+		 console.log(JSON.stringify(metadataSC));
+		 
+		 
 		 var cmdName = lpTag.agentSDK.cmdNames.writeSC;
 		 var payload = {
 			 json: listPickerSC,
@@ -756,7 +760,7 @@ div.products {
 			 metadata: []
 		 };
 		 
-		 console.log(JSON.stringify(payload));
+		 console.log(JSON.stringify(richSC));
 		 
 		 lpTag.agentSDK.command(cmdName, payload, function (err) {
 			 if(err){

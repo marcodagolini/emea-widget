@@ -27,7 +27,7 @@ $(document).ready(function() {
 	var onSuccess = function(data) {
 		console.log(data);
 		customerID = data;
-		if(customerID){
+		if(!customerID){
 			location.replace("./other.html")
 		}
 		else if(customerID.includes("apple")){

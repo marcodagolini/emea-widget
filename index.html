@@ -28,7 +28,7 @@ $(document).ready(function() {
 	var onSuccess = function(data) {
 		console.log(data);
 		customerID = data;
-		if(!(typeof customerID === 'object')){
+		if((typeof customerID === 'object')){
 			location.replace("./other.html")
 		}
 		else if(customerID.includes("apple")){

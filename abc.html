@@ -698,6 +698,7 @@ div.products {
 				 
 				 console.log(xhr.response);
 				 var appleBody = JSON.parse(xhr.response);
+				 delete appleBody[1].apple.data.payment.merchantSession.retries;
 				 delete appleBody[1].apple.data.payment.merchantSession.operationalAnalyticsIdentifier;
 				 appleBody = JSON.stringify(appleBody);
 				 console.log(appleBody);
